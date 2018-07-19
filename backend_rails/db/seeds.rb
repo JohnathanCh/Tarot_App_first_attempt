@@ -18,3 +18,6 @@ name: "The Magician",
 type: "major",
 value_int: 1
 })
+
+newReading = Reading.create({reading_name: "reading one"})
+

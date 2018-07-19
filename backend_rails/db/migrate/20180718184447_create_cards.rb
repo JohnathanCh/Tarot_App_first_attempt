@@ -2,7 +2,7 @@ class CreateCards < ActiveRecord::Migration[5.2]
   def change
     create_table :cards do |t|
       t.string :name
-      t.string :type
+      t.string :card_type
       t.integer :value_int
       t.text :meaning_up
       t.text :meaning_rev

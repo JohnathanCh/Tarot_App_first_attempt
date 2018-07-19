@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import LoginSignup from './Login_Signup/Login_Signup_component';
 
 class App extends Component {
 
-  componentDidMount() {
-    fetch('https://rws-cards-api.herokuapp.com/api/v1/cards')
-    .then(resp => resp.json())
-    .then(result => {console.log(result);
-    })
-  }
+  // componentDidMount() {
+  //   fetch('http://localhost:3000/cards')
+  //   .then(resp => resp.json())
+  //   .then(result => {console.log(result);
+  //   })
+  // }
 
   render() {
     return (
@@ -18,9 +19,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <LoginSignup />
       </div>
     );
   }

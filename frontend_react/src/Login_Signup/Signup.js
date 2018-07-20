@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export default class LoginSignup extends React.Component {
+export default class Signup extends React.Component {
     state = {
         user: {
             user_name: '',
@@ -62,16 +62,18 @@ export default class LoginSignup extends React.Component {
         .then(results => {console.log("USER POST", results)})
     }
 
-    componentDidMount = () => {
-        fetch('http://localhost:3000/cards')
-        .then(resp => resp.json())
-        .then(cards => {
-            this.setState({
-                ...this.state,
-                cardList: [...cards]
-            })
-        })
-    }
+    // componentDidMount = () => {
+    //     fetch('http://localhost:3000/cards')
+    //     .then(resp => resp.json())
+    //     .then(cards => {
+    //         this.setState({
+    //             ...this.state,
+    //             cardList: [...cards]
+    //         })
+    //     })
+    // }
+
+
 
     render() {
         console.log(this.state);

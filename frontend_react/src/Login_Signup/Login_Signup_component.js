@@ -43,7 +43,6 @@ export default class LoginSignup extends React.Component {
                 ...this.state
             })
         }
-        let post;
 
         fetch('http://localhost:3000/users', options)
         .then(resp => {
@@ -71,8 +70,8 @@ export default class LoginSignup extends React.Component {
                     <label htmlFor="user_email">Email</label>
                     <input type="text" name="user_email" value={this.state.user_email} placeholder="Enter your Email" onChange={this.handleEmailInput}/>
 
-                    {/* <label htmlFor="password">Password</label>
-                    <input type="password" name="password" value={this.state.password} placeholder="*****" onChange={this.handlePasswordInput}/> */}
+                    <label htmlFor="password">Password</label>
+                    <input type="password" name="password" value={this.state.password} placeholder="*****" onChange={this.handlePasswordInput}/>
 
                     <button type='submit'>Submit</button>
                 </form>

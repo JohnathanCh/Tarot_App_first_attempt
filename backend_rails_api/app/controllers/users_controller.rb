@@ -6,8 +6,8 @@ class UsersController < ApplicationController
     end
 
     def create
-        # @user = User.create(name: params[:name], email: params[:email])
-        byebug
+        @user = User.create(name: params[:user_name], email: params[:user_email], password: params[:password])
+        # byebug
     end
 
 

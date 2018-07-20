@@ -3,8 +3,8 @@ import React from 'react';
 export default class Signup extends React.Component {
     state = {
         user: {
-            user_name: '',
-            user_email: '',
+            userName: '',
+            userEmail: '',
             password: ''
         },
         cardList: [],
@@ -16,7 +16,7 @@ export default class Signup extends React.Component {
         this.setState({
             user:{
                 ...this.state.user,
-                user_name: e.currentTarget.value 
+                userName: e.currentTarget.value 
             }
 
         })
@@ -27,7 +27,7 @@ export default class Signup extends React.Component {
         this.setState({
             user:{
                 ...this.state.user,
-                user_email: e.currentTarget.value 
+                userEmail: e.currentTarget.value 
             }
 
         })
@@ -57,6 +57,8 @@ export default class Signup extends React.Component {
             })
         }
 
+        //Send back info that logs the user in
+        //Fetch should happen in a thunk with redux
         fetch('http://localhost:3000/users', options)
         .then(resp => resp.json())
         .then(results => {console.log("USER POST", results)})
@@ -81,11 +83,11 @@ export default class Signup extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="user_name">Name:</label>
-                    <input type="text" name="user_name" value={this.state.user_name} placeholder="Enter your Name" onChange={this.handleNameInput}/>
+                    <label htmlFor="userName">Name:</label>
+                    <input type="text" name="userName" value={this.state.userName} placeholder="Enter your Name" onChange={this.handleNameInput}/>
 
-                    <label htmlFor="user_email">Email</label>
-                    <input type="text" name="user_email" value={this.state.user_email} placeholder="Enter your Email" onChange={this.handleEmailInput}/>
+                    <label htmlFor="userEmail">Email</label>
+                    <input type="text" name="userEmail" value={this.state.userEmail} placeholder="Enter your Email" onChange={this.handleEmailInput}/>
 
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" value={this.state.password} placeholder="*****" onChange={this.handlePasswordInput}/>

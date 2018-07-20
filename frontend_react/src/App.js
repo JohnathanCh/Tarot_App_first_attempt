@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Signup from './Login_Signup/Signup';
-// import { One } from './One';
+import One from './One';
 
 
 class App extends Component {
 
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/cards')
-  //   .then(resp => resp.json())
-  //   .then(result => {console.log(result);
-  //   })
-  // }
+  componentDidMount() {
+    fetch('http://localhost:3000/cards')
+    .then(resp => resp.json())
+    .then(result => {console.log(result);
+    })
+  }
 
   render() {
     return (
@@ -22,7 +22,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Signup />
-        {/* <One /> */}
+        <One />
       </div>
     );
   }

@@ -6,12 +6,12 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.create(name: user_params['user_name'], email: user_params['user_email'], password: user_params['password'])
+        @user = User.create(name: user_params['userName'], email: user_params['userEmail'], password: user_params['password'])
         # byebug
     end
 
     def user_params
-        params.require(:user).permit(:user_name, :user_email, :password)
+        params.require(:user).permit(:userName, :userEmail, :password)
     end
 
 end

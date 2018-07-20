@@ -2,32 +2,45 @@ import React from 'react'
 
 export default class LoginSignup extends React.Component {
     state = {
-        user_name: '',
-        user_email: '',
-        password: ''
+        user: {
+            user_name: '',
+            user_email: '',
+            password: ''
+        },
+        cardList: [],
+        loggedIn: false,
     }
 
     handleNameInput = (e) => {
         // console.log(e.currentTarget.value);
         this.setState({
-            ...this.state,
-            user_name: e.currentTarget.value 
+            user:{
+                ...this.state.user,
+                user_name: e.currentTarget.value 
+            }
+
         })
     }
 
     handleEmailInput = (e) => {
         // console.log(e.currentTarget);
         this.setState({
-            ...this.state,
-            user_email: e.currentTarget.value 
+            user:{
+                ...this.state.user,
+                user_email: e.currentTarget.value 
+            }
+
         })
     }
 
     handlePasswordInput = (e) => {
         // console.log(e.currentTarget);
         this.setState({
-            ...this.state,
-            password: e.currentTarget.value 
+            user:{
+                ...this.state.user,
+                password: e.currentTarget.value
+            }
+ 
         })
     }
 
@@ -40,21 +53,23 @@ export default class LoginSignup extends React.Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                ...this.state
+                user: {...this.state.user}
             })
         }
 
         fetch('http://localhost:3000/users', options)
-        .then(resp => {
-            return resp.json()
-        })
+        .then(resp => resp.json())
         .then(results => {console.log("USER POST", results)})
     }
 
     componentDidMount = () => {
         fetch('http://localhost:3000/cards')
         .then(resp => resp.json())
-        .then(results => {console.log("CARDS", results);
+        .then(cards => {
+            this.setState({
+                ...this.state,
+                cardList: [...cards]
+            })
         })
     }
 

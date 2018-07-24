@@ -2,8 +2,6 @@ import * as actions from './actions';
 
 const initialState = {
     cardList: ["empty"],
-    readingCards: ["empty"],
-    singleCard: {}
 }
 
 // fetch('http://localhost:3000/cards')
@@ -19,7 +17,7 @@ const initialState = {
 const cardListReducer = (state = initialState, action) => {
     switch (action.type) {
         case actions.CARD_LIST:
-            return {...state, cardList: action.payload}
+            return {cardList: action.payload}
         default:
             return state
     }

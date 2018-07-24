@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Signup from './login_signup/Signup';
-import { fetchCards } from './store/actions'
+import { fetchCards } from './store/allCards/actions';
 import { connect } from 'react-redux';
+import CardList from './components/cards/CardList'
 
 class App extends Component {
 
@@ -22,15 +23,19 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log("App Props", this.props);
     
+    const user = this.props.user
+    // console.log("user", user);
+
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to Tarot App</h1>
         </header>
-        <Signup />
+        {!user.loggedIn ? <Signup /> : <CardList /> }
+        
       </div>
     );
   }
@@ -42,6 +47,11 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-export default connect(null, mapDispatchToProps)(App);
+const mapStateToProps = (state) => ({
+  user: { ...state.user },
+  cards:{ ...state.cards}
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 

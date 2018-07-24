@@ -26,9 +26,3 @@ export const fetchCards = () => {
         .then(cards => dispatch(cardListAction(cards))
         )}
 }
-
-// export const selectCardAction = (card) => {
-//     type: SELECTED_CARD,
-//     card: card
-//     //Some Stuff
-// }

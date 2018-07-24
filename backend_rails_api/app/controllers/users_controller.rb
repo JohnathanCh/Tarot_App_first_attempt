@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create(name: user_params['userName'], email: user_params['userEmail'], password: user_params['password'])
-        # byebug
+        render json: @user
     end
 
     def user_params

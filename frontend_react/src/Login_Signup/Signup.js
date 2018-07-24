@@ -1,15 +1,19 @@
 import React from 'react';
+import cardListReducer from '../store/reducer';
+import { connect } from 'react-redux';
 
 export default class Signup extends React.Component {
+
+    
     state = {
         user: {
             userName: '',
             userEmail: '',
             password: ''
         },
-        cardList: [],
         loggedIn: false,
     }
+
 
     handleNameInput = (e) => {
         // console.log(e.currentTarget.value);
@@ -50,7 +54,8 @@ export default class Signup extends React.Component {
         let options = {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify({
                 user: {...this.state.user}
@@ -99,3 +104,8 @@ export default class Signup extends React.Component {
     }
 
 }
+
+// mapStateToProps = (cardListReducer) => {
+
+// }
+

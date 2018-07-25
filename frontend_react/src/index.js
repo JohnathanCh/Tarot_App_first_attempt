@@ -1,26 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { Route, IndexRoute, Switch, BrowserRouter as Router } from 'react-router-dom';
+import 'semantic-ui-css/semantic.min.css';
 
 import './index.css';
 import App from './App';
-// import { reducer } from './ReduxPractice/reducers';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store/index'
+import CardList from './components/cards/CardList'
+import Card from './components/cards/Card'
+
+
 
 ReactDOM.render(<Provider store={store} >
-    <App />
+    <Router >
+        <Route path="/" component={App} >
+            <Route path="/Cards" component={CardList} >
+                <Route path="Cards/:id" component={Card}></Route>
+            </Route>
+        </Route>
+    </Router>
     </Provider>, 
     document.getElementById('root'));
 registerServiceWorker();
-
-
-// import React from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-// import ReactDOM from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react-dom';
-// import './index.css';
-// import App from './App';
-// import { createStore } from 'redux';
-// import { Provider } from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react-redux';
-// import { reducer } from './ReduxPractice/reducers';
-// import registerServiceWorker from './registerServiceWorker';

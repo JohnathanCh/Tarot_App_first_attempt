@@ -2,25 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 // import { selectCard } from '../../'
 
-class Card extends React.Component{
-
-        state = {
-            showDesc: false,
-        }
+const Card = (props) => {    
     
-    
-    render() {
         console.log("Card Component", props);
 
         return (
-            <div class="single-card">
+            <div class="ui card centered">
                 <h1>{props.name}</h1>
                 <h3>{props.type} Arcana</h3>
-                <p>{props.meaning_up}</p>
-                <p>{props.meaning_rev}</p>
+                <p>Meaning Upright: {props.meaning_up}</p>
+                <p>Meaning Reversed: {props.meaning_rev}</p>
             </div>
         )
-    }
+    
     
 
 }

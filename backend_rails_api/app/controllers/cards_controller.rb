@@ -1,7 +1,8 @@
 class CardsController < ApplicationController
 
     def index 
-        @cards = Card.all
+        @cards = Card.all.sort_by{|card| card.id}
+
         render json: @cards
     end
 

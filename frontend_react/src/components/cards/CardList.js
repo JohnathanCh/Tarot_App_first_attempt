@@ -16,12 +16,12 @@ class CardList extends React.Component {
     }
 
    render() {
-    console.log(this.props.cardList);
+    console.log("CardList Component", this.props.cardList);
     const cardList = this.props.cardList
     
        return (
-           <div>
-               {cardList.map(card => <Card key={card.id} name={card.name}/> )}
+           <div className="cardList">
+               {cardList.map(card => <Card key={card.id} name={card.name} description={card.desc} meaning_rev={card.meaning_rev} meaning_up={card.meaning_up} value={card.value_int} type={card.card_type} /> )}
            </div>
        )
    }

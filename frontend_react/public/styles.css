@@ -2,3 +2,15 @@
 #cardList {
     border: 10px solid black;
 }
+
+/* .horizontal-scroll-wrapper {
+    width: 100px;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .horizontal-scroll-wrapper > div {
+    width: 100px;
+    height: 100px;
+  } */

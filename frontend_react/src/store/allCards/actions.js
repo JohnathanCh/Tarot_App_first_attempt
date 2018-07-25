@@ -12,6 +12,13 @@ export const cardListAction = (cardList) => {
     })
 }
 
+export const selectCardAction = (card) => {
+    return ({
+        type: SELECTED_CARD,
+        payload: card
+    })
+}
+
 
 /*--------------- Thunk Creator ---------------*/
 //returns a thunk(the function you return that will be called with dispatch)
@@ -26,3 +33,4 @@ export const fetchCards = () => {
         .then(cards => dispatch(cardListAction(cards))
         )}
 }
+

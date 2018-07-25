@@ -1,0 +1,27 @@
+
+#cardList {
+    border: 10px solid black;
+}
+
+
+  #my-card {
+    height: 400px;
+    width: 300px;
+    overflow: auto;
+    border: 3px solid black;
+  }
+
+  /* .horizontal-scroll-wrapper {
+  display: flex
+  } */
+  .horizontal-scroll-wrapper {
+    max-width: 100%;
+    height: 500px;
+    margin: 10px auto;
+    background: #A3CBE0;
+    border: 2px solid #000;
+    display: flex;
+    align-content: center;
+    overflow-x: scroll;
+    white-space: normal;
+  }

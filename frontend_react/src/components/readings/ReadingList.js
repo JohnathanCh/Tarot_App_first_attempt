@@ -1,5 +1,5 @@
 import React from 'react';
-import Reading from './reading'
+import Reading from './Reading'
 
 class ReadingList extends React.Component {
 
@@ -12,3 +12,5 @@ class ReadingList extends React.Component {
         )
     }
 }
+
+export default ReadingList;

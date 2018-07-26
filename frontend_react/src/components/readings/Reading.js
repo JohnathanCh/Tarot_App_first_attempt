@@ -1,4 +1,4 @@
-import React from './react';
+import React from 'react';
 
 class Reading extends React.Component {
 
@@ -10,3 +10,5 @@ class Reading extends React.Component {
         )
     }
 }
+
+export default Reading;

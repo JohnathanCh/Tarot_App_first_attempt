@@ -6,7 +6,7 @@ const initialState = {
         name: '',
         email: ''
     },
-    loggedIn: true
+    loggedIn: false
 
 }
 

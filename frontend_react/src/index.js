@@ -13,13 +13,10 @@ import Card from './components/cards/Card'
 
 
 
-ReactDOM.render(<Provider store={store} >
+ReactDOM.render(
+<Provider store={store} >
     <Router >
-        <Route path="/" component={App} >
-            <Route path="/Cards" component={CardList} >
-                <Route path="Cards/:id" component={Card}></Route>
-            </Route>
-        </Route>
+        <App />
     </Router>
     </Provider>, 
     document.getElementById('root'));

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { fetchCards } from '../../store/allCards/actions';
 import Card from './Card';
 import './cardStyles.css';
@@ -18,10 +18,10 @@ class CardList extends React.Component {
        return (
         <div>
             <div className="horizontal-scroll-wrapper" >
-                {cardList.map(card => <Link to={`/Cards/${card.id}`} > <Card key={card.id} card={card}  /> </Link>)}
+                {cardList.map(card => <Link to={`/cards/${card.id}`} > <Card key={card.id} card={card}  /> </Link>)}
             </div>
 
-            {this.props.selectedCard === 'undefined' ? null : <Card key={this.props.selectedCard.id} card={this.props.selectedCard} /> }
+           {this.props.selectedCard ? <Route path="/cards/:id" render={() => <Card card={this.props.selectedCard} /> } /> : null}
 
         </div>
 
@@ -29,7 +29,7 @@ class CardList extends React.Component {
    }
 }
 
-// {cardList.map(card => <Link to="/Cards/:id"> <Card key={card.id} name={card.name} description={card.desc} meaning_rev={card.meaning_rev} meaning_up={card.meaning_up} value={card.value_int} type={card.card_type} /> </Link>)}
+ {/* <Card key={this.props.selectedCard.id} card={this.props.selectedCard} /> */}
 
 const mapDispatchToProps = (dispatch) => ({
     fetchAllCards: () => {
@@ -37,8 +37,14 @@ const mapDispatchToProps = (dispatch) => ({
     }
 })
 
-const mapStateToProps = (state) => ({
-    cardList: state.cards.cardList,
-    selectedCard: state.cards.clickedCard
-})
+const mapStateToProps = (state, ownprops) => {
+    console.log("MSTP state", state);
+    console.log("MSTP props", ownprops);
+    const selected = state.cards.clickedCard.id ? state.cards.clickedCard : state.cards.cardList.find(card => card.id === ownprops.match.params.id)
+   return {cardList: state.cards.cardList,
+    selectedCard: selected || null
+   }
+}
+
+// selectedCard: state.cards.clickedCard
 export default connect(mapStateToProps, mapDispatchToProps)(CardList);

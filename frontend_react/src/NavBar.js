@@ -11,17 +11,23 @@ class NavBar extends React.Component {
             <div className="ui inverted menu">
                 <h1 style={{color: "white"}}>Three Seeds Tarot</h1>
 
-                <button >
-                    <NavLink to="/cards"> Cards </NavLink>
-                </button>
+                
+                    <NavLink to="/cards">
+                        <button > Cards </button>
+                    </NavLink>
+                
 
-                <button >
-                    <NavLink to="/readings"> Readings </NavLink>
-                </button> 
+                
+                    <NavLink to="/readings">
+                        <button > Readings </button>
+                    </NavLink>
+                 
 
-                <button >
-                    <NavLink to="/profile"> Profile </NavLink>
-                </button> 
+                
+                    <NavLink to="/profile">
+                        <button > Profile </button> 
+                    </NavLink>
+                
                 
                 
             </div>

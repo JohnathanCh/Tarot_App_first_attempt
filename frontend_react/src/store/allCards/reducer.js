@@ -18,12 +18,14 @@ const initialState = {
 const cardListReducer = (state = initialState, action) => {
     switch (action.type) {
         case actions.CARD_LIST:
-            return {cardList: action.payload,
+            return {
+                cardList: action.payload,
                 clickedCard: state.clickedCard
         }
 
         case actions.SELECTED_CARD:
-        return {...state, 
+        return {
+            ...state, 
             clickedCard: action.payload
         }
         default:

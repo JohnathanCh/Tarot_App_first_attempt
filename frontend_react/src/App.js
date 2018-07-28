@@ -10,7 +10,8 @@ import { fetchCards } from './store/allCards/actions';
 import CardList from './components/cards/CardList'
 import NavBar from './NavBar'
 import Welcome from './components/Welcome';
-import Reading from './components/readings/Reading';
+import NewReading from './components/readings/NewReading';
+import ReadingSplash from "./components/readings/ReadingSplash";
 import Profile from './components/user/Profile';
 
 class App extends Component {
@@ -35,7 +36,8 @@ class App extends Component {
         </header> <Signup /> </div> : null } */}
 
         <Switch>  
-          <Route exact path="/readings" component={Reading} />
+          <Route path='/readings/new' component={ NewReading } />
+          <Route exact path="/readings" component={ ReadingSplash } />
           <Route path="/cards" component={CardList}/> 
           <Route path="/profile" component={Profile} />
           <Route exact path='/' component={Welcome} />

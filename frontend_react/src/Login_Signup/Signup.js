@@ -17,7 +17,6 @@ class Signup extends React.Component {
 
 
     handleNameInput = (e) => {
-        // console.log(e.currentTarget.value);
         this.setState({
             user:{
                 ...this.state.user,
@@ -27,15 +26,7 @@ class Signup extends React.Component {
         })
     }
 
-    // fetchStuff = () => {
-    //     fetch('http://localhost:3000/users')
-    //     .then(resp => resp.json())
-    //     .then(res => {console.log("users", res);
-    //     })
-    // }
-
     handleEmailInput = (e) => {
-        // console.log(e.currentTarget);
         this.setState({
             user:{
                 ...this.state.user,
@@ -46,7 +37,6 @@ class Signup extends React.Component {
     }
 
     handlePasswordInput = (e) => {
-        // console.log(e.currentTarget);
         this.setState({
             user:{
                 ...this.state.user,
@@ -56,41 +46,15 @@ class Signup extends React.Component {
         })
     }
 
-    /* this should be handled with redux */
     handleSubmit = (e) => {
         e.preventDefault()
 
-        // this.fetchStuff()
-        // user: {
-        //     userName: e.currentTarget.userName.value,
-        //     userEmail: e.currentTarget.userEmail.value,
-        //     password: e.currentTarget.password.value
-        // }
         this.props.handleCreateUser({...this.state.user})
-
-        // let options = {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Accept': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         user: {...this.state.user}
-        //     })
-        // }
-
-        // //Send back info that logs the user in
-        // //Fetch should happen in a thunk with redux
-        // fetch('http://localhost:3000/users', options)
-        // .then(resp => resp.json())
-        // .then(results => {console.log("USER POST", results)})
     }
 
 
 
     render() {
-        // console.log("Signup state", this.state);
-        // console.log("Signup props", this.props);
         
         return (
             <div>

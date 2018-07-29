@@ -10,23 +10,25 @@ const initialState = {
 
 
  const readingReducer = (state = initialState, action) => {
+     console.log("In the Reading Reducer", state);
+     
     switch (action.type) {
-        case CARD_LIST:
-            return {
-                cardList: action.payload,
-                ...state
-        }
+        // case CARD_LIST:
+        //     return {
+        //         cardList: action.payload,
+        //         ...state
+        // }
 
-        case CREATE_USER:
-        return {
-            ...state,
-            user: {
-                id: action.payload.user.id,
-                name: action.payload.user.name,
-                email: action.payload.user.email
-            }
+        // case CREATE_USER:
+        // return {
+        //     ...state,
+        //     user: {
+        //         id: action.payload.user.id,
+        //         name: action.payload.user.name,
+        //         email: action.payload.user.email
+        //     }
             
-        }
+        // }
 
         case actions.CREATE_READING:
         return {

@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :create, :destroy]
   resources :cards, only: [:index, :show]
+  resources :readings, only: [:index, :show, :create]
 end

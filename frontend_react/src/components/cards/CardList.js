@@ -38,8 +38,7 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const mapStateToProps = (state, ownprops) => {
-    console.log("MSTP state", state);
-    console.log("MSTP props", ownprops);
+    
     const selected = state.cards.clickedCard.id ? state.cards.clickedCard : state.cards.cardList.find(card => card.id === ownprops.match.params.id)
    return {cardList: state.cards.cardList,
     selectedCard: selected || null

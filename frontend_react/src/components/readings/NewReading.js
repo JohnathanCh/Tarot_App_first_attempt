@@ -23,7 +23,7 @@ export default class NewReading extends React.Component {
         
         return (
             <div className="new-reading-container">
-                {this.state.handleChoice === true ? <NavLink to="readings/new" ><h1>New Reading</h1> </NavLink> : <h1>New Reading</h1> }
+                {this.state.readingChose === true ? null : <h1>Select a reading type</h1> }
                 
 
                 {this.state.readingChose === false ? 

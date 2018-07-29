@@ -21,8 +21,11 @@ export const readingCardsAction = (cards) => {
 
 /*--------------- Thunk Creator ---------------*/
 
-export const createReading = (reading) => {
+
+//I think I have to send a user as well to this.
+export const createReading = (readingCards) => {
     return function thunk(dispatch) {
+        
         const options = {
             method: "POST",
             headers: {
@@ -31,10 +34,10 @@ export const createReading = (reading) => {
             },
             body: JSON.stringify({
                user: {
-                    ...this.state.currentUser
+                    ...this.state.user
                 },
-               reading: {
-                    ...reading
+               readingCards: {
+                    ...readingCards
                }
             })
         }

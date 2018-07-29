@@ -18,13 +18,14 @@ class OneCardReading extends React.Component {
         // [Math.floor(Math.random()*cardList.length)]
 
         const shuffledCards = this.props.cardList.sort(function() {return 0.5 - Math.random()})
-        console.log("card", shuffledCards)
+        const card = [shuffledCards[0]]
+        console.log("card", card)
 
         this.setState({
             readingCards: shuffledCards[0]
         })
         
-        this.props.startReading(this.state.readingCards)
+        this.props.startReading(card, this.props.user)
     }
 
     render() {
@@ -46,15 +47,16 @@ class OneCardReading extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log("MSTP state", state);
+    // console.log("MSTP state", state.user.user);
     return ({
-        cardList: [...state.cards.cardList]
+        cardList: [...state.cards.cardList],
+        user: {...state.user.user}
     })
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    startReading: (readingCards) => {
-        dispatch(createReading(readingCards))
+    startReading: (readingCards, user) => {
+        dispatch(createReading(readingCards, user))
     }
 })
 

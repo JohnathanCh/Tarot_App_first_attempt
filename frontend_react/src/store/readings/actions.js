@@ -23,7 +23,7 @@ export const readingCardsAction = (cards) => {
 
 
 //I think I have to send a user as well to this.
-export const createReading = (readingCards) => {
+export const createReading = (readingCards, user) => {
     return function thunk(dispatch) {
         
         const options = {
@@ -34,16 +34,20 @@ export const createReading = (readingCards) => {
             },
             body: JSON.stringify({
                user: {
-                    ...this.state.user
+                    ...user
                 },
-               readingCards: {
+               readingCards: [
                     ...readingCards
-               }
+               ]
             })
         }
 
         fetch('http://localhost:3000/readings', options)
         .then(resp => resp.json())
-        .then(reading => dispatch(createReadingAction(reading)))
+        .then(reading => {console.log(reading)})
     }
 }
+
+// fetch('http://localhost:3000/readings', options)
+// .then(resp => resp.json())
+// .then(reading => dispatch(createReadingAction(reading)))

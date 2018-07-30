@@ -24,6 +24,19 @@ class ThreeCardReading extends React.Component {
         this.props.startReading(cards, this.props.user)
     }
 
+
+    getImage = cardName => {
+        let formattedName = cardName
+        .split(" ")
+        .join("_")
+
+            // Put relative path in here
+        // let image = require() 
+
+        // return image
+    }
+    
+
     render() {
         // console.log("propssss", this.state);
         

@@ -9,6 +9,17 @@ class OneCardReading extends React.Component {
         readingCards: [],
         clicked: false
     }
+
+    getImage = cardName => {
+        let formattedName = cardName
+        .split(" ")
+        .join("_")
+
+            // Put relative path in here
+        let image = require('../../../Rider-Waite/The_Fool.png') 
+
+        return image
+    }
     
 
     handleCardPull = (e) => {
@@ -35,6 +46,8 @@ class OneCardReading extends React.Component {
                 </div>}
 
                 {this.state.clicked === true ? <CardInfo card={this.state.readingCards} /> : null }
+
+                <img src={this.getImage("hi world")} alt="yep"/>
 
             </div>   
         )

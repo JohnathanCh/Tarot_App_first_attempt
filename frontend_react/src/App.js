@@ -13,6 +13,7 @@ import Welcome from './components/Welcome';
 import NewReading from './components/readings/NewReading';
 import ReadingSplash from "./components/readings/ReadingSplash";
 import Profile from './components/user/Profile';
+import TheFool from './img/Rider-Waite/TheFool.png';
 
 class App extends Component {
 
@@ -21,7 +22,7 @@ class App extends Component {
   }
 
   render() {
-    // console.log("App Props", this.props);
+    console.log("App Props", this.props);
     
     const user = this.props.user
 
@@ -63,5 +64,8 @@ const mapStateToProps = (state) => ({
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+
+
+
 
 

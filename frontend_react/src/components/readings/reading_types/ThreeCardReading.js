@@ -9,6 +9,17 @@ class ThreeCardReading extends React.Component {
         readingCards: [],
         clicked: false
     }
+
+    getImage = cardName => {
+        let formattedName = cardName
+        .split(" ")
+        .join("_")
+
+            // Put relative path in here
+        // let image = require() 
+
+        // return image
+    }
     
 
     handleCardPull = (e) => {

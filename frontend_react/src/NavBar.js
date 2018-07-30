@@ -1,8 +1,5 @@
 import React from 'react';
-import { NavLink, Switch, Route, withRouter } from 'react-router-dom';
-import ReadingList from './components/readings/ReadingList'
-import CardList from './components/cards/CardList'
-import Profile from './components/user/Profile'
+import { NavLink, withRouter } from 'react-router-dom';
 
 class NavBar extends React.Component {
 

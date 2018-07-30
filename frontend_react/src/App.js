@@ -27,7 +27,7 @@ class App extends Component {
 
     return (
       <div className="App">
-      {/* {!user.loggedIn ? null : <NavBar /> } */}
+      {!user.loggedIn ? null : <NavBar /> }
         <NavBar />
         {!user.loggedIn ? <div>
           <header className="App-header">

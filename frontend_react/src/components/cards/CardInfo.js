@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './cardStyles.css';
 import { selectCardAction } from '../../store/allCards/actions';
 
-const Card = (props) => {    
+const CardInfo = (props) => {    
     
         console.log("Card Component", props.selectCard);
 
@@ -42,4 +42,4 @@ const mapDispatchToProps = (dispatch, card) => ({
     }
 })
 
-export default connect(null, mapDispatchToProps)(Card);
+export default connect(null, mapDispatchToProps)(CardInfo);

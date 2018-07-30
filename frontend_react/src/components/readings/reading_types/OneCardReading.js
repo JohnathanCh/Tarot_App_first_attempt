@@ -1,46 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Card from "../../cards/Card";
+import CardInfo from "../../cards/CardInfo";
 import { createReading } from '../../../store/readings/actions';
 
 class OneCardReading extends React.Component {
 
     state = {
-        readingCards: []
+        readingCards: [],
+        clicked: false
     }
     
 
     handleCardPull = (e) => {
-        // Choose random card from Deck
-        // Change state
-        // Trigger render of Card element below
-
-        // [Math.floor(Math.random()*cardList.length)]
 
         const shuffledCards = this.props.cardList.sort(function() {return 0.5 - Math.random()})
         const card = [shuffledCards[0]]
-        console.log("card", card)
 
         this.setState({
-            readingCards: shuffledCards[0]
+            readingCards: shuffledCards[0],
+            clicked: true 
         })
         
         this.props.startReading(card, this.props.user)
     }
 
     render() {
-        console.log("propssss", this.props.cardList);
+        // console.log("propssss", this.state);
         
         return (
             <div>
                 <h1>One Card Reading</h1>
-
-
-
-                <div>
+               {this.state.clicked === true ? null : <div>
                     <button onClick={this.handleCardPull} >Reading </button>
-                    {/* Render some sort of Tarot deck here */}
-                </div>
+                </div>}
+
+                {this.state.clicked === true ? <CardInfo card={this.state.readingCards} /> : null }
+
             </div>   
         )
     }

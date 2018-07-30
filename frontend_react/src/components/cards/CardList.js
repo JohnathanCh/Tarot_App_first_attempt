@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Route } from 'react-router-dom';
 import { fetchCards } from '../../store/allCards/actions';
-import Card from './Card';
+import CardInfo from './CardInfo';
 import './cardStyles.css';
 
 class CardList extends React.Component {
@@ -18,10 +18,10 @@ class CardList extends React.Component {
        return (
         <div>
             <div className="horizontal-scroll-wrapper" >
-                {cardList.map(card => <Link to={`/cards/${card.id}`} > <Card key={card.id} card={card}  /> </Link>)}
+                {cardList.map(card => <Link to={`/cards/${card.id}`} > <CardInfo key={card.id} card={card}  /> </Link>)}
             </div>
 
-           {this.props.selectedCard ? <Route path="/cards/:id" render={() => <Card card={this.props.selectedCard} /> } /> : null}
+           {this.props.selectedCard ? <Route path="/cards/:id" render={() => <CardInfo card={this.props.selectedCard} /> } /> : null}
 
         </div>
 

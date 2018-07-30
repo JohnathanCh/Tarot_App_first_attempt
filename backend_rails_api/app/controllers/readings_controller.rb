@@ -3,7 +3,9 @@ class ReadingsController < ApplicationController
     def index
         # @readings = Reading.all.where(user === currentUser)
         @user = User.all.find(params[:user][:id])
-        @readings = 
+        @readings = Reading.where(:user_id => params[:user][:id])
+        
+        render json: @readings
     end
 
     def show

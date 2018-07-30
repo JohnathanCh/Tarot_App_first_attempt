@@ -2,6 +2,8 @@ class ReadingsController < ApplicationController
 
     def index
         # @readings = Reading.all.where(user === currentUser)
+        @user = User.all.find(params[:user][:id])
+        @readings = 
     end
 
     def show
@@ -10,11 +12,6 @@ class ReadingsController < ApplicationController
     end
 
     def create
-        # params user looks like this
-        # {"id"=>50, "name"=>"a", "email"=>"a"}
-
-        # Everything works except for the Reading.create() is creating a new reading without an id (not persisting it)
-
         # Update the reading_name to have a better version of the Date Time with strftime
         @reading = Reading.new(reading_name: "#{params[:user][:name]} - #{DateTime.now}")
 

@@ -1,8 +1,11 @@
 import React from 'react';
 import CardInfo from "./CardInfo";
+import { connect } from "react-redux";
+import { selectCardAction } from '../../store/allCards/actions';
+import { withRouter } from 'react-router-dom';
 
 
-export default class CardImage extends React.Component {
+class CardImage extends React.Component {
 
     state = {
         showInfo: false
@@ -20,24 +23,42 @@ export default class CardImage extends React.Component {
     }
 
     handleClick = (e) => {
+        console.log(this.state);
+        this.props.selectCard(this.props.card)
+
+        if (this.props.match.path.startsWith('/cards')) {
+            this.props.history.push(`/cards/${this.props.card.id}`)
+        }
         
-        this.setState({
-            showInfo: !this.state.showinfo
-        })
+
+        // let changeState = !this.state.showInfo
+        // this.setState({
+        //     showInfo: changeState
+        // })
         
     }
 
     render() {
-        console.log("CardImage", this.props);
+        // console.log("CardImage", this.props);
         
         return (
             <div>
 
                 <img className="card-image" src={this.getImage(this.props.card.name)} alt="No Image Found" onClick={this.handleClick} />
 
-               {/* {this.state.showInfo === true ? <CardInfo card={this.props.card} /> : null } */}
+               {this.state.showInfo === true ? <CardInfo card={this.props.card} /> : null }
 
             </div>
         )
     }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+    selectCard: (card) => { 
+        // console.log(card);
+        
+        dispatch(selectCardAction(card))
+    }
+})
+
+export default withRouter(connect(null, mapDispatchToProps)(CardImage));

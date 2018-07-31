@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-export default class Login extends React.Component {
+class Login extends React.Component {
 
     state = {
         loggedIn: false,
@@ -18,13 +19,16 @@ export default class Login extends React.Component {
                  
              })
          }
-         fetch('http://localhost:3000/users')
+         fetch('http://localhost:3000/users', options)
+         .then(resp => resp.json())
+         .then(user => {console.log(user);
+         })
      }
 
     render() {
         return (
             <div>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.login}>
 
                     <label htmlFor="user_email">Email</label>
                     <input type="text" name="user_email" value={this.state.user_email} placeholder="Enter your Email" onChange={this.handleEmailInput}/>
@@ -38,3 +42,5 @@ export default class Login extends React.Component {
         )
     }
 }
+
+export default connect(null, null)(Login);

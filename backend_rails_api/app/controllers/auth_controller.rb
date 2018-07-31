@@ -1,6 +1,7 @@
 class Api::V1::AuthController < ApplicationController
 
     def create
+      byebug
       user = User.find_by(username: params[:username])
       if user && user.authenticate(params[:password])
         token = encoded_token(user)
@@ -11,6 +12,7 @@ class Api::V1::AuthController < ApplicationController
     end
   
     def show
+      byebug
       if logged_in
         render json: {username: current_user.username, id: current_user.id}, status: 200
       else

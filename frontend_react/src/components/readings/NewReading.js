@@ -12,7 +12,9 @@ export default class NewReading extends React.Component {
     }
 
     handleChoice = (e) => {
-        // console.log(e.currentTarget);
+        console.log(e.currentTarget);
+        console.log(this.state);
+        
         this.setState({
             readingChose: true
         })

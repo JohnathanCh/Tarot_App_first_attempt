@@ -35,9 +35,9 @@ class App extends Component {
         </header> <Signup /> </div> : null }
 
         <Switch>  
-          <Route exact path='/readings/new' component={ NewReading } />
-          <Route exact path="/readings" component={ ReadingSplash } />
-          <Route exact path="/cards" component={CardList}/> 
+          <Route path='/readings/new' component={ NewReading } />
+          <Route path="/readings" component={ ReadingSplash } />
+          <Route path="/cards" component={CardList}/> 
           <Route exact path="/profile" component={Profile} />
           <Route exact path='/' component={Welcome} />
         </Switch>

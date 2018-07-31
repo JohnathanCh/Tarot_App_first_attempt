@@ -20,9 +20,9 @@ class CardList extends React.Component {
         <div>
             <div className="horizontal-scroll-wrapper" >
                 {cardList.map(card => 
-                <Link to={`/cards/${card.id}`}>
+                
                     <CardImage key={card.id} card={card}  /> 
-                </Link>
+                
                 )}
             </div>
 
@@ -46,6 +46,7 @@ const mapDispatchToProps = (dispatch) => ({
 const mapStateToProps = (state, ownprops) => {
     
     const selected = state.cards.clickedCard.id ? state.cards.clickedCard : state.cards.cardList.find(card => card.id === ownprops.match.params.id)
+    
    return {cardList: state.cards.cardList,
     selectedCard: selected || null
    }

@@ -15,7 +15,7 @@ const CardInfo = (props) => {
             
         }
         return (
-            <div class="ui card centered" id="my-card" onClick={handleClick} >
+            <div className="ui card centered" id="my-card" onClick={handleClick} >
                 <h1>{props.card.name}</h1>
                 <h3>{props.card.type} Arcana</h3>
                 <p>Meaning Upright: {props.card.meaning_up}</p>
@@ -34,12 +34,12 @@ const CardInfo = (props) => {
     
 // })
 
-const mapDispatchToProps = (dispatch, card) => ({
-    selectCard: (card) => { 
-        console.log(card);
+// const mapDispatchToProps = (dispatch, card) => ({
+//     selectCard: (card) => { 
+//         console.log(card);
         
-        dispatch(selectCardAction(card))
-    }
-})
+//         dispatch(selectCardAction(card))
+//     }
+// })
 
-export default connect(null, mapDispatchToProps)(CardInfo);
+export default CardInfo;

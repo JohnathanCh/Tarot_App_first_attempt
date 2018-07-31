@@ -20,7 +20,10 @@ export default class CardImage extends React.Component {
     }
 
     handleClick = (e) => {
-        console.log(e.currentTarget);
+        
+        this.setState({
+            showInfo: !this.state.showinfo
+        })
         
     }
 
@@ -29,8 +32,10 @@ export default class CardImage extends React.Component {
         
         return (
             <div>
+
                 <img className="card-image" src={this.getImage(this.props.card.name)} alt="No Image Found" onClick={this.handleClick} />
 
+               {/* {this.state.showInfo === true ? <CardInfo card={this.props.card} /> : null } */}
 
             </div>
         )

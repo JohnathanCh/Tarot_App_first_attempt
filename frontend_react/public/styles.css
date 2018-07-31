@@ -3,6 +3,25 @@
     border: 10px solid black;
 }
 
+body, html {
+  height: 100%;
+}
+
+.bg { 
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup {
+  background: #222;
+  color: white;
+}
+
+
 /* .horizontal-scroll-wrapper {
     width: 100px;
     height: 300px;

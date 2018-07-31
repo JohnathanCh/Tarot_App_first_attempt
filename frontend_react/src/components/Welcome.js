@@ -5,7 +5,9 @@ export default class Welcome extends React.Component {
     render() {
         return (
             <div>
-                <h1>Welcome to Three Seeds Tarot</h1>
+
+            <img src="http://media.beliefnet.com/~/media/photos-with-attribution/spiritual/tarotcardscreditShutterstockcom.jpg?as=1" className="bg"/>
+            
             </div>
         )
     }

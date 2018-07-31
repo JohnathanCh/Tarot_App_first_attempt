@@ -11,14 +11,11 @@
     border: 3px solid black;
   }
 
-  /* .horizontal-scroll-wrapper {
-  display: flex
-  } */
   .horizontal-scroll-wrapper {
     max-width: 100%;
     height: 500px;
     margin: 10px auto;
-    background: #A3CBE0;
+    background: rgb(74, 80, 82);
     border: 2px solid #000;
     display: flex;
     align-content: center;

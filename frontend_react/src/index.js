@@ -12,10 +12,10 @@ import store from './store/index'
 
 
 ReactDOM.render(
-<Provider store={store} >
-    <Router >
-        <App />
-    </Router>
+    <Provider store={store} >
+        <Router >
+            <App />
+        </Router>
     </Provider>, 
     document.getElementById('root'));
 registerServiceWorker();

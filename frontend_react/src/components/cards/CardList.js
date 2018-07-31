@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, withRouter } from 'react-router-dom';
 import { fetchCards } from '../../store/allCards/actions';
 import CardInfo from './CardInfo';
+import CardImage from './CardImage';
 import './cardStyles.css';
 
 class CardList extends React.Component {
@@ -18,10 +19,15 @@ class CardList extends React.Component {
        return (
         <div>
             <div className="horizontal-scroll-wrapper" >
-                {cardList.map(card => <Link to={`/cards/${card.id}`} > <CardInfo key={card.id} card={card}  /> </Link>)}
+                {cardList.map(card => 
+                <Link to={`/cards/${card.id}`}>
+                    <CardImage key={card.id} card={card}  /> 
+                </Link>
+                )}
             </div>
 
            {this.props.selectedCard ? <Route path="/cards/:id" render={() => <CardInfo card={this.props.selectedCard} /> } /> : null}
+
 
         </div>
 
@@ -46,4 +52,11 @@ const mapStateToProps = (state, ownprops) => {
 }
 
 // selectedCard: state.cards.clickedCard
-export default connect(mapStateToProps, mapDispatchToProps)(CardList);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardList));
+
+ {/* <div className="horizontal-scroll-wrapper" >
+                {cardList.map(card => 
+                <Link to={`/cards/${card.id}`} > 
+                <CardImage key={card.id} card={card}  /> 
+                </Link>)}
+            </div> */}

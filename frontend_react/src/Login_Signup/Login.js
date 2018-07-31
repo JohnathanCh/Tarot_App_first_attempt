@@ -9,20 +9,58 @@ class Login extends React.Component {
         password: ''
     }
 
-    login = (user_name, password) => {
+    // handleLogin = (user) => {
+    //     this.setState({
+    //         auth: {
+    //           currentUser: user
+    //         }
+    //       })
+    //     localStorage.setItem('token', user.jwt)
+    // }
+
+    // handleLogout = () => {
+    //     this.setState({
+    //       auth: {
+    //         currentUser: {}
+    //       }
+    //     })
+    //     localStorage.clear()
+    //   }
+
+    login = (e) => {
+        e.preventDefault()
+
         const options = {
              method: 'POST',
              headers: {
-                 'Content-Type': 'application/json'
+                 'Content-Type': 'application/json',
+                 'Accept': 'application/json'
              },
              body: JSON.stringify({
-                 
+                 user_email: this.state.user_email,
+                 password: this.state.password
              })
          }
-         fetch('http://localhost:3000/users', options)
+         fetch('http://localhost:3000/auth', options)
          .then(resp => resp.json())
-         .then(user => {console.log(user);
+         .then(info => {console.log("Login", info.jwt);
          })
+     }
+
+     handleEmailInput = (e) => {
+        console.log("Mail", e.currentTarget.value);
+        this.setState({
+            user_email: e.currentTarget.value
+        })
+        
+     }
+
+     handlePasswordInput = (e) => {
+        console.log("pass", e.currentTarget.value);
+        this.setState({
+            password: e.currentTarget.value
+        })
+        
      }
 
     render() {
@@ -31,10 +69,10 @@ class Login extends React.Component {
             <form onSubmit={this.login}>
 
                     <label htmlFor="user_email">Email</label>
-                    <input type="text" name="user_email" value={this.state.user_email} placeholder="Enter your Email" onChange={this.handleEmailInput}/>
+                    <input type="text" name="user_email" placeholder="Enter your Email" onChange={this.handleEmailInput}/>
 
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" value={this.state.password} placeholder="*****" onChange={this.handlePasswordInput}/>
+                    <input type="password" name="password" placeholder="*****" onChange={this.handlePasswordInput}/>
 
                     <button type='submit'>Submit</button>
                 </form>

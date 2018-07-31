@@ -12,6 +12,7 @@ import NavBar from './NavBar'
 import NewReading from './components/readings/NewReading';
 import ReadingSplash from "./components/readings/ReadingSplash";
 import Profile from './components/user/Profile';
+import Login from './login_signup/Login';
 
 let image = require(`../src/Rider-Waite/The_Fool.png`) 
 class App extends Component {
@@ -31,8 +32,13 @@ class App extends Component {
 
         {!user.loggedIn ? <div>
           <header className="App-header">
-          <img src={image} className="App-logo" alt="logo" />
-        </header> <Signup /> </div> : null }
+            <img src={image} className="App-logo" alt="logo" />
+          </header> 
+          <Login />
+          {/* <Signup />  */}
+        </div> : null 
+        
+        }
 
         <Switch>  
           <Route path='/readings/new' component={ NewReading } />

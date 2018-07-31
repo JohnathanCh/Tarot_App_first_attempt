@@ -1,18 +1,18 @@
-class Api::V1::AuthController < ApplicationController
+class AuthController < ApplicationController
 
     def create
-      byebug
-      user = User.find_by(username: params[:username])
+      # byebug
+      user = User.find_by(email: params[:user_email])
       if user && user.authenticate(params[:password])
         token = encoded_token(user)
-        render json: {username: user.username, id: user.id, jwt: token}, status: 200
+        render json: {username: user.name, id: user.id, jwt: token}, status: 200
       else
         render json: {error: 'Username or Password Invalid'}, status: 401
       end
     end
   
     def show
-      byebug
+      # byebug
       if logged_in
         render json: {username: current_user.username, id: current_user.id}, status: 200
       else

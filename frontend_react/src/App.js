@@ -13,7 +13,6 @@ import Welcome from './components/Welcome';
 import NewReading from './components/readings/NewReading';
 import ReadingSplash from "./components/readings/ReadingSplash";
 import Profile from './components/user/Profile';
-import TheFool from './img/Rider-Waite/TheFool.png';
 
 class App extends Component {
 

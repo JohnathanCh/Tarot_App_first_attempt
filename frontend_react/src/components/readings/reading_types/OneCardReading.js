@@ -16,7 +16,7 @@ class OneCardReading extends React.Component {
         .join("_")
 
             // Put relative path in here
-        let image = require('../../../Rider-Waite/The_Fool.png') 
+        let image = require(`../../../Rider-Waite/${formattedName}.png`) 
 
         return image
     }
@@ -47,7 +47,7 @@ class OneCardReading extends React.Component {
 
                 {this.state.clicked === true ? <CardInfo card={this.state.readingCards} /> : null }
 
-                <img src={this.getImage("hi world")} alt="yep"/>
+                <img src={this.getImage("Four of Wands")} alt="Image not Found"/>
 
             </div>   
         )

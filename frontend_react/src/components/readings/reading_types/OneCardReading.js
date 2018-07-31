@@ -2,11 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CardInfo from "../../cards/CardInfo";
 import { createReading } from '../../../store/readings/actions';
+import CardImage from '../../cards/CardImage'
 
 class OneCardReading extends React.Component {
 
     state = {
-        readingCards: [],
+        readingCards: ["empty"],
         clicked: false
     }
 
@@ -28,7 +29,7 @@ class OneCardReading extends React.Component {
         const card = [shuffledCards[0]]
 
         this.setState({
-            readingCards: shuffledCards[0],
+            readingCards: [shuffledCards[0]],
             clicked: true 
         })
         
@@ -45,9 +46,7 @@ class OneCardReading extends React.Component {
                     <button onClick={this.handleCardPull} >Reading </button>
                 </div>}
 
-                {this.state.clicked === true ? <CardInfo card={this.state.readingCards} /> : null }
-
-                <img src={this.getImage("Four of Wands")} alt="Image not Found"/>
+                {this.state.clicked === true ? this.state.readingCards.map(card => <CardImage card={card} />) : null }
 
             </div>   
         )

@@ -2,23 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CardInfo from "../../cards/CardInfo";
 import { createReading } from '../../../store/readings/actions';
+import CardImage from '../../cards/CardImage'
 
 class ThreeCardReading extends React.Component {
 
     state = {
-        readingCards: [],
+        readingCards: ["empty"],
         clicked: false
-    }
-
-    getImage = cardName => {
-        let formattedName = cardName
-        .split(" ")
-        .join("_")
-
-            // Put relative path in here
-        // let image = require() 
-
-        // return image
     }
     
 
@@ -46,7 +36,7 @@ class ThreeCardReading extends React.Component {
                 </div>}
 
                 {this.state.clicked === true && this.state.readingCards.length != 0 ? 
-                this.state.readingCards.map(card => <CardInfo key ={card.id} card={card} />) : null }
+                this.state.readingCards.map(card => <CardImage key={card.id} card={card} />) : null }
                 
 
             </div>   

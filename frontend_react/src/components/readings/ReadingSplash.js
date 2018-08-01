@@ -6,17 +6,13 @@ class ReadingSplash extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Do You want a new reading or to see old readings</h1>
+            <div className="reading-splash">
 
-                <ul>
-                    <li>
-                        <NavLink to="/readings/new" > New Reading </NavLink>
-                    </li>
-                    <li>
-                        <p>Link to Old Readings</p>
-                    </li>
-                </ul>
+                <h1>
+                    <NavLink to="/readings/new" > Start a new reading </NavLink>
+                </h1>
+
+                <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fpeopledotcom.files.wordpress.com%2F2017%2F08%2Ftarot-cards.jpg%3Fw%3D2000&w=1600&q=70" className="bg"/>
 
             </div>
         )

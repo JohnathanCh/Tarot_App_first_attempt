@@ -21,6 +21,33 @@ body, html {
   color: white;
 }
 
+#logout {
+  /* background: grey; */
+  background-image: url('https://lindaursin.net/wp-content/blogs.dir/26/files/2015/03/2-unicursal-hexagram-scan-contrast2-1080x764.jpg');
+  /* margin: auto; */
+}
+
+#nav-bar {
+  background: rgb(194, 200, 204);
+  margin: 0;
+  border-radius: 0;
+  color: white;
+}
+
+#navButton {
+  color: white;
+  margin: auto;
+}
+
+.new-reading-container {
+  background-image: url('https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fpeopledotcom.files.wordpress.com%2F2017%2F08%2Ftarot-cards.jpg%3Fw%3D2000&w=1600&q=70');
+}
+
+.reading-splash {
+  background-color: black;
+}
+
+
 
 /* .horizontal-scroll-wrapper {
     width: 100px;

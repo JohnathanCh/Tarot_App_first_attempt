@@ -45,8 +45,10 @@ class OneCardReading extends React.Component {
                {this.state.clicked === true ? null : <div>
                     <button onClick={this.handleCardPull} >Reading </button>
                 </div>}
-
-                {this.state.clicked === true ? this.state.readingCards.map(card => <CardImage card={card} />) : null }
+                
+                <div className="ui large images" >
+                    {this.state.clicked === true ? this.state.readingCards.map(card => <CardImage card={card} />) : null }
+                </div>
 
             </div>   
         )

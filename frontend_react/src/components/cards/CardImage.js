@@ -44,7 +44,9 @@ class CardImage extends React.Component {
         return (
             <div>
 
-                <img className="card-image" src={this.getImage(this.props.card.name)} alt="No Image Found" onClick={this.handleClick} />
+                <div className="ui medium images" > 
+                    <img className="card-image" src={this.getImage(this.props.card.name)} alt="No Image Found" onClick={this.handleClick} />
+                </div>
 
                {this.state.showInfo === true ? <CardInfo card={this.props.card} /> : null }
 

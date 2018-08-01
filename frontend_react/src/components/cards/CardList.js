@@ -17,7 +17,7 @@ class CardList extends React.Component {
     const cardList = this.props.cardList
     
        return (
-        <div>
+        <div className="card-list">
             <div className="horizontal-scroll-wrapper" >
                 {cardList.map(card => 
                 

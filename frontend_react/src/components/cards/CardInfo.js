@@ -14,12 +14,15 @@ const CardInfo = (props) => {
             props.selectCard(props.card)
             
         }
+
         return (
-            <div className="ui card centered" id="my-card" onClick={handleClick} >
+            <div className="ui card centered" id="my-card" onClick={handleClick} style={{"background-image": "url('https://blog-cdn.californiapsychics.com/blog/wp-content/blogs.dir/1/files/2018/07/weekly-tarot-reading_20180722_600x320.jpg')" }}>
                 <h1>{props.card.name}</h1>
                 <h3>{props.card.type} Arcana</h3>
-                <p>Meaning Upright: {props.card.meaning_up}</p>
-                <p>Meaning Reversed: {props.card.meaning_rev}</p>
+                <p><strong>Meaning Upright:</strong> {props.card.meaning_up}</p>
+                <p><strong>Meaning Reversed:</strong> {props.card.meaning_rev}</p>
+                <p><strong>Description:</strong> {props.card.desc} </p>
+
             </div>
         )
     
@@ -34,12 +37,12 @@ const CardInfo = (props) => {
     
 // })
 
-// const mapDispatchToProps = (dispatch, card) => ({
-//     selectCard: (card) => { 
-//         console.log(card);
+const mapDispatchToProps = (dispatch) => ({
+    selectCard: (card) => { 
+        console.log(card);
         
-//         dispatch(selectCardAction(card))
-//     }
-// })
+        dispatch(selectCardAction(card))
+    }
+})
 
-export default CardInfo;
+export default connect(null, mapDispatchToProps)(CardInfo);

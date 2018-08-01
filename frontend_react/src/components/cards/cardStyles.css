@@ -5,16 +5,19 @@
 
 
   #my-card {
+    color: white;
+    /* text-decoration-color: #000;
+    text-shadow: black; */
     height: 400px;
-    width: 300px;
+    width: 500px;
     overflow: auto;
     border: 3px solid black;
   }
 
   .horizontal-scroll-wrapper {
     max-width: 100%;
-    height: 500px;
-    margin: 10px auto;
+    /* height: 500px; */
+    /* margin: 10px auto; */
     background: rgb(74, 80, 82);
     border: 2px solid #000;
     display: flex;
@@ -26,4 +29,11 @@
   .card-image {
     height: 400px;
     width: 300px;
+  }
+
+  .card-list {
+    background-image: url('https://blog-cdn.californiapsychics.com/blog/wp-content/blogs.dir/1/files/2018/07/weekly-tarot-reading_20180722_600x320.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }

@@ -67,24 +67,18 @@ class ThreeCardReading extends React.Component {
                                  }>
                                  
                             <div className="my-modal">
-                            <Modal.Header>{this.props.clickedCard.name}</Modal.Header>
-                            <Modal.Content image>
-                                <Image wrapped size="medium" src={this.getImage(this.props.clickedCard.name)}/>
+                            <Modal.Header> <h1 >{this.props.clickedCard.name}</h1> </Modal.Header>
+                            <Modal.Content >
+                                <Image size="medium" src={this.getImage(this.props.clickedCard.name)}/>
                             <Modal.Description>
                                 <p>Meaning Upright: {this.props.clickedCard.meaning_up}</p>
-                                <p> Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
-                                <p>{this.props.clickedCard.desc}</p>
+                                <p>Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
+                                <p>Description: {this.props.clickedCard.desc}</p>
 
                             </Modal.Description>
                             </Modal.Content>
-                            <Modal.Actions>
-            <Button color='black' onClick={this.close()}>
-              CLOSE
-            </Button>
-          </Modal.Actions>
+
                             </div>
-
-
                             </Modal>
                             
                         ) 

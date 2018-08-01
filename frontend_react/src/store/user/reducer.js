@@ -26,6 +26,8 @@ const createUserReducer = (state = initialState, action) => {
                 }
 
         case actions.LOGIN_USER:
+        console.log("createUserReducer", state, action);
+        
 
                 return {
                     loggedIn: action.payload.loggedIn,

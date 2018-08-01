@@ -102,6 +102,18 @@ body, html {
 
 }
 
+.three-card-reading {
+  display: flex;
+  margin: auto;
+  align-content: center;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.my-modal {
+  margin-top: 300px;
+}
+
 
 
 

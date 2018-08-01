@@ -3,12 +3,30 @@ import { connect } from 'react-redux';
 import CardInfo from "../../cards/CardInfo";
 import { createReading } from '../../../store/readings/actions';
 import CardImage from '../../cards/CardImage'
+import { Modal, Image, Button } from 'semantic-ui-react'
 
 class ThreeCardReading extends React.Component {
 
+    show = dimmer => () => this.setState({ dimmer, open: true })
+    close = () => this.setState({ open: false })
+
     state = {
         readingCards: ["empty"],
-        clicked: false
+        clicked: false,
+        open: false
+    }
+
+    getImage = cardName => {
+        if (cardName != undefined) {
+        let formattedName = cardName
+        .split(" ")
+        .join("_")
+
+            // Put relative path in here
+        let image = require(`../../../Rider-Waite/${formattedName}.png`) 
+
+        return image
+        }
     }
     
 
@@ -26,30 +44,71 @@ class ThreeCardReading extends React.Component {
     }
 
     render() {
-        // console.log("propssss", this.state);
+        console.log("propssss", this.props);
+
+        const { open, dimmer } = this.state
         
         return (
-            <div>
+            <div >
                 <h1>Three Card Reading</h1>
                {this.state.clicked === true ? null : <div>
                     <button onClick={this.handleCardPull} >Reading </button>
                 </div>}
                 
-                <div className="ui medium images" >
-                    {this.state.clicked === true && this.state.readingCards.length != 0 ? 
-                    this.state.readingCards.map(card => <CardImage key={card.id} card={card} />) : null }
+                <div className="three-card-reading">
+                    <div className="ui medium images" >
+                        {this.state.clicked === true && this.state.readingCards.length != 0 ? 
+                        this.state.readingCards.map(card => 
+
+                        
+                            <Modal trigger={ <div onClick={this.show('blurring')} >
+                                 <CardImage key={card.id} card={card} />
+                                 </div>
+                                 }>
+                                 
+                            <div className="my-modal">
+                            <Modal.Header>{this.props.clickedCard.name}</Modal.Header>
+                            <Modal.Content image>
+                                <Image wrapped size="medium" src={this.getImage(this.props.clickedCard.name)}/>
+                            <Modal.Description>
+                                <p>Meaning Upright: {this.props.clickedCard.meaning_up}</p>
+                                <p> Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
+                                <p>{this.props.clickedCard.desc}</p>
+
+                            </Modal.Description>
+                            </Modal.Content>
+                            <Modal.Actions>
+            <Button color='black' onClick={this.close()}>
+              CLOSE
+            </Button>
+          </Modal.Actions>
+                            </div>
+
+
+                            </Modal>
+                            
+                        ) 
+                        
+                        : null }
+                             
+                    </div>
                 </div>
                 
+                
+                    
+
+               
 
             </div>   
         )
+    
     }
 }
 
 const mapStateToProps = (state) => {
-    // console.log("MSTP state", state.user.user);
     return ({
         cardList: [...state.cards.cardList],
+        clickedCard: {...state.cards.clickedCard},
         user: {...state.user.user}
     })
 }

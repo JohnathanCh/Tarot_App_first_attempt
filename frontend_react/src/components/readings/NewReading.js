@@ -25,6 +25,7 @@ export default class NewReading extends React.Component {
         
         return (
             <div className="new-reading-container">
+                <div className="reading-grey-box" >
                 {this.state.readingChose === true ? null : <h1>Select a reading type</h1> }
                 
 
@@ -45,7 +46,7 @@ export default class NewReading extends React.Component {
                     <Route path="/readings/new/5-card" component={ FiveCardReading } />
                 </Switch>
 
-
+                </div>
             </div>
         )
     }

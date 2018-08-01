@@ -6,7 +6,7 @@ const initialState = {
         name: '',
         email: ''
     },
-    loggedIn: true
+    loggedIn: false
 
 }
 
@@ -22,7 +22,6 @@ const createUserReducer = (state = initialState, action) => {
                 user: {
                     id: action.payload.user.id,
                     name: action.payload.user.name,
-                    email: action.payload.user.email
                 }
                 }
 
@@ -32,8 +31,7 @@ const createUserReducer = (state = initialState, action) => {
                     loggedIn: action.payload.loggedIn,
                     user: {
                         id: action.payload.user.id,
-                        name: action.payload.user.name,
-                        email: action.payload.user.email
+                        name: action.payload.user.username,
                     }
                     }
 

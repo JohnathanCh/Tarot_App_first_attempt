@@ -40,12 +40,68 @@ body, html {
 }
 
 .new-reading-container {
-  background-image: url('https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fpeopledotcom.files.wordpress.com%2F2017%2F08%2Ftarot-cards.jpg%3Fw%3D2000&w=1600&q=70');
+  background-image: url('http://www.luisasempere.com/wp-content/uploads/2017/02/green-leaves-dark-floral-wallpaper-right-here-high-quality-shocking-collection-vertically-hung-premium-material-featured-scenes.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* http://www.luisasempere.com/wp-content/uploads/2017/02/green-leaves-dark-floral-wallpaper-right-here-high-quality-shocking-collection-vertically-hung-premium-material-featured-scenes.jpg */
+/* http://bonitos.club/wp-content/uploads/2018/01/black-floral-fabric-fabric-freedom-black-ditsy-floral-black-floral-fabric-uk.jpg */
+/* http://bonitos.club/wp-content/uploads/2018/01/black-floral-fabric-like-this-item-floral-print-fabric-with-black-background.jpg */
+
+.reading-grey-box {
+  display: block;
+  margin: auto;
+  background: rgba(125, 131, 134, 0.5);
+  color: white;
 }
 
-.reading-splash {
-  background-color: black;
+/* .new-reading-container h1 {
+  display: block;
+  margin: auto;
+  background: rgba(125, 131, 134, 0.5);
+  color: white;
 }
+
+.new-reading {
+  display: block;
+  margin: auto;
+  background: rgba(125, 131, 134, 0.5);
+  width: 200px;
+} */
+
+.new-reading a {
+  color: white;
+}
+
+
+.reading-splash {
+  background-image: url('https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fpeopledotcom.files.wordpress.com%2F2017%2F08%2Ftarot-cards.jpg%3Fw%3D2000&w=1600&q=70');
+  height: 610px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.reading-splash .splash-header {
+  display: block;
+  align-items: center;
+  background: rgba(78, 83, 83, 0.589);
+  width: 400px;
+  height: 100px;
+}
+
+.reading-splash .splash-header a {
+  color: lightgrey;
+  margin: auto;
+}
+
+
+.reading-splash .splash-header a:hover {
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: rgb(110, 173, 175);
+
+}
+
 
 
 

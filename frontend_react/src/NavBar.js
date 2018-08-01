@@ -1,11 +1,14 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logoutUserAction } from './store/user/actions';
 
 class NavBar extends React.Component {
     // This Will handle the Logout inside redux and in localStorage
     handleLogout = () => {
         
         localStorage.clear()
+        this.props.logoutUser()
       }
 
     render() {
@@ -41,7 +44,13 @@ class NavBar extends React.Component {
     }
 }
 
-export default withRouter(NavBar);
+const MDTP = () => ({
+    logoutUser: (dispatch) => {
+        dispatch(logoutUserAction)
+    }
+})
+
+export default withRouter(connect(null, MDTP)(NavBar));
 
 
                 {/* <Switch >

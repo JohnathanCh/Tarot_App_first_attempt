@@ -16,7 +16,7 @@ const CardInfo = (props) => {
         }
 
         return (
-            <div className="ui card centered" id="my-card" onClick={handleClick} style={{"background-image": "url('https://blog-cdn.californiapsychics.com/blog/wp-content/blogs.dir/1/files/2018/07/weekly-tarot-reading_20180722_600x320.jpg')" }}>
+            <div className="ui card centered" id="my-card" onClick={handleClick} >
                 <h1>{props.card.name}</h1>
                 <h3>{props.card.type} Arcana</h3>
                 <p><strong>Meaning Upright:</strong> {props.card.meaning_up}</p>

@@ -50,6 +50,7 @@ class Signup extends React.Component {
         e.preventDefault()
 
         this.props.handleCreateUser({...this.state.user})
+        // localStorage.setItem('token', user.jwt)
     }
 
 

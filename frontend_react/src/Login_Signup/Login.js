@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { getUser } from "../store/user/actions";
 
 class Login extends React.Component {
 
@@ -9,14 +10,12 @@ class Login extends React.Component {
         password: ''
     }
 
-    // handleLogin = (user) => {
-    //     this.setState({
-    //         auth: {
-    //           currentUser: user
-    //         }
-    //       })
-    //     localStorage.setItem('token', user.jwt)
-    // }
+    handleLogin = (e) => {
+        e.preventDefault()
+        console.log('Popopops', this.state.password);
+        
+        this.props.loginUser(this.state.user_email, this.state.password)
+    }
 
     // handleLogout = () => {
     //     this.setState({
@@ -27,28 +26,27 @@ class Login extends React.Component {
     //     localStorage.clear()
     //   }
 
-    login = (e) => {
-        e.preventDefault()
+    // login = (e) => {
+    //     e.preventDefault()
 
-        const options = {
-             method: 'POST',
-             headers: {
-                 'Content-Type': 'application/json',
-                 'Accept': 'application/json'
-             },
-             body: JSON.stringify({
-                 user_email: this.state.user_email,
-                 password: this.state.password
-             })
-         }
-         fetch('http://localhost:3000/auth', options)
-         .then(resp => resp.json())
-         .then(info => {console.log("Login", info.jwt);
-         })
-     }
+    //     const options = {
+    //          method: 'POST',
+    //          headers: {
+    //              'Content-Type': 'application/json',
+    //              'Accept': 'application/json'
+    //          },
+    //          body: JSON.stringify({
+    //              user_email: this.state.user_email,
+    //              password: this.state.password
+    //          })
+    //      }
+    //      fetch('http://localhost:3000/auth', options)
+    //      .then(resp => resp.json())
+    //      .then(user => {console.log("Login", user);
+    //      })
+    //  }
 
      handleEmailInput = (e) => {
-        console.log("Mail", e.currentTarget.value);
         this.setState({
             user_email: e.currentTarget.value
         })
@@ -56,7 +54,6 @@ class Login extends React.Component {
      }
 
      handlePasswordInput = (e) => {
-        console.log("pass", e.currentTarget.value);
         this.setState({
             password: e.currentTarget.value
         })
@@ -66,7 +63,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-            <form onSubmit={this.login}>
+            <form onSubmit={this.handleLogin}>
 
                     <label htmlFor="user_email">Email</label>
                     <input type="text" name="user_email" placeholder="Enter your Email" onChange={this.handleEmailInput}/>
@@ -81,4 +78,10 @@ class Login extends React.Component {
     }
 }
 
-export default connect(null, null)(Login);
+const mapDispatchToProps = (dispatch) => ({
+    loginUser: (email, password) => {
+        dispatch(getUser(email, password))
+    }
+})
+
+export default connect(null, mapDispatchToProps)(Login);

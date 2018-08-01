@@ -14,16 +14,23 @@ export const createUserAction= (user) => ({
     }
 })
 
-export const loginUserAction= (user) => ({
+export const loginUserAction= (email, name) => ({
     type: LOGIN_USER,
     payload: {
-        user: {...user},
+        user: {
+            name: name,
+            email: email
+        },
         loggedIn: true
     }
 })
 
 export const logoutUserAction = () => ({
-    type: LOGOUT_USER
+    type: LOGOUT_USER,
+    payload: {
+        user: {},
+        loggedIn: false
+    }
 })
 
 
@@ -50,10 +57,23 @@ export const createUser = (user) => {
 }
 
 // Should I use email here instead of ID?
-export const getUser = (id) => {
+export const getUser = (email, password) => {
     return function thunk(dispatch) {
-        fetch(`http://localhost:3000/users/${id}`)
+        console.log("inside getUser Thunk", email, password);
+        
+        let options = {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                user_email: email,
+                password: password
+            })
+        }
+        fetch(`http://localhost:3000/auth`, options)
         .then(resp => resp.json())
-        .then(user => dispatch(loginUserAction(user)))
+        .then(user => { dispatch(loginUserAction(user.email, user.name)), localStorage.setItem('token', user.jwt) })
     }
 }

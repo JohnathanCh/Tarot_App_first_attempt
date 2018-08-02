@@ -19,6 +19,10 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchAllCards()
+
+    if (localStorage.token === undefined || this.props.user.loggedIn === false) {
+      this.props.history.push('/');
+    }
   }
 
   render() {

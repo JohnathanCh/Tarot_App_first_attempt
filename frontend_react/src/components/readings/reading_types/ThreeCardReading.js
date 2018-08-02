@@ -49,19 +49,21 @@ class ThreeCardReading extends React.Component {
         const { open, dimmer } = this.state
         
         return (
-            <div >
+            <div className="three-card-reading">
                 <h1>Three Card Reading</h1>
+                <h4>Click the cards to get a description of what they mean</h4>
                {this.state.clicked === true ? null : <div>
-                    <button onClick={this.handleCardPull} >Reading </button>
+                    <button onClick={this.handleCardPull} > Pull Cards </button>
                 </div>}
                 
-                <div className="three-card-reading">
+                <div className="cards">
                     <div className="ui medium images" >
                         {this.state.clicked === true && this.state.readingCards.length != 0 ? 
                         this.state.readingCards.map(card => 
 
                         
-                            <Modal trigger={ <div onClick={this.show('blurring')} >
+                            <Modal trigger={ 
+                                <div onClick={this.show('blurring')} className="image-card" >
                                  <CardImage key={card.id} card={card} />
                                  </div>
                                  }>

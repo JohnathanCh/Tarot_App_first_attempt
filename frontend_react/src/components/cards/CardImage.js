@@ -16,7 +16,6 @@ class CardImage extends React.Component {
         .split(" ")
         .join("_")
 
-            // Put relative path in here
         let image = require(`../../Rider-Waite/${formattedName}.png`) 
 
         return image
@@ -30,16 +29,9 @@ class CardImage extends React.Component {
             this.props.history.push(`/cards/${this.props.card.id}`)
         }
         
-
-        // let changeState = !this.state.showInfo
-        // this.setState({
-        //     showInfo: changeState
-        // })
-        
     }
 
     render() {
-        // console.log("CardImage", this.props);
         
         return (
             <div>
@@ -56,9 +48,7 @@ class CardImage extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    selectCard: (card) => { 
-        // console.log(card);
-        
+    selectCard: (card) => {         
         dispatch(selectCardAction(card))
     }
 })

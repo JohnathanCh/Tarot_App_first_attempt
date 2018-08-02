@@ -7,6 +7,7 @@ import readingReducer from "./readings/reducer";
 
 
 const middleWare = applyMiddleware(thunk)
+
 const reducers = combineReducers({
     cards: cardListReducer,
     user: createUserReducer,

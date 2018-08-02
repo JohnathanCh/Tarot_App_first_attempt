@@ -13,7 +13,6 @@ class CardList extends React.Component {
     }
 
    render() {
-    console.log("CardList Component", this.props);
     const cardList = this.props.cardList
     
        return (
@@ -47,7 +46,8 @@ const mapStateToProps = (state, ownprops) => {
     
     const selected = state.cards.clickedCard.id ? state.cards.clickedCard : state.cards.cardList.find(card => card.id === ownprops.match.params.id)
     
-   return {cardList: state.cards.cardList,
+   return {
+    cardList: state.cards.cardList,
     selectedCard: selected || null
    }
 }

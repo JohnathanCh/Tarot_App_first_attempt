@@ -7,8 +7,9 @@ class NavBar extends React.Component {
     // This Will handle the Logout inside redux and in localStorage
     handleLogout = () => {
         
-        localStorage.clear()
-        this.props.logoutUser()
+        localStorage.clear();
+        this.props.logoutUser();
+        this.props.history.push('/');
       }
 
     render() {
@@ -44,9 +45,9 @@ class NavBar extends React.Component {
     }
 }
 
-const MDTP = () => ({
-    logoutUser: (dispatch) => {
-        dispatch(logoutUserAction)
+const MDTP = (dispatch) => ({
+    logoutUser: () => {
+        dispatch(logoutUserAction())
     }
 })
 

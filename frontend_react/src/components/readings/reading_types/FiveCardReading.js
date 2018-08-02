@@ -60,6 +60,7 @@ class ThreeCardReading extends React.Component {
                     <button onClick={this.handleCardPull} >Reading </button>
                 </div>}
 
+                <div className="five-card-reading" >
                 <div className="ui medium images" >
                 {this.state.clicked === true && this.state.readingCards.length != 0 ? 
                         this.state.readingCards.map(card => 
@@ -88,6 +89,7 @@ class ThreeCardReading extends React.Component {
                         ) 
                         
                         : null }
+                </div>
                 </div>
             </div>   
         )

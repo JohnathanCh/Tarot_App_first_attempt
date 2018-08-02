@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from "react-redux";
 
-export default class Profile extends React.Component {
+class Profile extends React.Component {
 
     render() {
         return (
@@ -13,3 +14,10 @@ export default class Profile extends React.Component {
         )
     }
 }
+
+const mapStateToProps = (state) => ({
+    cardList: [...state.cards.cardList],
+    user: {...state.user.user}
+})
+
+export default connect(mapStateToProps)(Profile);

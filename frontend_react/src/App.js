@@ -36,7 +36,7 @@ class App extends Component {
 
         {!user.loggedIn ? <div>
           <header className="App-header">
-            <img src={image} className="App-logo" alt="logo" />
+            <marquee scrollamount="5" direction="right"><img src={image} className="App-logo" alt="logo" /></marquee>
           </header> 
           <Login />
           {/* <Signup />  */}

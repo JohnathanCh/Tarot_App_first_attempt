@@ -127,25 +127,6 @@ body, html {
 }
 
 
-
-/* .three-card-reading {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .five-card-reading {
-  max-width: 100%;
-  background: rgb(0, 0, 0, 0.20);
-  border: 2px solid #000;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  overflow-x: scroll;
-  white-space: normal;
-} */
-
 .my-modal {
   margin-top: 300px;
   width: 100%;
@@ -159,21 +140,15 @@ body, html {
 
 }
 
-/* display: flex;
-flex-direction: ltr;
-margin: auto;
-align-content: center;
-overflow-y: scroll; */
-
-
-/* .horizontal-scroll-wrapper {
-    width: 100px;
-    height: 300px;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .horizontal-scroll-wrapper > div {
-    width: 100px;
-    height: 100px;
-  } */
+.horizontal-scroll {
+  color: white;
+  max-width: 100%;
+  max-height: 600px;
+  /* margin: 10px auto; */
+  background: rgb(49, 86, 99);
+  border: 2px solid #000;
+  display: flex;
+  align-content: center;
+  overflow-x: scroll;
+  white-space: normal;
+}

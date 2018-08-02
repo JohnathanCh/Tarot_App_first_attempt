@@ -27,13 +27,13 @@ class NavBar extends React.Component {
 
                 
                     <NavLink to="/readings">
-                        <button id="navButton" className="item" > Readings </button>
+                        <button id="navButton" className="item" > New Reading </button>
                     </NavLink>
                  
 
                 
                     <NavLink to="/profile">
-                        <button id="navButton" className="item" > Profile </button> 
+                        <button id="navButton" className="item" > Past Readings </button> 
                     </NavLink>
 
                     

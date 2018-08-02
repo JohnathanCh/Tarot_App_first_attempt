@@ -17,35 +17,6 @@ class Login extends React.Component {
         this.props.loginUser(this.state.user_email, this.state.password)
     }
 
-    // handleLogout = () => {
-    //     this.setState({
-    //       auth: {
-    //         currentUser: {}
-    //       }
-    //     })
-    //     localStorage.clear()
-    //   }
-
-    // login = (e) => {
-    //     e.preventDefault()
-
-    //     const options = {
-    //          method: 'POST',
-    //          headers: {
-    //              'Content-Type': 'application/json',
-    //              'Accept': 'application/json'
-    //          },
-    //          body: JSON.stringify({
-    //              user_email: this.state.user_email,
-    //              password: this.state.password
-    //          })
-    //      }
-    //      fetch('http://localhost:3000/auth', options)
-    //      .then(resp => resp.json())
-    //      .then(user => {console.log("Login", user);
-    //      })
-    //  }
-
      handleEmailInput = (e) => {
         this.setState({
             user_email: e.currentTarget.value
@@ -62,7 +33,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="login-form">
             <form onSubmit={this.handleLogin}>
 
                     <label htmlFor="user_email">Email</label>

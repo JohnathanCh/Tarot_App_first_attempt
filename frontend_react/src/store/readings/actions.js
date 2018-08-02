@@ -44,7 +44,7 @@ export const createReading = (readingCards, user) => {
 
         fetch('http://localhost:3000/readings', options)
         .then(resp => resp.json())
-        .then(reading => {console.log(reading)})
+        .then(reading => {console.log("This is a popsicle stick I'm useing to keep the castle standing")})
     }
 }
 

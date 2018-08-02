@@ -9,13 +9,14 @@ class ReadingsController < ApplicationController
     end
 
     def show
-        # @user = User.all.find(params[:user][:id])
+
 
     end
 
     def create
         # Update the reading_name to have a better version of the Date Time with strftime
-        @reading = Reading.new(reading_name: "#{params[:user][:name]} - #{DateTime.now}")
+        # %b %e %Y %I %p
+        @reading = Reading.new(reading_name: "#{params[:user][:name]} - #{DateTime.now.strftime("%b%e %Y %I%p")}")
 
         @user = User.all.find(params[:user][:id])
         @cards = params[:readingCards]

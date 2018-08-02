@@ -2,6 +2,7 @@
 export const CREATE_USER = "CREATE_USER"
 export const LOGIN_USER = "LOGIN_USER"
 export const LOGOUT_USER = "LOGOUT_USER"
+export const GET_READINGS = "GET_READINGS"
 
 
 
@@ -31,6 +32,13 @@ export const logoutUserAction = () => ({
     }
 })
 
+export const userReadingsAction = (readings) => ({
+    type: GET_READINGS,
+    payload: {
+        readings: readings
+    }
+})
+
 
 
 /*--------------- Thunk Creator ---------------*/
@@ -50,7 +58,7 @@ export const createUser = (user) => {
 
         fetch('http://localhost:3000/users', options)
         .then(resp => resp.json())
-        .then(user => dispatch(createUserAction(user)))
+        .then(user => {dispatch(createUserAction(user)); localStorage.setItem('token', user.jwt)})
     }
 }
 
@@ -75,5 +83,14 @@ export const getUser = (email, password) => {
         .then(resp => resp.json())
         .then(user => { dispatch(loginUserAction(user));
         ; localStorage.setItem('token', user.jwt) })
+    }
+}
+
+export const getUserReadings = (id) => {
+    return function thunk(dispatch) {
+
+        fetch(`http://localhost:3000/users/${id}`)
+        .then(resp => resp.json())
+        .then(userReadings => dispatch(userReadingsAction(userReadings)))
     }
 }

@@ -6,7 +6,8 @@ const initialState = {
         name: '',
         email: ''
     },
-    loggedIn: false
+    loggedIn: false,
+    readings: []
 
 }
 
@@ -22,20 +23,33 @@ const createUserReducer = (state = initialState, action) => {
                 user: {
                     id: action.payload.user.id,
                     name: action.payload.user.name,
-                }
-                }
+                },
+                readings: state.readings
+            }
 
-        case actions.LOGIN_USER:
-        console.log("createUserReducer", state, action);
-        
+        case actions.LOGIN_USER:        
 
                 return {
                     loggedIn: action.payload.loggedIn,
                     user: {
                         id: action.payload.user.id,
                         name: action.payload.user.username,
-                    }
-                    }
+                    },
+                    readings: state.readings
+                }
+
+        case actions.GET_READINGS:
+        console.log("USER REDUCER", state, action);
+
+            return {
+                loggedIn: state.loggedIn,
+                user: {
+                    ...state.user
+                },
+                readings: action.payload.readings
+            }
+        
+
 
         case actions.LOGOUT_USER:
                 

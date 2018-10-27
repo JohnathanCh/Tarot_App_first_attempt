@@ -1,6 +1,6 @@
 module api
     module v1
-        class AuthsController < ApplicationController
+        class AuthController < ApplicationController
 
             def create
                 # byebug

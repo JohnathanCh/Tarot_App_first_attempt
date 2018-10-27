@@ -13,13 +13,17 @@ module api
                 @readings = @user.readings
         
                 @userReadings = []
+
                 @readings.each do |reading|
-        
                     @userReadings.push({readingName: reading.reading_name, readingCards: [*reading.cards]})
         
                 end
         
                 render json: @userReadings
+            end
+
+            def create
+                @user
             end
 
         end

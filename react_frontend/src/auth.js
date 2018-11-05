@@ -6,9 +6,9 @@ export default class Auth extends Component {
         return(
         <form> 
             <label>
-                Username:
+                user_name:
             </label>
-            <input type="text" name="username"/>
+            <input type="text" name="user_name"/>
 
             <label>
                 Password:

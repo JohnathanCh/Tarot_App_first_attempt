@@ -15,7 +15,7 @@ module api
                 @userReadings = []
 
                 @readings.each do |reading|
-                    @userReadings.push({readingName: reading.reading_name, readingCards: [*reading.cards]})
+                    @userReadings.push({readingName: reading.reading_title, readingCards: [*reading.cards]})
         
                 end
         

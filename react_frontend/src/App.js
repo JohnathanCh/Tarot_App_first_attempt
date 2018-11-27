@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Auth from './auth';
+import MenuExampleTabularOnLeft from './navbar'
+
 
 class App extends Component {
   render() {
@@ -9,15 +11,8 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Auth></Auth>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <MenuExampleTabularOnLeft/>
+          <Auth/>
         </header>
       </div>
     );

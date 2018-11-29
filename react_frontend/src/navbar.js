@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Grid, Menu, Segment } from '/Users/admin/Desktop/tarot_app/react_frontend/node_modules/semantic-ui-react/dist/es/index.js'
+import { Menu } from 'semantic-ui-react'
 
-export default class MenuExampleTabularOnLeft extends Component {
-  state = { activeItem: 'bio' }
+export default class MenuExampleBasic extends Component {
+  state = {}
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -10,30 +10,27 @@ export default class MenuExampleTabularOnLeft extends Component {
     const { activeItem } = this.state
 
     return (
-      <Grid>
-        <Grid.Column width={4}>
-          <Menu fluid vertical tabular>
-            <Menu.Item name='bio' active={activeItem === 'bio'} onClick={this.handleItemClick} />
-            <Menu.Item name='pics' active={activeItem === 'pics'} onClick={this.handleItemClick} />
-            <Menu.Item
-              name='companies'
-              active={activeItem === 'companies'}
-              onClick={this.handleItemClick}
-            />
-            <Menu.Item
-              name='links'
-              active={activeItem === 'links'}
-              onClick={this.handleItemClick}
-            />
-          </Menu>
-        </Grid.Column>
+      <Menu>
+        <Menu.Item
+          name='profile'
+          active={activeItem === 'profile'}
+          onClick={this.handleItemClick}
+        >
+          Profile
+        </Menu.Item>
 
-        <Grid.Column stretched width={12}>
-          <Segment>
-            This is an stretched grid column. This segment will always match the tab height
-          </Segment>
-        </Grid.Column>
-      </Grid>
+        <Menu.Item name='readings' active={activeItem === 'readings'} onClick={this.handleItemClick}>
+          Readings
+        </Menu.Item>
+
+        <Menu.Item
+          name='logout'
+          active={activeItem === 'logout'}
+          onClick={this.handleItemClick}
+        >
+          Logout
+        </Menu.Item>
+      </Menu>
     )
   }
 }

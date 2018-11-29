@@ -8,11 +8,7 @@ export default class Auth extends Component {
             <label>
                 user_name:
             </label>
-<<<<<<< HEAD
             <input type="text" name="user_name" className="username"/>
-=======
-            <input type="text" name="user_name"/>
->>>>>>> 150e3cfe0d1636492e80f1cb22068e1a1743f2b1
 
             <label>
                 Password:

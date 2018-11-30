@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
+import { connect, dispatch } from 'redux';
 
-export default class Auth extends Component {
+class Auth extends Component {
+
+    state = {
+        user: {
+            user_name: '',
+            email: ''
+        }
+    }
 
     render() {
         return(
@@ -24,3 +32,5 @@ export default class Auth extends Component {
         </form>
     )}
 }
+
+export default connect(mapDispatchToProps)

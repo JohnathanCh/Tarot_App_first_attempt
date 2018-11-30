@@ -1,5 +1,5 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
 
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 const initialState = {
     stuff: true

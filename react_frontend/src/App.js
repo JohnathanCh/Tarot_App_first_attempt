@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-import Auth from './auth';
+import Signup from './Auth';
 import MenuExampleTabularOnLeft from './navbar'
+import { Provider } from 'react-redux'
+import store from './store/index'
+// import Login from './Login';
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-      <MenuExampleTabularOnLeft/>
-      <Auth/>
-      </div>
+      <Provider store={store} >
+        <div className="App">
+        <MenuExampleTabularOnLeft/>
+        <Signup />
+        </div>
+      </Provider>
     );
   }
 }

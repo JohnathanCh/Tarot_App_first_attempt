@@ -62,11 +62,10 @@ export const createUser = (user) => {
     }
 }
 
-// Should I use email here instead of ID?
 export const getUser = (email, password) => {
     
     return function thunk(dispatch) {
-        // console.log("inside getUser Thunk", email, password);
+        console.log("inside getUser Thunk", email, password);
         
         let options = {
             method: "POST",

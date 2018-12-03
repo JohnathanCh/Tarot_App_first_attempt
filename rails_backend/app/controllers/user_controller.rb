@@ -1,5 +1,7 @@
-module api
-    module v1
+require 'pry'
+
+# module api
+#     module v1
         class UsersController < ApplicationController
 
             def index
@@ -23,9 +25,10 @@ module api
             end
 
             def create
+                binding.pry
                 @user
             end
 
         end
-    end
-end
+#     end
+# end

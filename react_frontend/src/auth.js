@@ -42,7 +42,7 @@ class Signup extends Component {
             <button type='submit' name="Submit"/>
 
             <h2>
-                If you don't have an account yet... Then you can create one <bold>here</bold>
+                If you don't have an account yet... Then you can create one here
             </h2>
         </form>
     )}

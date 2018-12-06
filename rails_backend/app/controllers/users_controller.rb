@@ -41,3 +41,7 @@ require 'pry'
 # user_name = params['user']['user_name']
 # email = params['user']['email']
 # password = params['user']['password']
+
+# RESPONSE 
+# [1] pry(#<UsersController>)> params
+# => <ActionController::Parameters {"user"=><ActionController::Parameters {"user_name"=>"name", "password"=>"pass", "email"=>"email"} permitted: false>, "controller"=>"users", "action"=>"create"} permitted: false>

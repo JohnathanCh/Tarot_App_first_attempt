@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Signup from './Auth'
+import Signup from './auth';
 import MenuExampleTabularOnLeft from './navbar';
 import { Provider } from 'react-redux';
 import store from './store/index';

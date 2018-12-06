@@ -12,6 +12,39 @@ class Signup extends Component {
         }
     }
 
+    handleUsernameInput = (e) => {
+        // console.log("username: " + e.target.value)
+        this.setState({
+            user: {
+                user_name: e.target.value,
+                password: this.state.user.password,
+                email: this.state.user.email
+            }
+        })
+    }
+
+    handleEmailInput = (e) => {
+        // console.log("Email: " + e.target.value)
+        this.setState({
+            user: {
+                user_name: this.state.user.user_name,
+                password: this.state.user.password,
+                email: e.target.value
+            }
+        })
+    }
+
+    handlePasswordInput = (e) => {
+        // console.log("Password: " + e.target.value)
+        this.setState({
+            user: {
+                user_name: this.state.user.user_name,
+                password: e.target.value,
+                email: this.state.user.email
+            }
+        })
+    }
+
     handleSubmit = (e) => {
         e.preventDefault()
         console.log(e.target)
@@ -27,18 +60,18 @@ class Signup extends Component {
             <label>
                 Username:
             </label>
-            <input type="text" name="user_name" placeholder="username" />
-
-            <label>
-                Password:
-            </label>
-            <input type ="password" name="password" placeholder="password"/>
+            <input type="text" name="user_name" placeholder="username" onChange={this.handleUsernameInput}/>
 
             <label> 
                 Email: 
             </label>
-            <input type="text" name="email" placeholder="email" />
+            <input type="text" name="email" placeholder="email" onChange={this.handleEmailInput}/>
             
+            <label>
+                Password:
+            </label>
+            <input type ="password" name="password" placeholder="password" onChange={this.handlePasswordInput}/>
+
             <button type='submit' name="Submit"/>
 
             <h2>

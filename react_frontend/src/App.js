@@ -4,18 +4,24 @@ import Signup from './auth';
 import MenuExampleTabularOnLeft from './navbar';
 import { Provider } from 'react-redux';
 import store from './store/index';
-// import Login from './Login';
+import { Router, Switch, Route } from 'react-router';
+import createBrowserHistory from "history/createBrowserHistory";
+
+const history = createBrowserHistory()
 
 
 class App extends Component {
   render() {
     return (
-      <Provider store={store} >
-        <div className="App">
-        <MenuExampleTabularOnLeft/>
-        <Signup />
-        </div>
-      </Provider>
+      <Router history={history}>
+        <Provider store={store} >
+          <div className="App">
+            <MenuExampleTabularOnLeft/>
+            <Signup/>
+
+          </div>
+        </Provider>
+      </Router>
     );
   }
 }

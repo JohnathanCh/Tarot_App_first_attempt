@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import store from './store/index';
 import { Router, Switch, Route } from 'react-router';
 import createBrowserHistory from "history/createBrowserHistory";
+import Welcome from './welcome/welcome';
 
 const history = createBrowserHistory()
 
@@ -17,7 +18,7 @@ class App extends Component {
         <Provider store={store} >
           <div className="App">
             <MenuExampleTabularOnLeft/>
-            <Signup/>
+            <Welcome/>
 
           </div>
         </Provider>

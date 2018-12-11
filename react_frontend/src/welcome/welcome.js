@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { createUser } from '../store/user/actions';
 
@@ -57,28 +56,31 @@ class Welcome extends Component{
 
     render() {
         return(
-            <form onSubmit={this.handleSubmit}> 
-                <label>
-                    Username:
-                </label>
-                <input type="text" name="user_name" placeholder="username" onChange={this.handleUsernameInput}/>
+            <div>
+                <h1>WELCOME</h1>
+                <form onSubmit={this.handleSubmit}> 
+                    <label>
+                        Username:
+                    </label>
+                    <input type="text" name="user_name" placeholder="username" onChange={this.handleUsernameInput}/>
 
-                <label> 
-                    Email: 
-                </label>
-                <input type="text" name="email" placeholder="email" onChange={this.handleEmailInput}/>
-                
-                <label>
-                    Password:
-                </label>
-                <input type ="password" name="password" placeholder="password" onChange={this.handlePasswordInput}/>
+                    <label> 
+                        Email: 
+                    </label>
+                    <input type="text" name="email" placeholder="email" onChange={this.handleEmailInput}/>
+                    
+                    <label>
+                        Password:
+                    </label>
+                    <input type ="password" name="password" placeholder="password" onChange={this.handlePasswordInput}/>
 
-                <button type='submit' name="Submit"/>
+                    <button type='submit' name="Submit"/>
 
-                <h2>
-                    If you don't have an account yet... Then you can create one here
-                </h2>
-            </form>
+                    <h2>
+                        If you don't have an account yet... Then you can create one here
+                    </h2>
+                </form>
+            </div>
     )}
 }
 

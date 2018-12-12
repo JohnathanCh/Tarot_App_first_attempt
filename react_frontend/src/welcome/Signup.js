@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createUser } from '../store/user/actions'
 
 class Signup extends Component{
     state = {
         loggedIn: false,
-        user: {
+        userInfo: {
             user_name: '',
             password: '',
             email: ''
@@ -13,7 +15,7 @@ class Signup extends Component{
     handleUsernameInput = (e) => {
         // console.log("username: " + e.target.value)
         this.setState({
-            user: {
+            userInfo: {
                 user_name: e.target.value,
                 password: this.state.user.password,
                 email: this.state.user.email
@@ -24,7 +26,7 @@ class Signup extends Component{
     handleEmailInput = (e) => {
         // console.log("Email: " + e.target.value)
         this.setState({
-            user: {
+            userInfo: {
                 user_name: this.state.user.user_name,
                 password: this.state.user.password,
                 email: e.target.value
@@ -35,7 +37,7 @@ class Signup extends Component{
     handlePasswordInput = (e) => {
         // console.log("Password: " + e.target.value)
         this.setState({
-            user: {
+            userInfo: {
                 user_name: this.state.user.user_name,
                 password: e.target.value,
                 email: this.state.user.email
@@ -53,8 +55,7 @@ class Signup extends Component{
     render() {
         return(
             <div>
-                <h1>Welcome to Three Seeds Tarot App</h1>
-
+                <h3>Signup</h3>
 
                 <form onSubmit={this.handleSubmit}> 
                     <label>
@@ -77,3 +78,15 @@ class Signup extends Component{
             </div>
     )}
 }
+
+// const mapStateToProps = (state) => ({
+//     userInfo: {...state.user.userInfo}
+// })
+
+const mapDispatchToProps = (dispatch) => ({
+    handleCreateUser: user => {
+        dispatch(createUser(user))
+    }
+})
+
+export default connect(null, mapDispatchToProps)(Signup)

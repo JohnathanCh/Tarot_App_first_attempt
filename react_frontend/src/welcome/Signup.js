@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { createUser } from '../store/user/actions';
 
-class Welcome extends Component{
+class Signup extends Component{
     state = {
-        loggedIn: this.props.user.loggedIn,
-        user: {...this.props.user}
+        loggedIn: false,
+        user: {
+            user_name: '',
+            password: '',
+            email: ''
+        }
     }
 
     handleUsernameInput = (e) => {
@@ -43,20 +45,12 @@ class Welcome extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(e.target)
 
         this.props.handleCreateUser({...this.state.user})
-
     }
 
 
     render() {
-        console.log(this.props);
-        console.log(this.props.user.loggedIn);
-        // console.log(this.state);
-        
-        console.log("^^ props inside the welcome page ^^")
-        
         return(
             <div>
                 <h1>Welcome to Three Seeds Tarot App</h1>
@@ -83,15 +77,3 @@ class Welcome extends Component{
             </div>
     )}
 }
-
-const mapStateToProps = (state) => ({
-    user: {...state.user}
-})
-
-const mapDispatchToProps = (dispatch) => ({
-    handleCreateUser: user => {
-        dispatch(createUser(user))
-    }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Welcome)

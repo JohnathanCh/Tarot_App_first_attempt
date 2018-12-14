@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 // import { createUser } from '../store/user/actions';
 import Signup from './Signup';
 import Login from './Login';
@@ -64,7 +65,9 @@ class Welcome extends Component{
             <div>
                 <h1>Welcome to Three Seeds Tarot App</h1>
 
-                
+                <Login/>
+
+                <h3>If you don't have a Profile already, you can sign up <Link to="/signup">Here</Link></h3>
             </div>
     )}
 }

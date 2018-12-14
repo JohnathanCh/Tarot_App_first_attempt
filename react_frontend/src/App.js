@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
-import MenuExampleTabularOnLeft from './navbar';
 import { Provider } from 'react-redux';
+import createBrowserHistory from "history/createBrowserHistory";
 import store from './store/index';
 import { Router, Switch, Route } from 'react-router';
-import createBrowserHistory from "history/createBrowserHistory";
+
+import './App.css';
+import Navbar from './navbar';
 import Welcome from './welcome/welcome';
+import Signup from './welcome/Signup'
+
 
 const history = createBrowserHistory()
 
@@ -16,10 +19,10 @@ class App extends Component {
       <Router history={history}>
         <Provider store={store} >
           <div className="App">
-            <MenuExampleTabularOnLeft/>
-            <Route path="/" Component={Welcome}/>
-            
+            <Navbar/>
 
+            <Route path="/" exact component={Welcome}/>
+            <Route path="/signup" exact component={Signup} /> 
           </div>
         </Provider>
       </Router>

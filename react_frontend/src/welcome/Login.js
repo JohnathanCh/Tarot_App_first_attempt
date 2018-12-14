@@ -72,7 +72,6 @@ class Login extends Component{
 
                     <button type='submit' name="Submit"/>
                 </form>
-                <h3>Don't have an account? <Link to="/signup">Signup Here</Link></h3>
             </div>
     )}
 }

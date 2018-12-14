@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Signup from './auth';
 import MenuExampleTabularOnLeft from './navbar';
 import { Provider } from 'react-redux';
 import store from './store/index';
@@ -18,7 +17,8 @@ class App extends Component {
         <Provider store={store} >
           <div className="App">
             <MenuExampleTabularOnLeft/>
-            <Welcome/>
+            <Route path="/" Component={Welcome}/>
+            
 
           </div>
         </Provider>

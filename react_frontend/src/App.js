@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import createBrowserHistory from "history/createBrowserHistory";
-import store from './store/index';
+import store from './store/Index';
 import { Router, Switch, Route } from 'react-router';
 
 import './App.css';
 import Navbar from './navbar';
-import Welcome from './welcome/welcome';
+import Welcome from './welcome/Welcome';
 import Signup from './welcome/Signup'
 
 

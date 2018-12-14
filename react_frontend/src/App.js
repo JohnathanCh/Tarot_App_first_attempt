@@ -11,9 +11,7 @@ import Signup from './welcome/Signup'
 import Readings from './components/Readings/Readings'
 import Profile from './components/Profile/Profile'
 
-
 const history = createBrowserHistory()
-
 
 class App extends Component {
   render() {

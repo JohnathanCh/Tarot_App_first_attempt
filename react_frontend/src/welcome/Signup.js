@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createUser } from '../store/user/actions'
+import { createUser } from '../store/user/actions';
+import { Button } from 'semantic-ui-react';
 
 class Signup extends Component{
     state = {
@@ -73,7 +74,7 @@ class Signup extends Component{
                     </label>
                     <input type ="password" name="password" placeholder="password" onChange={this.handlePasswordInput}/>
 
-                    <button type='submit' name="Submit"/>
+                    <Button type='submit' name="Submit"/>
                 </form>
             </div>
     )}

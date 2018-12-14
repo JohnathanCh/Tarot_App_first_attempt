@@ -8,6 +8,8 @@ import './App.css';
 import Navbar from './navbar';
 import Welcome from './welcome/Welcome';
 import Signup from './welcome/Signup'
+import Readings from './components/Readings/Readings'
+import Profile from './components/Profile/Profile'
 
 
 const history = createBrowserHistory()
@@ -21,8 +23,10 @@ class App extends Component {
           <div className="App">
             <Navbar/>
 
-            <Route path="/" exact component={Welcome}/>
-            <Route path="/signup" exact component={Signup} /> 
+            <Route exact path="/" component={Welcome}/>
+            <Route exact path="/signup" component={Signup} /> 
+            <Route exact path="/readings" component={Readings} />
+            <Route exact path="/profile" component={Profile} />
           </div>
         </Provider>
       </Router>

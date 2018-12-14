@@ -7,6 +7,10 @@ export default class Navbar extends Component {
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
+  handleLogout = (user) => {
+    // this is where we will handle the logout function. Removing the JWT token and the user from local storage
+  }
+
   render() {
     const { activeItem } = this.state
 
@@ -24,7 +28,7 @@ export default class Navbar extends Component {
           </Menu.Item>
         </Link>
 
-        <Link to="/logout">
+        <Link to="/">
           <Menu.Item name='logout' active={activeItem === 'logout'} onClick={this.handleItemClick} >
             Logout
           </Menu.Item>

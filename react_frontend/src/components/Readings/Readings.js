@@ -10,3 +10,5 @@ class Readings extends Component {
         )
     }
 }
+
+export default Readings;

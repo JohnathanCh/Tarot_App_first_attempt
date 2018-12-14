@@ -64,26 +64,7 @@ class Welcome extends Component{
             <div>
                 <h1>Welcome to Three Seeds Tarot App</h1>
 
-                { this.state.signup ? <Signup/> : <Login/> }
-
-                {/* <form onSubmit={this.handleSubmit}> 
-                    <label>
-                        Username:
-                    </label>
-                    <input type="text" name="user_name" placeholder="username" onChange={this.handleUsernameInput}/>
-
-                    <label> 
-                        Email: 
-                    </label>
-                    <input type="text" name="email" placeholder="email" onChange={this.handleEmailInput}/>
-                    
-                    <label>
-                        Password:
-                    </label>
-                    <input type ="password" name="password" placeholder="password" onChange={this.handlePasswordInput}/>
-
-                    <button type='submit' name="Submit"/>
-                </form> */}
+                
             </div>
     )}
 }

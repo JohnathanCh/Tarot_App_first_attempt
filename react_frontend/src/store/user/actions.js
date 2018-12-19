@@ -56,9 +56,11 @@ export const createUser = (user) => {
             })
         }
 
+        // debugger
+
         fetch('http://localhost:3000/users', options)
         .then(resp => resp.json())
-        .then(user => {dispatch(createUserAction(user)); localStorage.setItem('token', user.jwt)})
+        .then(user => {dispatch(createUserAction(user)); localStorage.setItem('token', user.jwt); debugger})
     }
 }
 

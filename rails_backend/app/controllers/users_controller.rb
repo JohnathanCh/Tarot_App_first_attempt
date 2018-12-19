@@ -33,7 +33,7 @@ class UsersController < ApplicationController
             @token = encoded_token(@user)
         end
 
-        render json: {user_name: @user.user_name, id: @user.id, email: @user.email, jwt: token}
+        render json: {user_name: @user.user_name, id: @user.id, email: @user.email, jwt: @token}
     end
 
 end

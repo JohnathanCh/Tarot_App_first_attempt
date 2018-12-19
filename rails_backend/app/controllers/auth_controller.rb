@@ -1,8 +1,11 @@
+require 'pry'
+
 class AuthController < ApplicationController
 
     def create
         # byebug
-        @user = User.find_by(email: params[:user_email])
+        binding.pry
+        @user = User.find_by(email: params['email'])
         if @user && @user.authenticate(params[:password])
           @token = encoded_token(@user)
           render json: {user_name: @user.name, id: @user.id, jwt: @token}, status: 200

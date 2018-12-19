@@ -64,10 +64,10 @@ export const createUser = (user) => {
     }
 }
 
-export const getUser = (email, password) => {
+export const getUser = (user) => {
     
     return function thunk(dispatch) {
-        console.log("inside getUser Thunk", email, password);
+        console.log("inside getUser Thunk", user);
         
         let options = {
             method: "POST",
@@ -76,8 +76,8 @@ export const getUser = (email, password) => {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                user_email: email,
-                password: password
+                email: user.email,
+                password: user.password
             })
         }
         fetch(`http://localhost:3000/auth`, options)

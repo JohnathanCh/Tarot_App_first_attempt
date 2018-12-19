@@ -18,8 +18,8 @@ class Signup extends Component{
         this.setState({
             userInfo: {
                 user_name: e.target.value,
-                password: this.state.user.password,
-                email: this.state.user.email
+                password: this.state.userInfo.password,
+                email: this.state.userInfo.email
             }
         })
     }
@@ -28,8 +28,8 @@ class Signup extends Component{
         // console.log("Email: " + e.target.value)
         this.setState({
             userInfo: {
-                user_name: this.state.user.user_name,
-                password: this.state.user.password,
+                user_name: this.state.userInfo.user_name,
+                password: this.state.userInfo.password,
                 email: e.target.value
             }
         })
@@ -39,9 +39,9 @@ class Signup extends Component{
         // console.log("Password: " + e.target.value)
         this.setState({
             userInfo: {
-                user_name: this.state.user.user_name,
+                user_name: this.state.userInfo.user_name,
                 password: e.target.value,
-                email: this.state.user.email
+                email: this.state.userInfo.email
             }
         })
     }
@@ -49,7 +49,7 @@ class Signup extends Component{
     handleSubmit = (e) => {
         e.preventDefault()
 
-        this.props.handleCreateUser({...this.state.user})
+        this.props.handleCreateUser({...this.state.userInfo})
     }
 
 
@@ -74,7 +74,7 @@ class Signup extends Component{
                     </label>
                     <input type ="password" name="password" placeholder="password" onChange={this.handlePasswordInput}/>
 
-                    <Button type='submit' name="Submit"/>
+                    <Button type='submit' name="Submit">Signup</Button>
                 </form>
             </div>
     )}

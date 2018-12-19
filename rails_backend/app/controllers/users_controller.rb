@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     end
 
     def show
-
         @user = User.all.find(params[:id])
         @readings = @user.readings
 
@@ -30,10 +29,31 @@ class UsersController < ApplicationController
 
         if @user.save
             puts("NEW USER WAS CREATED")
+            @token = encoded_token(@user)
         end
+
+        render json: {user_name: @user.user_name, id: @user.id, email: @user.email, jwt: @token}
     end
 
 end
+
+# def create
+#     user = User.find_by(username: params[:username])
+#     if user && user.authenticate(params[:password])
+#       token = encoded_token(user)
+#       render json: {username: user.username, id: user.id, jwt: token}, status: 200
+#     else
+#       render json: {error: 'Username or Password Invalid'}, status: 401
+#     end
+#   end
+
+#   def show
+#     if logged_in
+#       render json: {username: current_user.username, id: current_user.id}, status: 200
+#     else
+#       render json: {error: 'Token Invalid'}, status: 401
+#   end
+
 
 # PARAMS 
 # user_name = params['user']['user_name']

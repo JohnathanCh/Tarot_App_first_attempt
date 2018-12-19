@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getUser } from '../store/user/actions';
-import { Link } from 'react-router-dom';
 import { Button } from 'semantic-ui-react'
 
 class Login extends Component{
@@ -17,8 +16,7 @@ class Login extends Component{
         // console.log("Email: " + e.target.value)
         this.setState({
             userInfo: {
-                user_name: this.state.user.user_name,
-                password: this.state.user.password,
+                password: this.state.userInfo.password,
                 email: e.target.value
             }
         })
@@ -28,18 +26,17 @@ class Login extends Component{
         // console.log("Password: " + e.target.value)
         this.setState({
             userInfo: {
-                user_name: this.state.user.user_name,
                 password: e.target.value,
-                email: this.state.user.email
+                email: this.state.userInfo.email
             }
         })
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(e.target)
+        console.log("state password: ", this.state.userInfo.password)
 
-        this.props.handleCreateUser({...this.state.user})
+        this.props.handleGetUser(this.state.userInfo)
 
     }
 
@@ -60,7 +57,7 @@ class Login extends Component{
                     </label>
                     <input type ="password" name="password" placeholder="password" onChange={this.handlePasswordInput}/>
 
-                    <Button type='submit' name="Submit"/>
+                    <Button type='submit' name="Submit">Login</Button>
                 </form>
             </div>
     )}

@@ -14,6 +14,38 @@ import Profile from './components/Profile/Profile'
 const history = createBrowserHistory()
 
 class App extends Component {
+
+  state = {
+    userInfo: {
+      user_name: '',
+      email: ''
+    }
+  }
+
+  componentDidMount () {
+    const token = localStorage.getItem('token')
+    if (token) {
+      const options =   {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': token
+        }
+      }
+      fetch('http://localhost:3000/auth', options)
+      .then(resp => resp.json())
+      .then(user => {
+        this.setState({
+            auth: {
+              currentUser: user
+            }
+          })
+
+        })
+    }
+  }
+
   render() {
     return (
       <Router history={history}>

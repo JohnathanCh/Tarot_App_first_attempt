@@ -4,9 +4,10 @@ class AuthController < ApplicationController
 
     def create
         # byebug
-        binding.pry
         @user = User.find_by(email: params['email'])
-        if @user && @user.authenticate(params[:password])
+        binding.pry
+
+        if @user && @user.authenticate(params['password'])
           @token = encoded_token(@user)
           render json: {user_name: @user.name, id: @user.id, jwt: @token}, status: 200
         else
@@ -24,3 +25,9 @@ class AuthController < ApplicationController
       end
 
 end
+
+# TEST USER
+# [["user_name", "john"], ["email", "john@mail.com"], ["password", "password"]
+
+
+# (@user.password === params['password'])

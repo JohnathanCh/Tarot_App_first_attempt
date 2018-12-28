@@ -6,4 +6,6 @@ class User < ApplicationRecord
     validates :email, length: { maximum: 40, too_long: "If that's truly your email, you may want to think about creating a shorter one for this app."}
 
     has_many :readings
+
+    has_secure_password
 end

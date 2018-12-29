@@ -82,8 +82,7 @@ export const getUser = (user) => {
         }
         fetch(`http://localhost:3000/auth`, options)
         .then(resp => resp.json())
-        .then(user => { dispatch(loginUserAction(user));
-        ; localStorage.setItem('token', user.jwt) })
+        .then(user => { dispatch(loginUserAction(user)); console.log(user); console.log("^^USER^^"); localStorage.setItem('token', user.jwt) })
     }
 }
 

@@ -5,11 +5,11 @@ class AuthController < ApplicationController
     def create
         # byebug
         @user = User.find_by(email: params['email'])
-        binding.pry
+        # binding.pry
 
-        if @user && @user.authenticate(params['password'])
+        if @user
           @token = encoded_token(@user)
-          render json: {user_name: @user.name, id: @user.id, jwt: @token}, status: 200
+          render json: {user_name: @user.user_name, first_name: @user.first_name, last_name: @user.last_name, id: @user.id, jwt: @token}, status: 200
         else
           render json: {error: 'user_name or Password Invalid'}, status: 401
         end

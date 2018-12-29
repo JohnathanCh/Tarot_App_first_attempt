@@ -22,9 +22,9 @@ class UsersController < ApplicationController
     end
 
     def create
+        binding.pry
         @user = User.new({user_name: params['user']['user_name'], email: params['user']['email'], password: params['user']['password']})
 
-        # binding.pry
 
         if @user.save
             puts("NEW USER WAS CREATED")

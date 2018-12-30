@@ -21,8 +21,8 @@ const createUserReducer = (state = initialState, action) => {
             return {
                 loggedIn: action.payload.loggedIn,
                 userInfo: {
-                    id: action.payload.user.id,
-                    name: action.payload.user.name,
+                    id: action.payload.userInfo.id,
+                    name: action.payload.userInfo.name,
                 },
                 readings: state.readings
             }
@@ -32,8 +32,8 @@ const createUserReducer = (state = initialState, action) => {
                 return {
                     loggedIn: action.payload.loggedIn,
                     userInfo: {
-                        id: action.payload.user.id,
-                        name: action.payload.user.username,
+                        id: action.payload.userInfo.id,
+                        name: action.payload.userInfo.username,
                     },
                     readings: state.readings
                 }

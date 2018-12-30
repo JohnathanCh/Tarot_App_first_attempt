@@ -4,17 +4,18 @@ import { Link } from 'react-router-dom';
 import Login from './Login';
 
 class Welcome extends Component{
-    state = {
-        signup: false,
-        loggedIn: this.props.user.loggedIn,
-        user: {...this.props.user.userInfo}
-    }
+    // state = {
+    //     signup: false,
+    //     loggedIn: this.props.user.loggedIn,
+    //     user: {...this.props.user.userInfo}
+    // }
 
     render() {
+        console.group()
         console.log(this.props);
-        console.log(this.props.user.loggedIn);
+        console.log(this.props.loggedIn);
+        console.groupEnd()
         // console.log(this.state);
-        
         console.log("^^ props inside the welcome page ^^")
         
         return(
@@ -29,7 +30,8 @@ class Welcome extends Component{
 }
 
 const mapStateToProps = (state) => ({
-    user: {...state.user}
+    userInfo: {...state.userInfo},
+    loggedIn: state.loggedIn
 })
 
 export default connect(mapStateToProps)(Welcome)

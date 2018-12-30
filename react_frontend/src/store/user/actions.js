@@ -19,7 +19,7 @@ export const loginUserAction= (user) => ({
 
     type: LOGIN_USER,
     payload: {
-        user: {...user},
+        userInfo: {...user},
         loggedIn: true
     }
 })
@@ -27,7 +27,7 @@ export const loginUserAction= (user) => ({
 export const logoutUserAction = () => ({
     type: LOGOUT_USER,
     payload: {
-        user: {},
+        userInfo: {},
         loggedIn: false
     }
 })
@@ -52,7 +52,7 @@ export const createUser = (user) => {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                user: {...user}
+                userInfo: {...user}
             })
         }
 
@@ -64,10 +64,10 @@ export const createUser = (user) => {
     }
 }
 
-export const getUser = (user) => {
+export const getUser = (userInfo) => {
     
     return function thunk(dispatch) {
-        console.log("inside getUser Thunk", user);
+        // console.log("inside getUser Thunk", userInfo);
         
         let options = {
             method: "POST",
@@ -76,8 +76,8 @@ export const getUser = (user) => {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                email: user.email,
-                password: user.password
+                email: userInfo.email,
+                password: userInfo.password
             })
         }
         fetch(`http://localhost:3000/auth`, options)

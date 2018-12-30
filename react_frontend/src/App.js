@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 import createBrowserHistory from "history/createBrowserHistory";
 import store from './store/Index';
 import { Router, Switch, Route } from 'react-router';
 
 import './App.css';
 import Navbar from './navbar';
-import Welcome from './welcome/Welcome';
+import Welcome from './welcome/welcome';
 import Signup from './welcome/Signup'
 import Readings from './components/Readings/Readings'
 import Profile from './components/Profile/Profile'
@@ -18,6 +18,7 @@ class App extends Component {
   state = {
     userInfo: {
       user_name: '',
+      userId: 0,
       email: ''
     }
   }
@@ -35,10 +36,11 @@ class App extends Component {
       }
       fetch('http://localhost:3000/auth', options)
       .then(resp => resp.json())
-      .then(user => {
+      .then(user => { console.log(user); console.log("in the componentDidMount func")
         this.setState({
-            auth: {
-              currentUser: user
+          userInfo: {
+              user_name: user.user_name,
+              userId: user.id
             }
           })
 
@@ -47,9 +49,9 @@ class App extends Component {
   }
 
   render() {
+    console.table(this.state);
     return (
       <Router history={history}>
-        <Provider store={store} >
           <div className="App">
             <Navbar/>
 
@@ -58,10 +60,14 @@ class App extends Component {
             <Route exact path="/readings" component={Readings} />
             <Route exact path="/profile" component={Profile} />
           </div>
-        </Provider>
       </Router>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  userInfo: {...state.userInfo},
+  loggedIn: state.loggedIn
+})
+
+export default connect(mapStateToProps)(App);

@@ -9,11 +9,20 @@ body, html {
 
 .bg { 
   height: 100%; 
-
+  width: 100%;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.login-form {
+  background-color: rgba(20, 32, 20, 0.35)
+}
+
+.submit-button {
+  background: #000;
+  color: white;
 }
 
 .signup {

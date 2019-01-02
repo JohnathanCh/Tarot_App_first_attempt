@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 8b057b79f073d5622c510aeea5fcaed5c6e31c40 github username <github email address> 1543612936 -0500	commit (initial): backend
+8b057b79f073d5622c510aeea5fcaed5c6e31c40 bd19d4bf17db063226f3209dce045245f4b6bcbf github username <github email address> 1543614451 -0500	commit (amend): backend
+bd19d4bf17db063226f3209dce045245f4b6bcbf bbfbc335ab8bf21b95c015362cd805d2d6afc01c github username <github email address> 1543863476 -0500	rebase finished: refs/heads/master onto 53ac59bca2f59fc3d1addf068ebefc44f31b01ac

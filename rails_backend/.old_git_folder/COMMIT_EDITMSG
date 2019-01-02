@@ -1,0 +1,82 @@
+backend !
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri Nov 30 16:22:16 2018 -0500
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   .ruby-version
+#	new file:   Gemfile
+#	new file:   Gemfile.lock
+#	new file:   README.md
+#	new file:   Rakefile
+#	new file:   app/channels/application_cable/channel.rb
+#	new file:   app/channels/application_cable/connection.rb
+#	new file:   app/controllers/api/v1/auth_controller.rb
+#	new file:   app/controllers/api/v1/reading_controller.rb
+#	new file:   app/controllers/api/v1/user_controller.rb
+#	new file:   app/controllers/application_controller.rb
+#	new file:   app/controllers/concerns/.keep
+#	new file:   app/jobs/application_job.rb
+#	new file:   app/mailers/application_mailer.rb
+#	new file:   app/models/application_record.rb
+#	new file:   app/models/card.rb
+#	new file:   app/models/concerns/.keep
+#	new file:   app/models/reading.rb
+#	new file:   app/models/reading_card.rb
+#	new file:   app/models/user.rb
+#	new file:   app/views/layouts/mailer.html.erb
+#	new file:   app/views/layouts/mailer.text.erb
+#	new file:   bin/bundle
+#	new file:   bin/rails
+#	new file:   bin/rake
+#	new file:   bin/setup
+#	new file:   bin/spring
+#	new file:   bin/update
+#	new file:   config.ru
+#	new file:   config/application.rb
+#	new file:   config/boot.rb
+#	new file:   config/cable.yml
+#	new file:   config/credentials.yml.enc
+#	new file:   config/database.yml
+#	new file:   config/environment.rb
+#	new file:   config/environments/development.rb
+#	new file:   config/environments/production.rb
+#	new file:   config/environments/test.rb
+#	new file:   config/initializers/application_controller_renderer.rb
+#	new file:   config/initializers/backtrace_silencers.rb
+#	new file:   config/initializers/cors.rb
+#	new file:   config/initializers/filter_parameter_logging.rb
+#	new file:   config/initializers/inflections.rb
+#	new file:   config/initializers/mime_types.rb
+#	new file:   config/initializers/wrap_parameters.rb
+#	new file:   config/locales/en.yml
+#	new file:   config/puma.rb
+#	new file:   config/routes.rb
+#	new file:   config/spring.rb
+#	new file:   config/storage.yml
+#	new file:   db/migrate/20181011235812_create_users.rb
+#	new file:   db/migrate/20181013025554_create_readings.rb
+#	new file:   db/migrate/20181013031156_create_cards.rb
+#	new file:   db/migrate/20181013031233_create_reading_cards.rb
+#	new file:   db/schema.rb
+#	new file:   db/seeds.rb
+#	new file:   lib/tasks/.keep
+#	new file:   log/.keep
+#	new file:   public/robots.txt
+#	new file:   test/controllers/.keep
+#	new file:   test/fixtures/.keep
+#	new file:   test/fixtures/files/.keep
+#	new file:   test/integration/.keep
+#	new file:   test/mailers/.keep
+#	new file:   test/models/.keep
+#	new file:   test/test_helper.rb
+#	new file:   tmp/.keep
+#	new file:   vendor/.keep
+#

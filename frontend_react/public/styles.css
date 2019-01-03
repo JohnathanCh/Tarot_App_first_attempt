@@ -30,6 +30,10 @@ body, html {
   color: white;
 }
 
+#welcome {
+  background-image: url('http://media.beliefnet.com/~/media/photos-with-attribution/spiritual/tarotcardscreditShutterstockcom.jpg?as=1')
+}
+
 #logout {
   /* background: grey; */
   background-image: url('https://lindaursin.net/wp-content/blogs.dir/26/files/2015/03/2-unicursal-hexagram-scan-contrast2-1080x764.jpg');

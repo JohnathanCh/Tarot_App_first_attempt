@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { getUser } from "../store/user/actions";
+import { Link } from 'react-router-dom'
 
 class Login extends React.Component {
 
@@ -44,6 +45,8 @@ class Login extends React.Component {
 
                     <button className="submit-button" type='submit'>Submit</button>
                 </form>
+
+                <h3>If you don't have a profile you can create one <Link to="/signup">here</Link></h3>
             </div>
         )
     }

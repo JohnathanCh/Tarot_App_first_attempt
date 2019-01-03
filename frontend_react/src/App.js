@@ -38,8 +38,6 @@ class App extends Component {
           <header className="App-header">
             <marquee scrollamount="5" direction="right"><img src={image} className="App-logo" alt="logo" /></marquee>
           </header> 
-          <Login />
-          {/* <Signup />  */}
         </div> : null 
         
         }
@@ -50,6 +48,7 @@ class App extends Component {
           <Route path="/cards" component={CardList}/> 
           <Route exact path="/profile" component={Profile} />
           <Route exact path='/' component={Welcome} />
+          <Route exact path='/signup' component={Signup} />
         </Switch>
 
       </div>

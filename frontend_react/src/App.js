@@ -44,9 +44,9 @@ class App extends Component {
 
         <Switch>  
           <Route path='/readings/new' component={ NewReading } />
-          <Route path="/readings" component={ ReadingSplash } />
-          <Route path="/cards" component={CardList}/> 
-          <Route exact path="/profile" component={Profile} />
+          <Route path='/readings' component={ ReadingSplash } />
+          <Route path='/cards' component={CardList}/> 
+          <Route exact path='/profile' component={Profile} />
           <Route exact path='/' component={Welcome} />
           <Route exact path='/signup' component={Signup} />
         </Switch>

@@ -46,7 +46,7 @@ class Login extends React.Component {
                     <button className="submit-button" type='submit'>Submit</button>
                 </form>
 
-                <h3>If you don't have a profile you can create one <Link to="/signup">here</Link></h3>
+                <h3>If you don't have a profile you can create one <Link to='/signup'>here</Link></h3>
             </div>
         )
     }

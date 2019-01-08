@@ -43,7 +43,7 @@ class Login extends React.Component {
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" placeholder="*****" onChange={this.handlePasswordInput}/>
 
-                    <button className="submit-button" type='submit'>Submit</button>
+                    <button className="submit-button" type="submit">Submit</button>
                 </form>
 
                 <h3>If you don't have a profile you can create one <Link to='/signup'>here</Link></h3>

@@ -88,3 +88,5 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup);
+
+// this is a test of whether the working branch is working

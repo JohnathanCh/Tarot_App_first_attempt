@@ -8,10 +8,11 @@
 }
 
 .App-header {
-  background-color: #222;
-  /* background-image: url('https://i.pinimg.com/736x/df/67/6f/df676f189eff03a2c0f6ce11cb01ff8c.jpg'); */
-  height: 100px;
-  padding: 5px;
+  /* background-color: #222; */
+  background-image: url('http://jonvilma.com/images/space-9.jpg');
+  height: 150px;
+  width: 100%;
+  padding: 40px;
   margin: auto;
   color: white;
 }

@@ -74,7 +74,6 @@ class Signup extends React.Component {
             </div>
         )
     }
-
 }
 
 
@@ -89,8 +88,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup);
-
-// mapStateToProps = (cardListReducer) => {
-
-// }
-

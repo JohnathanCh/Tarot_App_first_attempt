@@ -39,7 +39,6 @@ class App extends Component {
             <marquee scrollamount="5" direction="right"><img src={image} className="App-logo" alt="logo" /></marquee>
           </header> 
         </div> : null 
-        
         }
 
         <Switch>  
@@ -68,8 +67,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
-
-
-
-
-

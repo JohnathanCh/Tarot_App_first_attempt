@@ -28,10 +28,17 @@ body, html {
 .signup {
   background: #222;
   color: white;
+  height: 600px;
 }
 
 #welcome {
-  background-image: url('http://media.beliefnet.com/~/media/photos-with-attribution/spiritual/tarotcardscreditShutterstockcom.jpg?as=1')
+  display: flex;
+  background-image: url('http://media.beliefnet.com/~/media/photos-with-attribution/spiritual/tarotcardscreditShutterstockcom.jpg?as=1');
+  height: 600px;
+}
+
+#login-form {
+  display: flex;
 }
 
 #logout {

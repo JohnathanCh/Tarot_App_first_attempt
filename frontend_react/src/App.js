@@ -4,7 +4,7 @@ import { Route, withRouter } from 'react-router-dom'
 import { Switch } from 'react-router'
 import { connect } from 'react-redux';
 
-import Signup from './login_signup/Signup';
+import Signup from './Login_Signup/Signup';
 import { fetchCards } from './store/allCards/actions';
 import CardList from './components/cards/CardList'
 import Welcome from "./components/Welcome";
@@ -12,7 +12,6 @@ import NavBar from './NavBar'
 import NewReading from './components/readings/NewReading';
 import ReadingSplash from "./components/readings/ReadingSplash";
 import Profile from './components/user/Profile';
-import Login from './login_signup/Login';
 
 let image = require(`../src/Rider-Waite/The_Fool.png`) 
 class App extends Component {

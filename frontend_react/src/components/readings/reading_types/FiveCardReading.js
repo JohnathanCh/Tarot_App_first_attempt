@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createReading } from '../../../store/readings/actions';
 import CardImage from '../../cards/CardImage'
-import { Modal, Image, Button } from 'semantic-ui-react'
+import { Modal, Image } from 'semantic-ui-react'
 
 class ThreeCardReading extends React.Component {
     state = {
@@ -66,25 +66,25 @@ class ThreeCardReading extends React.Component {
                         this.state.readingCards.map(card => 
 
                         
-                            <Modal trigger={ <div onClick={this.show('blurring')} >
-                                 <CardImage key={card.id} card={card} />
-                                 </div>
-                                 }>
-                                 
-                            <div className="my-modal">
-                            <Modal.Header> <h1 >{this.props.clickedCard.name}</h1> </Modal.Header>
-                            <Modal.Content >
-                                <Image size="medium" src={this.getImage(this.props.clickedCard.name)}/>
-                            <Modal.Description>
-                                <p>Meaning Upright: {this.props.clickedCard.meaning_up}</p>
-                                <p>Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
-                                <p>Description: {this.props.clickedCard.desc}</p>
-
-                            </Modal.Description>
-                            </Modal.Content>
-
+                    <Modal trigger={ <div onClick={this.show('blurring')} >
+                            <CardImage key={card.id} card={card} />
                             </div>
-                            </Modal>
+                            }>
+                            
+                        <div className="my-modal">
+                        <Modal.Header> <h1 >{this.props.clickedCard.name}</h1> </Modal.Header>
+                        <Modal.Content >
+                            <Image size="medium" src={this.getImage(this.props.clickedCard.name)}/>
+                        <Modal.Description>
+                            <p>Meaning Upright: {this.props.clickedCard.meaning_up}</p>
+                            <p>Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
+                            <p>Description: {this.props.clickedCard.desc}</p>
+
+                        </Modal.Description>
+                        </Modal.Content>
+
+                        </div>
+                    </Modal>
                             
                         ) 
                         

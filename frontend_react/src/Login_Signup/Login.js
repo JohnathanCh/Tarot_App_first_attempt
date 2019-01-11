@@ -5,6 +5,14 @@ import { getUser } from "../store/user/actions";
 import { Modal } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
+const inlineStyle = {
+    modal : {
+      marginTop: '100px !important',
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    }
+  };
+
 class Login extends React.Component {
 
     state = {
@@ -38,7 +46,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <Modal open={ this.state.pageOpen == true }>
+                <Modal open={ this.state.pageOpen == true } style={inlineStyle.modal}>
                         
                     <div className="login-form">
                     <form onSubmit={this.handleLogin}>

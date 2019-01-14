@@ -47,7 +47,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="ui middle aligned center aligned grid">
+            <div className="login-page">
                 <Modal open={ this.state.pageOpen == true } style={inlineStyle.modal}>
 
                     <Modal.Header> Login </Modal.Header>
@@ -55,7 +55,7 @@ class Login extends React.Component {
                     <Modal.Content>
                         
                         <form className="ui large form" onSubmit={this.handleLogin}>
-                            <div class="ui segment">
+                            <div className="ui segment">
 
                                 <div className="field">
                                     <div className="ui left icon input">

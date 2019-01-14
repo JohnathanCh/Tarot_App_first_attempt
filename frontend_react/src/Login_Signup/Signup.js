@@ -1,7 +1,16 @@
 import React from 'react';
-import cardListReducer from '../store/allCards/reducer';
 import { connect } from 'react-redux';
+import { Modal } from 'semantic-ui-react';
+
 import { createUserAction, createUser } from '../store/user/actions';
+
+const inlineStyle = {
+    modal : {
+      marginTop: '100px !important',
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    }
+  };
 
 class Signup extends React.Component {
 
@@ -13,10 +22,13 @@ class Signup extends React.Component {
             password: ''
         },
         loggedIn: false,
-    }
+        pageOpen: true
+    };
 
 
-    handleNameInput = (e) => {
+    handleUserNameInput = (e) => {
+        console.log(e.target.value)
+
         this.setState({
             user:{
                 ...this.state.user,
@@ -24,7 +36,7 @@ class Signup extends React.Component {
             }
 
         })
-    }
+    };
 
     handleEmailInput = (e) => {
         this.setState({
@@ -34,7 +46,7 @@ class Signup extends React.Component {
             }
 
         })
-    }
+    };
 
     handlePasswordInput = (e) => {
         this.setState({
@@ -44,37 +56,58 @@ class Signup extends React.Component {
             }
  
         })
-    }
+    };
 
-    handleSubmit = (e) => {
+    handleSignup = (e) => {
         e.preventDefault()
 
         this.props.handleCreateUser({...this.state.user})
         // localStorage.setItem('token', user.jwt)
-    }
+    };
 
 
 
     render() {
-        
+        // MAKE SURE TO BE CONSISTENT WITH NAMING THE FIELDS THAT YOURE SENDING TO THE BACKEND: userName vs user_name
+        // ALSO MAKE SURE TO FIND DIFFERENT ICONS WHERE NEEDED
         return (
-            <div className="signup" >
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="userName">Name:</label>
-                    <input type="text" name="userName" value={this.props.userName} placeholder="Enter your Name" onChange={this.handleNameInput}/>
+            <div className="signup-page" >
+                <Modal open={this.state.pageOpen == true} style={inlineStyle.modal}>
 
-                    <label htmlFor="userEmail">Email</label>
-                    <input type="text" name="userEmail" value={this.props.userEmail} placeholder="Enter your Email" onChange={this.handleEmailInput}/>
+                    <Modal.Header> Signup </Modal.Header>
 
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" value={this.props.password} placeholder="*****" onChange={this.handlePasswordInput}/>
+                    <Modal.Content>
+                        <form className="ui large form" onSubmit={this.handleSignup}>
+                            <div className="ui segment">
+                                <div className="field">
+                                    <div className="ui left icon input">
+                                        <i className="user icon"></i>
+                                        <input type="text" name="userName" placeholder="UserName" value={this.props.userName} onChange={this.handleUserNameInput} />
+                                    </div>
+                                </div>
 
-                    <button type='submit'>Submit</button>
-                </form>
+                                <div className="field">
+                                    <div className="ui left icon input">
+                                        <i className="user icon"></i>
+                                        <input type="text" name="userEmail" placeholder="Email" value={this.props.userName} onChange={this.handleEmailInput}/> 
+                                    </div>
+                                </div>
+
+                                <div className="field">
+                                    <div className="ui left icon input">
+                                        <i className="lock icon"></i>
+                                        <input type="password" name="password" placeholder="Password" value={this.props.password} onChange={this.handlePasswordInput} />
+                                    </div>
+                                </div>
+                            <button className="ui fluid large primary submit button" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </Modal.Content>
+                </Modal>
             </div>
         )
-    }
-}
+    };
+};
 
 
 const mapDispatchToProps = (dispatch) => ({

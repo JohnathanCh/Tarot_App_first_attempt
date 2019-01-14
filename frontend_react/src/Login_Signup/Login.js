@@ -24,12 +24,13 @@ class Login extends React.Component {
 
     handleLogin = (e) => {
         e.preventDefault()
-        console.log('Popopops', this.state.password);
+        console.log("yep it works");
         
         this.props.loginUser(this.state.user_email, this.state.password)
     }
 
      handleEmailInput = (e) => {
+        // console.log(e.target.value)
         this.setState({
             user_email: e.currentTarget.value
         })
@@ -37,6 +38,7 @@ class Login extends React.Component {
      }
 
      handlePasswordInput = (e) => {
+        // console.log(e.target.value)
         this.setState({
             password: e.currentTarget.value
         })
@@ -45,23 +47,36 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="ui middle aligned center aligned grid">
                 <Modal open={ this.state.pageOpen == true } style={inlineStyle.modal}>
+
+                    <Modal.Header> Login </Modal.Header>
+
+                    <Modal.Content>
                         
-                    <div className="login-form">
-                    <form onSubmit={this.handleLogin}>
+                        <form className="ui large form" onSubmit={this.handleLogin}>
+                            <div class="ui segment">
 
-                            <label htmlFor="user_email">Email</label>
-                            <input type="text" name="user_email" placeholder="Enter your Email" onChange={this.handleEmailInput}/>
+                                <div className="field">
+                                    <div className="ui left icon input">
+                                        <i className="user icon"></i>
+                                        <input type="text" name="user_email" placeholder="E-mail address" onChange={this.handleEmailInput}/>
+                                    </div>
+                                </div>
 
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="password" placeholder="*****" onChange={this.handlePasswordInput}/>
+                                <div className="field">
+                                    <div className="ui left icon input">
+                                        <i className="lock icon"/>
+                                        <input type="password" name="password" placeholder="*****" onChange={this.handlePasswordInput}/>
+                                    </div>
+                                </div>
 
-                            <button className="submit-button" type="submit">Submit</button>
+                                <button className="ui fluid large primary submit button" type="submit">Login</button>
+                            </div>
                         </form>
 
-                        <h3>If you don't have a profile you can create one <Link to='/signup'>here</Link></h3>
-                    </div>
+                            <h3>If you don't have a profile you can create one <Link to='/signup'>here</Link></h3>
+                    </Modal.Content>
                 </Modal>
             </div>
         )

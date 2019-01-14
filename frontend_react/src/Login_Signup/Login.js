@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getUser } from "../store/user/actions";
-
 import { Modal } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+
+import { getUser } from "../store/user/actions";
 
 const inlineStyle = {
     modal : {

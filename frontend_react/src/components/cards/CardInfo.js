@@ -32,7 +32,7 @@ const CardInfo = (props) => {
 
 const mapDispatchToProps = (dispatch) => ({
     selectCard: (card) => { 
-        console.log(card);
+        // console.log(card);
         
         dispatch(selectCardAction(card))
     }

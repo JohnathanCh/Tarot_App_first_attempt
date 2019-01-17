@@ -25,7 +25,7 @@ class Signup extends React.Component {
     };
 
     handleUserNameInput = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
 
         this.setState({
             user:{
@@ -37,6 +37,7 @@ class Signup extends React.Component {
     };
 
     handleEmailInput = (e) => {
+        // console.log(e.target.value)
         this.setState({
             user:{
                 ...this.state.user,
@@ -47,6 +48,7 @@ class Signup extends React.Component {
     };
 
     handlePasswordInput = (e) => {
+        // console.log(e.target.value)
         this.setState({
             user:{
                 ...this.state.user,

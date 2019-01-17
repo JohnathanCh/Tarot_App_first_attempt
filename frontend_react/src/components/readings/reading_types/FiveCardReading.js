@@ -43,7 +43,7 @@ class ThreeCardReading extends React.Component {
     }
 
     handleClick = (e) => {
-        console.log(e.currentTarget);
+        // console.log(e.currentTarget);
         
     }
     

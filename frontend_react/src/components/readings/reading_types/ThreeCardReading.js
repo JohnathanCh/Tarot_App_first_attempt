@@ -44,7 +44,7 @@ class ThreeCardReading extends React.Component {
     }
 
     render() {
-        console.log("propssss", this.props);
+        // console.log("propssss", this.props);
 
         const { open, dimmer } = this.state
         
@@ -68,36 +68,26 @@ class ThreeCardReading extends React.Component {
                                  </div>
                                  }>
                                  
-                            <div className="my-modal">
-                            <Modal.Header> <h1 >{this.props.clickedCard.name}</h1> </Modal.Header>
-                            <Modal.Content >
-                                <Image size="medium" src={this.getImage(this.props.clickedCard.name)}/>
-                            <Modal.Description>
-                                <p>Meaning Upright: {this.props.clickedCard.meaning_up}</p>
-                                <p>Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
-                                <p>Description: {this.props.clickedCard.desc}</p>
+                                    <div className="my-modal">
+                                    <Modal.Header> <h1 >{this.props.clickedCard.name}</h1> </Modal.Header>
+                                    <Modal.Content >
+                                        <Image size="medium" src={this.getImage(this.props.clickedCard.name)}/>
+                                    <Modal.Description>
+                                        <p>Meaning Upright: {this.props.clickedCard.meaning_up}</p>
+                                        <p>Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
+                                        <p>Description: {this.props.clickedCard.desc}</p>
 
-                            </Modal.Description>
-                            </Modal.Content>
+                                    </Modal.Description>
+                                    </Modal.Content>
 
-                            </div>
-                            </Modal>
-                            
-                        ) 
-                        
-                        : null }
-                             
+                                </div>
+                            </Modal>  
+                        )
+                        : null }      
                     </div>
                 </div>
-                
-                
-                    
-
-               
-
             </div>   
         )
-    
     }
 }
 

@@ -4,10 +4,9 @@ import { getUserReadings } from '../../store/user/actions'
 import CardImage from "../cards/CardImage";
 
 class Profile extends React.Component {
-
     //fetching readings for this user
     componentDidMount() {
-        console.log("Profile Did Mount", this.props.user.user);
+        // console.log("Profile Did Mount", this.props.user.user);
 
         this.props.getReadings(this.props.user.user.id)
     }

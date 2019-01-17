@@ -12,8 +12,8 @@ export default class NewReading extends React.Component {
     }
 
     handleChoice = (e) => {
-        console.log(e.currentTarget);
-        console.log(this.state);
+        // console.log(e.currentTarget);
+        // console.log(this.state);
         
         this.setState({
             readingChose: true
@@ -21,7 +21,7 @@ export default class NewReading extends React.Component {
     }
 
     render() {
-        console.log(this.state);
+        // console.log(this.state);
         
         return (
             <div className="new-reading-container">

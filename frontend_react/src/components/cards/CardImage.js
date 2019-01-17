@@ -22,7 +22,7 @@ class CardImage extends React.Component {
     }
 
     handleClick = (e) => {
-        console.log(this.state);
+        // console.log(this.state);
         this.props.selectCard(this.props.card)
 
         if (this.props.match.path.startsWith('/cards')) {

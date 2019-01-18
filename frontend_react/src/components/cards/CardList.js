@@ -52,7 +52,6 @@ const mapStateToProps = (state, ownprops) => {
    }
 }
 
-// selectedCard: state.cards.clickedCard
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardList));
 
  {/* <div className="horizontal-scroll-wrapper" >

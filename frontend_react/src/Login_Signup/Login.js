@@ -27,6 +27,7 @@ class Login extends React.Component {
         e.preventDefault()
         
         this.props.loginUser(this.state.user_email, this.state.password)
+        this.props.history.push('/cards')
     }
 
      handleEmailInput = (e) => {

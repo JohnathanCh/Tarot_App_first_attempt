@@ -26,10 +26,11 @@ class App extends Component {
 
   render() {    
     const user = this.props.user
+    console.log(this.props, "propppppps")
 
     return (
       <div className="App">
-      {!user.loggedIn ? null : <NavBar /> }
+      {!user.loggedIn ? null : <NavBar/> }
 
         {!user.loggedIn ? <div>
           <header className="App-header">
@@ -39,9 +40,9 @@ class App extends Component {
         }
 
         <Switch>  
-          <Route path='/readings/new' component={ NewReading } />
-          <Route path='/readings' component={ ReadingSplash } />
-          <Route path='/cards' component={CardList}/> 
+          <Route exact path='/readings/new' component={ NewReading } />
+          <Route exact path='/readings' component={ ReadingSplash } />
+          <Route exact path='/cards' component={CardList}/> 
           <Route exact path='/profile' component={Profile} />
           <Route exact path='/' component={Welcome} />
           <Route exact path='/signup' component={Signup} />

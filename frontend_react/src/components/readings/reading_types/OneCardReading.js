@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import CardInfo from "../../cards/CardInfo";
+// import CardInfo from "../../cards/CardInfo";
 import { createReading } from '../../../store/readings/actions';
 import CardImage from '../../cards/CardImage'
-import { Modal, Image, Button } from 'semantic-ui-react'
+import { Modal, Image } from 'semantic-ui-react'
 
 class OneCardReading extends React.Component {
 
@@ -18,7 +18,7 @@ class OneCardReading extends React.Component {
 
 
     getImage = cardName => {
-        if (cardName != undefined) {
+        if (cardName !== undefined) {
         let formattedName = cardName
         .split(" ")
         .join("_")
@@ -46,7 +46,7 @@ class OneCardReading extends React.Component {
 
     render() {
         // console.log("propssss", this.state);
-        const { open, dimmer } = this.state
+        // const { open, dimmer } = this.state
         
         return (
             <div>
@@ -56,7 +56,7 @@ class OneCardReading extends React.Component {
                 </div>}
                 
                 <div className="ui large images" >
-                {this.state.clicked === true && this.state.readingCards.length != 0 ? 
+                {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
                         this.state.readingCards.map(card => 
 
                         

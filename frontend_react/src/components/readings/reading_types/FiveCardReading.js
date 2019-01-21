@@ -17,7 +17,7 @@ class ThreeCardReading extends React.Component {
     }
 
     getImage = cardName => {
-        if (cardName != undefined) {
+        if (cardName !== undefined) {
         let formattedName = cardName
         .split(" ")
         .join("_")
@@ -51,7 +51,7 @@ class ThreeCardReading extends React.Component {
     render() {
         // console.log("propssss", this.state);
 
-        const { open, dimmer } = this.state
+        // const { open, dimmer } = this.state
         
         return (
             <div>
@@ -62,7 +62,7 @@ class ThreeCardReading extends React.Component {
 
                 <div className="five-card-reading" >
                 <div className="ui medium images" >
-                {this.state.clicked === true && this.state.readingCards.length != 0 ? 
+                {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
                         this.state.readingCards.map(card => 
 
                         

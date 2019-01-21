@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Modal } from 'semantic-ui-react';
 
-import { createUserAction, createUser } from '../store/user/actions';
+import { createUser } from '../store/user/actions';
 
 const inlineStyle = {
     modal : {
@@ -71,7 +71,7 @@ class Signup extends React.Component {
         // ALSO MAKE SURE TO FIND DIFFERENT ICONS WHERE NEEDED
         return (
             <div className="signup-page" >
-                <Modal open={this.state.pageOpen == true} style={inlineStyle.modal}>
+                <Modal open={this.state.pageOpen === true} style={inlineStyle.modal}>
 
                     <Modal.Header> Signup </Modal.Header>
 

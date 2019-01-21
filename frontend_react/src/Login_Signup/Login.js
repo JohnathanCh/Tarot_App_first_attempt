@@ -49,7 +49,7 @@ class Login extends React.Component {
     render() {
         return (
             <div className="login-page">
-                <Modal open={ this.state.pageOpen == true } style={inlineStyle.modal}>
+                <Modal open={ this.state.pageOpen === true } style={inlineStyle.modal}>
 
                     <Modal.Header> Login </Modal.Header>
 

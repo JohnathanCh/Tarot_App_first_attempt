@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Route, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import { fetchCards } from '../../store/allCards/actions';
 import CardInfo from './CardInfo';
 import CardImage from './CardImage';
@@ -34,8 +34,6 @@ class CardList extends React.Component {
    }
 }
 
- {/* <Card key={this.props.selectedCard.id} card={this.props.selectedCard} /> */}
-
 const mapDispatchToProps = (dispatch) => ({
     fetchAllCards: () => {
         dispatch(fetchCards()) 
@@ -53,10 +51,3 @@ const mapStateToProps = (state, ownprops) => {
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardList));
-
- {/* <div className="horizontal-scroll-wrapper" >
-                {cardList.map(card => 
-                <Link to={`/cards/${card.id}`} > 
-                <CardImage key={card.id} card={card}  /> 
-                </Link>)}
-            </div> */}

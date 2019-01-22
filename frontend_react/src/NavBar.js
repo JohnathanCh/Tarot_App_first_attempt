@@ -19,26 +19,21 @@ class NavBar extends React.Component {
   "border-radius": "0"}}>
                 <h1 style={{color: "white"}}>Three Seeds Tarot</h1>
 
-                    <div className="right menu">
-                    <NavLink to="/cards">
-                        <button id="navButton" className="item" > Cards </button>
-                    </NavLink>
-                
+                <div className="right menu">
+                <NavLink to="/cards">
+                    <button id="navButton" className="item" > Cards </button>
+                </NavLink>
 
-                
-                    <NavLink to="/readings">
-                        <button id="navButton" className="item" > New Reading </button>
-                    </NavLink>
-                 
+                <NavLink to="/readings/new">
+                    <button id="navButton" className="item" > New Reading </button>
+                </NavLink>
 
-                
-                    <NavLink to="/profile">
-                        <button id="navButton" className="item" > Past Readings </button> 
-                    </NavLink>
+                <NavLink to="/profile">
+                    <button id="navButton" className="item" > Past Readings </button> 
+                </NavLink>
 
-                    
-                        <button onClick={this.handleLogout} id="logout" className="ui primary button" >Logout</button>
-                    </div>
+                <button onClick={this.handleLogout} id="logout" className="ui primary button" >Logout</button>
+                </div>
                 
             </div>
         )

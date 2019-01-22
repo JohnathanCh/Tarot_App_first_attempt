@@ -1,9 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import CardInfo from "../../cards/CardInfo";
+import { Modal, Image, Header } from 'semantic-ui-react'
+
 import { createReading } from '../../../store/readings/actions';
 import CardImage from '../../cards/CardImage'
-import { Modal, Image } from 'semantic-ui-react'
+import capitalize from '../../../functions';
+import inlineStyle from '../../../modalStyle';
 
 class OneCardReading extends React.Component {
 
@@ -15,7 +18,6 @@ class OneCardReading extends React.Component {
 
     show = dimmer => () => this.setState({ dimmer, open: true })
     close = () => this.setState({ open: false })
-
 
     getImage = cardName => {
         if (cardName !== undefined) {
@@ -58,36 +60,12 @@ class OneCardReading extends React.Component {
                 <div className="ui large images" >
                 {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
                         this.state.readingCards.map(card => 
-
-                        
-                            <Modal trigger={ 
-                                <div onClick={this.show('blurring')} className="image-card" >
-                                 <CardImage key={card.id} card={card} />
-                                 </div>
-                                 }>
-                                 
-                            <div className="my-modal">
-                            <Modal.Header> <h1 >{this.props.clickedCard.name}</h1> </Modal.Header>
-                            <Modal.Content >
-                                <Image size="medium" src={this.getImage(this.props.clickedCard.name)}/>
-                            <Modal.Description>
-                                <p>Meaning Upright: {this.props.clickedCard.meaning_up}</p>
-                                <p>Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
-                                <p>Description: {this.props.clickedCard.desc}</p>
-
-                            </Modal.Description>
-                            </Modal.Content>
-
+                            <div onClick={this.show('blurring')} className="image-card" >
+                                <CardImage key={card.id} card={card} />
                             </div>
-                            </Modal>
-                            
-                        ) 
-                        
-                        : null }
+                        )
+                        : null}
                 </div>
-
-                <h4>Take your time to look at the card and see what catches your eye and mind, before reading the description</h4>
-
             </div>   
         )
     }

@@ -19,9 +19,7 @@ class CardList extends React.Component {
         <div className="card-list">
             <div className="horizontal-scroll-wrapper" >
                 {cardList.map(card => 
-                
-                    <CardImage key={card.id} card={card}  /> 
-                
+                    <CardImage key={card.id} card={card} />
                 )}
             </div>
 

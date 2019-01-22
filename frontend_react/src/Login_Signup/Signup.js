@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Modal } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import { createUser } from '../store/user/actions';
 
@@ -12,7 +13,7 @@ const inlineStyle = {
     }
   };
 
-class Signup extends React.Component {
+class Signup extends Component {
 
     state = {
         user: {
@@ -101,6 +102,8 @@ class Signup extends React.Component {
                             <button className="ui fluid large primary submit button" type="submit">Login</button>
                             </div>
                         </form>
+
+                        <h3>Already have an account? <Link to='/'>here</Link></h3> 
                     </Modal.Content>
                 </Modal>
             </div>

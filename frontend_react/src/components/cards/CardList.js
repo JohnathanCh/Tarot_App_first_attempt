@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { fetchCards } from '../../store/allCards/actions';
-import CardInfo from './CardInfo';
 import CardImage from './CardImage';
 import './cardStyles.css';
 
@@ -16,16 +15,14 @@ class CardList extends React.Component {
     const cardList = this.props.cardList
     
        return (
-        <div className="card-list">
-            <div className="horizontal-scroll-wrapper" >
+        <div className="card-list-page">
+            <div className="card-list" >
                 {cardList.map(card => 
-                    <CardImage key={card.id} card={card} />
+                    <div className="ui card centered">
+                        <CardImage key={card.id} card={card} />
+                    </div>
                 )}
             </div>
-
-           {this.props.selectedCard ? <Route path="/cards/:id" render={() => <CardInfo card={this.props.selectedCard} /> } /> : null}
-
-
         </div>
 
        )

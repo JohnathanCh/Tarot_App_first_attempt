@@ -36,13 +36,13 @@ class CardImage extends React.Component {
     render() {
         
         return (
-            <div className='card-modal'>
+            <div className='card-image'>
                
                <Modal 
                size='large'
                trigger={
                     <div className="ui medium images" > 
-                        <img className="card-image" src={this.getImage(this.props.card.name)} alt="No Image Found" onClick={this.handleClick} />
+                        <img className="single-card" src={this.getImage(this.props.card.name)} alt="No Image Found" onClick={this.handleClick} />
                     </div>}
                 style={inlineStyle.modal}>
 
@@ -51,7 +51,7 @@ class CardImage extends React.Component {
                     <Modal.Content >
                         <Image wrapped size='medium' src={this.getImage(this.props.card.name)} floated='left' />
                         <Modal.Description>
-                            <Header>{capitalize(this.props.card.card_type)} Arcana CARD IMAGE</Header>
+                            <Header>{capitalize(this.props.card.card_type)} Arcana</Header>
                             <p>Meaning Upright: {this.props.card.meaning_up} </p>
                             <p>Meaning Reversed: {this.props.card.meaning_rev} </p>
                             <p>Description: {this.props.card.desc} </p>

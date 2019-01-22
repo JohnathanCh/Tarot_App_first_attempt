@@ -37,14 +37,8 @@ body, html {
   height: 600px;
 }
 
-#login-form {
-  display: flex;
-}
-
 #logout {
-  /* background: grey; */
   background-image: url('https://lindaursin.net/wp-content/blogs.dir/26/files/2015/03/2-unicursal-hexagram-scan-contrast2-1080x764.jpg');
-  /* margin: auto; */
 }
 
 #nav-bar {
@@ -75,20 +69,6 @@ body, html {
   background: rgba(125, 131, 134, 0.5);
   color: white;
 }
-
-/* .new-reading-container h1 {
-  display: block;
-  margin: auto;
-  background: rgba(125, 131, 134, 0.5);
-  color: white;
-}
-
-.new-reading {
-  display: block;
-  margin: auto;
-  background: rgba(125, 131, 134, 0.5);
-  width: 200px;
-} */
 
 .new-reading a {
   color: white;

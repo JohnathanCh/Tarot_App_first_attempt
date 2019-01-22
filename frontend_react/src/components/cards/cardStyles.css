@@ -1,44 +1,42 @@
+.card-list-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 
-#cardList {
-    border: 10px solid black;
+  background-image: url('https://blog-cdn.californiapsychics.com/blog/wp-content/blogs.dir/1/files/2018/07/weekly-tarot-reading_20180722_600x320.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
 
-  #my-card {
+  background-image: url('http://aqreative.co/wp-content/uploads/2018/04/space-colorful-geometric-wallpaper-iphone.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-image {
+  background-color: aqua;
+  background-image: url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80');
+  display: flex;
+  align-content: flex-start;
+}
+
+.single-card {
+    
+}
+
+/* #my-card {
     color: white;
     background-image: url('https://blog-cdn.californiapsychics.com/blog/wp-content/blogs.dir/1/files/2018/07/weekly-tarot-reading_20180722_600x320.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* text-decoration-color: #000;
-    text-shadow: black; */
     height: 400px;
     width: 500px;
     overflow: auto;
     border: 3px solid black;
-  }
-
-  .horizontal-scroll-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    max-height: 50%;
-    /* margin: 10px auto; */
-    background: rgb(144, 170, 180);
-    border: 2px solid #000;
-    align-content: center;
-    overflow-x: scroll;
-    white-space: normal;
-  }
-
-  .card-image {
-    height: 400px;
-    width: 300px;
-  }
-
-  .card-list {
-    background-image: url('https://blog-cdn.californiapsychics.com/blog/wp-content/blogs.dir/1/files/2018/07/weekly-tarot-reading_20180722_600x320.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  } */

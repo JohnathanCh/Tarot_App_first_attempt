@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Route, withRouter } from 'react-router-dom'
 import { Switch } from 'react-router'
 import { connect } from 'react-redux';
 
+import './App.css';
 import Signup from './Login_Signup/Signup';
+import Login from './Login_Signup/Login';
 import { fetchCards } from './store/allCards/actions';
 import CardList from './components/cards/CardList'
 import Welcome from "./components/Welcome";
-import NavBar from './NavBar'
+import NavBar from './NavBar';
 import NewReading from './components/readings/NewReading';
 import ReadingSplash from "./components/readings/ReadingSplash";
 import Profile from './components/user/Profile';
@@ -29,25 +30,32 @@ class App extends Component {
     console.log(this.props, "propppppps")
 
     return (
-      <div className="App">
-      {!user.loggedIn ? null : <NavBar/> }
+      <div className='App'>
 
-        {!user.loggedIn ? <div>
-          <header className="App-header">
-            <marquee scrollamount="5" direction="right"><img src={image} className="App-logo" alt="logo" /></marquee>
-          </header> 
-        </div> : null 
-        }
+        <div id='nav-bar'>
+          <NavBar/> 
+        </div>
 
-        <Switch>  
-          <Route path='/readings/new' component={ NewReading } />
-          <Route path='/readings' component={ ReadingSplash } />
-          <Route path='/cards' component={ CardList }/> 
-          <Route exact path='/profile' component={ Profile } />
-          <Route exact path='/' component={ Welcome } />
-          <Route exact path='/signup' component={ Signup } />
-        </Switch>
+        <div className='page'>
 
+          {!user.loggedIn ? <div>
+            <header className='App-header'>
+              <marquee scrollamount='5' direction='right'><img src={image} className='App-logo' alt='logo' /></marquee>
+            </header> 
+          </div> : null 
+          }
+
+          <Switch>  
+            <Route path='/readings/new' component={ NewReading } />
+            <Route path='/readings' component={ ReadingSplash } />
+            <Route path='/cards' component={ CardList }/> 
+            <Route exact path='/profile' component={ Profile } />
+            <Route exact path='/' component={ Welcome } />
+            <Route exact path='/login' component={ Login } />
+            <Route exact path='/signup' component={ Signup } />
+          </Switch>
+
+        </div>
       </div>
     );
   }

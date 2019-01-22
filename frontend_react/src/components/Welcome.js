@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Route } from 'react-router'
 import Login from '../Login_Signup/Login';
 import Signup from '../Login_Signup/Signup';
 
-export default class Welcome extends React.Component {
+export default class Welcome extends Component {
 
     render() {
         return (

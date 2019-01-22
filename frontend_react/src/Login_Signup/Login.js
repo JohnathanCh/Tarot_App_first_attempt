@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Modal } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
@@ -13,7 +13,7 @@ const inlineStyle = {
     }
   };
 
-class Login extends React.Component {
+class Login extends Component {
 
     state = {
         pageOpen: true,

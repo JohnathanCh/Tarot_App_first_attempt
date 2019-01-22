@@ -60,30 +60,10 @@ class ThreeCardReading extends React.Component {
                     <div className="ui medium images" >
                         {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
                         this.state.readingCards.map(card => 
-
-                        
-                            <Modal trigger={ 
-                                <div onClick={this.show('blurring')} className="image-card" >
-                                 <CardImage key={card.id} card={card} />
-                                 </div>
-                                 }>
-                                 
-                                    <div className="my-modal">
-                                    <Modal.Header> <h1 >{this.props.clickedCard.name}</h1> </Modal.Header>
-                                    <Modal.Content >
-                                        <Image size="medium" src={this.getImage(this.props.clickedCard.name)}/>
-                                    <Modal.Description>
-                                        <p>Meaning Upright: {this.props.clickedCard.meaning_up}</p>
-                                        <p>Meaning Reversed: {this.props.clickedCard.meaning_rev}</p>
-                                        <p>Description: {this.props.clickedCard.desc}</p>
-
-                                    </Modal.Description>
-                                    </Modal.Content>
-
-                                </div>
-                            </Modal>  
-                        )
-                        : null }      
+                            <div onClick={this.show('blurring')} className="image-card" >
+                                <CardImage key={card.id} card={card} />
+                            </div>)
+                        : null}
                     </div>
                 </div>
             </div>   

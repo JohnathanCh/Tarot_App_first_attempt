@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // import CardInfo from "../../cards/CardInfo";
 import { createReading } from '../../../store/readings/actions';
 import CardImage from '../../cards/CardImage'
-import { Modal, Image } from 'semantic-ui-react'
+import '../readingStyles.css';
 
 class ThreeCardReading extends React.Component {
 

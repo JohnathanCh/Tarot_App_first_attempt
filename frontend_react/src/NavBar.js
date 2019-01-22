@@ -14,7 +14,7 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <div id="nav-bar" className="ui large menu" style={{  background: "rgb(14, 30, 39)",
+            <div className="ui large menu" style={{  background: "rgb(14, 30, 39)",
   margin: "0",
   "border-radius": "0"}}>
                 <h1 style={{color: "white"}}>Three Seeds Tarot</h1>

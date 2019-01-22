@@ -30,26 +30,32 @@ class App extends Component {
     console.log(this.props, "propppppps")
 
     return (
-      <div className="App">
-      {!user.loggedIn ? null : <NavBar/> }
+      <div className='App'>
 
-        {!user.loggedIn ? <div>
-          <header className="App-header">
-            <marquee scrollamount="5" direction="right"><img src={image} className="App-logo" alt="logo" /></marquee>
-          </header> 
-        </div> : null 
-        }
+        <div id='nav-bar'>
+          <NavBar/> 
+        </div>
 
-        <Switch>  
-          <Route path='/readings/new' component={ NewReading } />
-          <Route path='/readings' component={ ReadingSplash } />
-          <Route path='/cards' component={ CardList }/> 
-          <Route exact path='/profile' component={ Profile } />
-          <Route exact path='/' component={ Welcome } />
-          <Route exact path='/login' component={ Login } />
-          <Route exact path='/signup' component={ Signup } />
-        </Switch>
+        <div className='page'>
 
+          {!user.loggedIn ? <div>
+            <header className='App-header'>
+              <marquee scrollamount='5' direction='right'><img src={image} className='App-logo' alt='logo' /></marquee>
+            </header> 
+          </div> : null 
+          }
+
+          <Switch>  
+            <Route path='/readings/new' component={ NewReading } />
+            <Route path='/readings' component={ ReadingSplash } />
+            <Route path='/cards' component={ CardList }/> 
+            <Route exact path='/profile' component={ Profile } />
+            <Route exact path='/' component={ Welcome } />
+            <Route exact path='/login' component={ Login } />
+            <Route exact path='/signup' component={ Signup } />
+          </Switch>
+
+        </div>
       </div>
     );
   }

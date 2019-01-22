@@ -51,7 +51,7 @@ class OneCardReading extends React.Component {
         // const { open, dimmer } = this.state
         
         return (
-            <div>
+            <div className='one-card-reading'>
                 <h1>One Card Reading</h1>
                {this.state.clicked === true ? null : <div>
                     <button onClick={this.handleCardPull} >Reading </button>

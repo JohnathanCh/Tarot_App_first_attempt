@@ -24,7 +24,7 @@ export default class NewReading extends React.Component {
         // console.log(this.state);
         
         return (
-            <div className="new-reading-container">
+            <div className="new-reading-page">
                 <div className="reading-grey-box" >
                 {this.state.readingChose === true ? null : <h1>Select a reading type</h1> }
                 

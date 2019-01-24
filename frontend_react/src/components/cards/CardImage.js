@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom';
-import { Modal, Header, Image } from 'semantic-ui-react';
+import { Modal, Header, Image, Button } from 'semantic-ui-react';
 
 import { selectCardAction } from '../../store/allCards/actions';
 import inlineStyle from '../../modalStyle';
@@ -14,9 +14,7 @@ class CardImage extends React.Component {
     }
 
     getImage = cardName => {
-        let formattedName = cardName
-        .split(" ")
-        .join("_")
+        let formattedName = cardName.split(" ").join("_")
 
         let image = require(`../../Rider-Waite/${formattedName}.png`) 
 
@@ -27,10 +25,20 @@ class CardImage extends React.Component {
         // console.log(this.state);
         this.props.selectCard(this.props.card)
 
+        this.setState({
+            showInfo: true
+        })
+
         if (this.props.match.path.startsWith('/cards')) {
             this.props.history.push(`/cards/${this.props.card.id}`)
         }
         
+    }
+
+    modalClose = () => {
+        this.setState({
+            showInfo: false
+        })
     }
 
     render() {
@@ -44,7 +52,8 @@ class CardImage extends React.Component {
                     <div className="ui medium images" > 
                         <img className="single-card" src={this.getImage(this.props.card.name)} alt="No Image Found" onClick={this.handleClick} />
                     </div>}
-                style={inlineStyle.modal}>
+                style={inlineStyle.modal}
+                >
 
                     <Modal.Header>{this.props.card.name}</Modal.Header>
 
@@ -57,6 +66,9 @@ class CardImage extends React.Component {
                             <p>Description: {this.props.card.desc} </p>
                         </Modal.Description>
                     </Modal.Content>
+                    <Modal.Actions>
+                        <Button primary onClick={this.modalClose}>Close</Button>
+                    </Modal.Actions>
                 </Modal>
 
             </div>

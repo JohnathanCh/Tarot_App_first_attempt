@@ -19,7 +19,7 @@ class CardList extends React.Component {
 
             <div className="card-list" >
                 {cardList.map(card => 
-                    <div className="ui card centered">
+                    <div>
                         <CardImage key={card.id} card={card} />
                     </div>
                 )}

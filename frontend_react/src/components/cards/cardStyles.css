@@ -16,17 +16,26 @@
 .card-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+
   overflow: hidden; 
   overflow-y: scroll;
 
-  background-image: url('http://aqreative.co/wp-content/uploads/2018/04/space-colorful-geometric-wallpaper-iphone.jpg');
+  background-image: url(http://gif-finder.com/wp-content/uploads/2015/09/Fractal-Animated-Gif.gif);
+  /* background-image: url(http://frameofmind.be/images/seed_anim3.gif); */
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.card-list * {
+  width: 25%;
+}
+
 .card-image {
-  background-image: url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80');
+  /* background-image: url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80'); */
+
 
 }
 

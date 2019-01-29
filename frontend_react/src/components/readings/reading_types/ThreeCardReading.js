@@ -53,7 +53,7 @@ class ThreeCardReading extends React.Component {
                 <h1>Three Card Reading</h1>
                 <h4>Click the cards to get a description of what they mean</h4>
                {this.state.clicked === true ? null : <div>
-                    <button onClick={this.handleCardPull} > Pull Cards </button>
+                    <button onClick={this.handleCardPull} className='link-button'> Pull Cards </button>
                 </div>}
                 
                 <div className="cards">

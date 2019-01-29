@@ -33,23 +33,28 @@ export default class NewReading extends React.Component {
                         {this.state.readingChose === false ? 
 
                         <div className='new-reading' >
-
                             <div className='link-to-one-card-reading'>
-                                <Button>
-                                    <NavLink to='/readings/new/1-card' onClick={this.handleChoice} > One Card Reading </NavLink>
-                                </Button>
+                                <NavLink to='/readings/new/1-card' onClick={this.handleChoice} >
+                                    <button className='link-button'>
+                                        <p className='button-text'>One Card reading</p> 
+                                    </button>
+                                </NavLink>
                             </div>
                             
                             <div className='link-to-three-card-reading'>
-                                <Button>
-                                    <NavLink to='/readings/new/3-card' onClick={this.handleChoice} > Three Card Reading </NavLink>
-                                </Button>
+                                <NavLink to='/readings/new/3-card' onClick={this.handleChoice} > 
+                                    <button className='link-button'>
+                                        <p className='button-text'>Three Card Reading</p> 
+                                    </button>  
+                                </NavLink>
                             </div>
                             
                             <div className='link-to-five-card-reading'>
-                                <Button>
-                                    <NavLink to='/readings/new/5-card' onClick={this.handleChoice} > Five Card Reading </NavLink>
-                                </Button>
+                                <NavLink to='/readings/new/5-card' onClick={this.handleChoice} >
+                                    <button className='link-button'> 
+                                        <p className='button-text'>Five Card Reading</p>
+                                    </button>
+                                </NavLink>
                             </div>
                             
                         </div> 

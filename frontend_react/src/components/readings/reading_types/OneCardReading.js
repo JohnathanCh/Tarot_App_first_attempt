@@ -58,7 +58,9 @@ class OneCardReading extends React.Component {
                 <div className='one-card-reading-button'>
                     {this.state.clicked === true ? null : 
                         <div>
-                            <Button onClick={this.handleCardPull}>Pull Cards</Button>
+                            <button onClick={this.handleCardPull} className='pull-card-button'>
+                                <h2>Pull A Card</h2>
+                            </button>
                         </div>
                     }
                 </div>

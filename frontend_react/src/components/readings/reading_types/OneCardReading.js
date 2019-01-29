@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import CardInfo from "../../cards/CardInfo";
-import { Modal, Image, Header } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 import { createReading } from '../../../store/readings/actions';
 import CardImage from '../../cards/CardImage'
@@ -47,15 +47,21 @@ class OneCardReading extends React.Component {
     }
 
     render() {
-        // console.log("propssss", this.state);
-        // const { open, dimmer } = this.state
         
         return (
             <div className='one-card-reading'>
-                <h1>One Card Reading</h1>
-               {this.state.clicked === true ? null : <div>
-                    <button onClick={this.handleCardPull} >Reading </button>
-                </div>}
+
+                <div>
+                    <h1>One Card Reading</h1>
+                </div>
+
+                <div className='one-card-reading-button'>
+                    {this.state.clicked === true ? null : 
+                        <div>
+                            <Button onClick={this.handleCardPull}>Pull Cards</Button>
+                        </div>
+                    }
+                </div>
                 
                 <div className="ui large images" >
                 {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
@@ -72,7 +78,6 @@ class OneCardReading extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    // console.log("MSTP state", state.user.user);
     return ({
         cardList: [...state.cards.cardList],
         clickedCard: state.cards.clickedCard,

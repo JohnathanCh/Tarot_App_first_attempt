@@ -1,5 +1,9 @@
 /* FOR THE NEW READING CONTAINER */
-.new-reading-container {
+.new-reading-page {
+    height: 1000px;
+}
+
+/* .new-reading-container {
     background-image: url('http://www.luisasempere.com/wp-content/uploads/2017/02/green-leaves-dark-floral-wallpaper-right-here-high-quality-shocking-collection-vertically-hung-premium-material-featured-scenes.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -10,23 +14,75 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  } */
+
+  .reading-elements {
+      height: 100vh;
   }
 
   .reading-grey-box {
-    /* display: block; */
-    /* margin: auto; */
-    background: rgba(125, 131, 134, 0.5);
+    background: rgba(18, 134, 134, 0.705);
     color: black;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 
+  .link-to-one-card-reading {
+    padding: 20px;
+    background: yellow;
+    height: 30%;
+
+    background-image: url('https://a.simbi.com/images/180592/images/large-2bc5ad340e593cd23a46bc203a06f996.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+
+  .link-to-three-card-reading {
+    padding: 20px;
+    background: green;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+
+    background-image: url('https://img.micheleknight.com/3-cards-1-1024x683.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+
+  .link-to-five-card-reading {
+    padding: 20px;
+    background: blue;
+    height: 30%;
+
+    background-image: url('https://content.jdmagicbox.com/comp/delhi/d2/011pxx11.xx11.170304181851.m9d2/catalogue/samridhii-tarot-reading-lado-sarai-mehrauli-delhi-tarot-reading-o9oruy.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+/* --------------------------------------- */
+
+
+/* STYLING FOR ONE CARD READING */
 .one-card-reading {
     width: 100%;
-    height: 565px;
+    height: 100vh;
+    padding-top: 80px;
     padding-bottom: 0%;
     background-image: url('http://aqreative.co/wp-content/uploads/2018/04/space-colorful-geometric-wallpaper-iphone.jpg');
+    /* background-size: cover; */
+    overflow: hidden; 
+    overflow-y: scroll;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,3 +102,19 @@
 .one-card-reading * {
     justify-content: center;
 }
+/* --------------------------------------- */
+
+
+/* STYLING FOR THREE CARD READING */
+.three-card-reading {
+    overflow: hidden; 
+    overflow-y: scroll;
+}
+
+/* --------------------------------------- */
+
+
+/* STYLING FOR FIVE CARD READING */
+
+/* --------------------------------------- */
+

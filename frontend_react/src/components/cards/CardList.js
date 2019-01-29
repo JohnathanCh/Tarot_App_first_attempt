@@ -16,6 +16,7 @@ class CardList extends React.Component {
     
        return (
         <div className="card-list-page">
+
             <div className="card-list" >
                 {cardList.map(card => 
                     <div className="ui card centered">
@@ -23,6 +24,7 @@ class CardList extends React.Component {
                     </div>
                 )}
             </div>
+            
         </div>
 
        )

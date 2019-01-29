@@ -20,7 +20,10 @@
     width: 100%;
     height: 100%;
   }
+/* --------------------------------------- */
 
+
+/* STYLING FOR ONE CARD READING */
 .one-card-reading {
     width: 100%;
     height: 565px;
@@ -46,3 +49,15 @@
 .one-card-reading * {
     justify-content: center;
 }
+/* --------------------------------------- */
+
+
+/* STYLING FOR THREE CARD READING */
+
+/* --------------------------------------- */
+
+
+/* STYLING FOR FIVE CARD READING */
+
+/* --------------------------------------- */
+

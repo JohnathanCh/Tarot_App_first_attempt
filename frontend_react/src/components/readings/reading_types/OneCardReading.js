@@ -63,10 +63,10 @@ class OneCardReading extends React.Component {
                     }
                 </div>
                 
-                <div className="ui large images" >
+                <div className='ui large images' >
                 {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
                         this.state.readingCards.map(card => 
-                            <div onClick={this.show('blurring')} className="image-card" >
+                            <div onClick={this.show('blurring')} className='image-card' >
                                 <CardImage key={card.id} card={card} />
                             </div>
                         )

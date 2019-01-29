@@ -4,6 +4,7 @@ import { NavLink, Route, Switch } from "react-router-dom";
 import OneCardReading from "./reading_types/OneCardReading";
 import ThreeCardReading from "./reading_types/ThreeCardReading";
 import FiveCardReading from "./reading_types/FiveCardReading";
+import './readingStyles.css'
 
 export default class NewReading extends React.Component {
 
@@ -26,10 +27,11 @@ export default class NewReading extends React.Component {
         return (
             <div className="new-reading-page">
                 <div className="reading-grey-box" >
-                {this.state.readingChose === true ? null : <h1>Select a reading type</h1> }
+                {this.state.readingChose === true ? null : <h1>What sort of reading would you like?</h1> }
                 
 
                 {this.state.readingChose === false ? 
+
                 <div className="new-reading" >
                     <NavLink to="/readings/new/1-card" onClick={this.handleChoice} > One Card Reading </NavLink>
                     <br/>
@@ -37,8 +39,8 @@ export default class NewReading extends React.Component {
                     <br/>
                     <NavLink to="/readings/new/5-card" onClick={this.handleChoice} > Five Card Reading </NavLink>
                     <br/>
-
-                </div> : null }
+                </div> 
+                : null }
 
                 <Switch>
                     <Route path="/readings/new/1-card" component={ OneCardReading } />

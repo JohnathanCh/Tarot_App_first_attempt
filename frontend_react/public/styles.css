@@ -57,31 +57,12 @@ body, html {
   position: fixed;
   z-index: 1;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 #navButton {
   color: white;
   margin: auto;
-}
-
-.new-reading-container {
-  background-image: url('http://www.luisasempere.com/wp-content/uploads/2017/02/green-leaves-dark-floral-wallpaper-right-here-high-quality-shocking-collection-vertically-hung-premium-material-featured-scenes.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-}
-/* http://www.luisasempere.com/wp-content/uploads/2017/02/green-leaves-dark-floral-wallpaper-right-here-high-quality-shocking-collection-vertically-hung-premium-material-featured-scenes.jpg */
-/* http://bonitos.club/wp-content/uploads/2018/01/black-floral-fabric-fabric-freedom-black-ditsy-floral-black-floral-fabric-uk.jpg */
-/* http://bonitos.club/wp-content/uploads/2018/01/black-floral-fabric-like-this-item-floral-print-fabric-with-black-background.jpg */
-
-.reading-grey-box {
-  display: block;
-  margin: auto;
-  background: rgba(125, 131, 134, 0.5);
-  color: white;
-  width: 100%;
-  height: 100%;
 }
 
 .new-reading a {

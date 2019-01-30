@@ -100,8 +100,9 @@
     height: 100%;
     padding-top: 80px;
     
-    background-image: url('http://aqreative.co/wp-content/uploads/2018/04/space-colorful-geometric-wallpaper-iphone.jpg');
-    /* background-size: cover; */
+    /* background-image: url('https://s3-us-west-2.amazonaws.com/iamgod/wp-content/uploads/2016/03/25172737/tumblr_nl38pb9Dk71six59bo1_5001.gif'); */
+    background-image: url('http://i.imgur.com/L5MfO.gif');
+   
     overflow: hidden; 
     overflow-y: scroll;
 
@@ -117,14 +118,11 @@
 }
 
 .one-card-reading h1 {
-    background-color: aquamarine;
-    order: 0;
+    background-color: black;
 }
 
 .one-card-reading-button {
-    background-color: yellow;
     border-radius: 27px;
-    /* order: 1; */
 }
 
 .pull-card-button {
@@ -164,19 +162,122 @@
 
 /* STYLING FOR THREE CARD READING */
 .three-card-reading {
-    overflow: hidden; 
-    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    
+    /* background-image: url('https://s3-us-west-2.amazonaws.com/iamgod/wp-content/uploads/2016/03/25172737/tumblr_nl38pb9Dk71six59bo1_5001.gif'); */
+    background-image: url('http://i.imgur.com/L5MfO.gif');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+
+.three-card-reading-cards {
+
+}
+
+.inner-cards-three-card-reading {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    margin: auto;
+    width: 30%;
+}
+
+.image-card {
+
 }
 
 /* --------------------------------------- */
 
 
 /* STYLING FOR FIVE CARD READING */
+
+.five-card-reading {
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    
+    /* background-image: url('https://s3-us-west-2.amazonaws.com/iamgod/wp-content/uploads/2016/03/25172737/tumblr_nl38pb9Dk71six59bo1_5001.gif'); */
+    background-image: url('http://i.imgur.com/L5MfO.gif');
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden; 
+    overflow-y: scroll;
+}
+
+.five-card-reading h2 {
+    color: darkcyan;
+}
+
+.inner-cards-five-card-reading {
+    display: flex;
+    flex: 1 100%;
+    /* align-content: flex-end; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 30%;
+}
+
+.five-card-reading-water-fire {
+    display: flex;
+    order: 1;
+    flex-direction: row;
+    /* background: purple; */
+    align-content: center;
+    justify-content: center;
+}
+
+.five-card-reading-water {
+    /* background: Blue; */
+    border-radius: 100px;
+}
+
+.five-card-reading-fire {
+    /* background: Red; */
+    border-radius: 100px;
+
+}
+
+.five-card-reading-air {
+    order: 2;
+    /* background: white; */
+    border-radius: 100px;
+
+}
+
+.five-card-reading-earth-bottom {
+    display: flex;
+    order: 3;
+    justify-content: center;
+
+    /* background: yellow; */
+    width: 1000px;
+}
+
+.five-card-reading-earth {
+    order: 0;
+    /* background: green; */
+    border-radius: 100px;
+    margin-left: 355px;
+}
+
+.five-card-reading-bottom {
+    order: 1;
+    /* background: black; */
+    border-radius: 100px;
+    align-self: right;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
 
 /* --------------------------------------- */
 

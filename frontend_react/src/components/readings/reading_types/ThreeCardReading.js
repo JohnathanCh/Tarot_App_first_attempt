@@ -53,16 +53,32 @@ class ThreeCardReading extends React.Component {
                 <h1>Three Card Reading</h1>
                 <h4>Click the cards to get a description of what they mean</h4>
                {this.state.clicked === true ? null : <div>
-                    <button onClick={this.handleCardPull} className='link-button'> Pull Cards </button>
+                    <button onClick={this.handleCardPull} className='pull-card-button'>
+                        <h2> Pull Cards </h2> 
+                    </button>
                 </div>}
                 
-                <div className="cards">
-                    <div className="ui medium images" >
+                <div className="three-card-reading-cards">
+                    <div >
                         {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
-                        this.state.readingCards.map(card => 
-                            <div onClick={this.show('blurring')} className="image-card" >
-                                <CardImage key={card.id} card={card} />
-                            </div>)
+                            <div className='inner-cards-three-card-reading'>
+                                <div onClick={this.show('blurring')} className="image-card" >
+                                    <CardImage key={this.state.readingCards[0].id} card={this.state.readingCards[0]} />
+                                    <h2>Past</h2>
+                                </div>
+
+                                <div onClick={this.show('blurring')} className="image-card" >
+                                    <CardImage key={this.state.readingCards[1].id} card={this.state.readingCards[1]} />
+                                    <h2>Present</h2>
+                                </div>
+
+                                <div onClick={this.show('blurring')} className="image-card" >
+                                    <CardImage key={this.state.readingCards[2].id} card={this.state.readingCards[2]} />
+                                    <h2>Future</h2>
+                                </div>
+
+                            </div>
+
                         : null}
                     </div>
                 </div>
@@ -70,6 +86,11 @@ class ThreeCardReading extends React.Component {
         )
     }
 }
+
+// this.state.readingCards.map(card => 
+//     <div onClick={this.show('blurring')} className="image-card" >
+//         <CardImage key={card.id} card={card} />
+//     </div>) 
 
 const mapStateToProps = (state) => {
     return ({

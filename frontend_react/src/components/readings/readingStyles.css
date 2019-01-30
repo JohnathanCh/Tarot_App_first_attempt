@@ -27,11 +27,22 @@
     background-position: center;
     background-size: cover;
     height: 80%;
+    border-radius: 27px;
+    width: 232px;
+    height: 400px; 
 }
 
 .link-button:hover * {
+    /* color: rgb(171, 248, 244);
+    background: -webkit-linear-gradient(transparent, transparent), url(https://data.whicdn.com/images/300826217/original.gif) repeat; */
     color: rgb(171, 248, 244);
     background: -webkit-linear-gradient(transparent, transparent), url(https://data.whicdn.com/images/300826217/original.gif) repeat;
+    background-position: center;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+
+    -webkit-transition: all, 2s;
+    transition: all, 2s;
 }
 
 .button-text {
@@ -43,7 +54,7 @@
 .link-to-one-card-reading {
     padding: 20px;
     background: yellow;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
 
@@ -57,7 +68,7 @@
 
 .link-to-three-card-reading {
     padding: 20px;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
 
@@ -70,7 +81,7 @@
 
 .link-to-five-card-reading {
     padding: 20px;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
 

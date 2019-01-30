@@ -49,12 +49,10 @@ class ThreeCardReading extends React.Component {
     
 
     render() {
-        // console.log("propssss", this.state);
-
-        // const { open, dimmer } = this.state
+        console.log(this.state.readingCards)
         
         return (
-            <div>
+            <div className='five-card-reading'>
                 <h1>Five Card Reading</h1>
                {this.state.clicked === true ? null : <div>
                     <button onClick={this.handleCardPull} className='pull-card-button'> 
@@ -62,14 +60,44 @@ class ThreeCardReading extends React.Component {
                     </button>
                 </div>}
 
-                <div className="five-card-reading" >
+                <div >
                     <div className="inner-cards-five-card-reading" >
-                    {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
-                        this.state.readingCards.map(card => 
-                            <div onClick={this.show('blurring')} >
-                                <CardImage key={card.id} card={card} />
+                    {this.state.clicked === true && this.state.readingCards.length !== 0 ?  
+                    <div className='whole-five-card-reading'>
+
+                        <div className='five-card-reading-water-fire'>
+                            <div onClick={this.show('blurring')} className='five-card-reading-water' >
+                                <CardImage key={this.state.readingCards[0].id} card={this.state.readingCards[0]}/>
+                                <h2>Water/Unconsious/Moon</h2>
                             </div>
-                        )
+                            <div onClick={this.show('blurring')} className='five-card-reading-fire' >
+                                <CardImage key={this.state.readingCards[1].id} card={this.state.readingCards[1]}/>
+                                <h2>Fire/Conscious/Sun/Drive</h2>
+                            </div>
+                        </div>
+
+                        <div className='five-card-reading-air'>
+                            <div onClick={this.show('blurring')} className='five-card-reading-air' >
+                                <CardImage key={this.state.readingCards[2].id} card={this.state.readingCards[2]}/>
+                                <h2>Air/Mind</h2>
+                            </div>
+                        </div>
+
+                        <div className='five-card-reading-earth-bottom'>
+                            <div onClick={this.show('blurring')} className='five-card-reading-earth' >
+                                <CardImage key={this.state.readingCards[3].id} card={this.state.readingCards[3]}/>
+                                <h2>Earth/Manifestation</h2>
+                            </div>
+                            <div onClick={this.show('blurring')} className='five-card-reading-bottom' >
+                                <CardImage key={this.state.readingCards[4].id} card={this.state.readingCards[4]}/>
+                                <h2>Where this is heading</h2>
+                            </div>
+
+                        </div>
+                    </div>  
+
+
+
                     : null}
                     </div>
                 </div>
@@ -77,6 +105,12 @@ class ThreeCardReading extends React.Component {
         )
     }
 }
+
+// this.state.readingCards.map((card, index) => 
+{/* <div onClick={this.show('blurring')} className={`five-card-reading-card-number-${index + 1}`} >
+    <CardImage key={card.id} card={card} />
+</div> */}
+// )
 
 const mapStateToProps = (state) => {
     // console.log("MSTP state", state.user.user);

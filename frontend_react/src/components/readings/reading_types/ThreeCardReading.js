@@ -59,12 +59,26 @@ class ThreeCardReading extends React.Component {
                 </div>}
                 
                 <div className="three-card-reading-cards">
-                    <div className='inner-cards-three-card-reading' >
+                    <div >
                         {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
-                        this.state.readingCards.map(card => 
-                            <div onClick={this.show('blurring')} className="image-card" >
-                                <CardImage key={card.id} card={card} />
-                            </div>)
+                            <div className='inner-cards-three-card-reading'>
+                                <div onClick={this.show('blurring')} className="image-card" >
+                                    <CardImage key={this.state.readingCards[0].id} card={this.state.readingCards[0]} />
+                                    <h2>Past</h2>
+                                </div>
+
+                                <div onClick={this.show('blurring')} className="image-card" >
+                                    <CardImage key={this.state.readingCards[1].id} card={this.state.readingCards[1]} />
+                                    <h2>Present</h2>
+                                </div>
+
+                                <div onClick={this.show('blurring')} className="image-card" >
+                                    <CardImage key={this.state.readingCards[2].id} card={this.state.readingCards[2]} />
+                                    <h2>Future</h2>
+                                </div>
+
+                            </div>
+
                         : null}
                     </div>
                 </div>
@@ -72,6 +86,11 @@ class ThreeCardReading extends React.Component {
         )
     }
 }
+
+// this.state.readingCards.map(card => 
+//     <div onClick={this.show('blurring')} className="image-card" >
+//         <CardImage key={card.id} card={card} />
+//     </div>) 
 
 const mapStateToProps = (state) => {
     return ({

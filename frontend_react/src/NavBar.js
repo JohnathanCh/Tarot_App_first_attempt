@@ -14,31 +14,37 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <div className="ui large menu" style={{  background: "rgb(14, 30, 39)",
-  margin: "0",
-  "border-radius": "0"}}>
+            <div className="ui menu" id="navBar" style={{  
+            "background": "black",
+            "background-position": "center",
+            "margin": "0",
+            "border-radius": "0"}}>
                 <h1 style={{color: "white"}}>Three Seeds Tarot</h1>
 
                 <div className="right menu">
-                <NavLink to="/cards">
-                    <button id="navButton" className="item" > Cards </button>
-                </NavLink>
+                    <NavLink to="/cards">
+                        <button id="navButton" className="item" > Cards </button>
+                    </NavLink>
 
-                <NavLink to="/readings/new">
-                    <button id="navButton" className="item" > New Reading </button>
-                </NavLink>
+                    <NavLink to="/readings/new">
+                        <button id="navButton" className="item" > New Reading </button>
+                    </NavLink>
 
-                <NavLink to="/profile">
-                    <button id="navButton" className="item" > Past Readings </button> 
-                </NavLink>
+                    <NavLink to="/profile">
+                        <button id="navButton" className="item" > Past Readings </button> 
+                    </NavLink>
 
-                <button onClick={this.handleLogout} id="logout" className="ui primary button" >Logout</button>
+                    <button onClick={this.handleLogout} id="logout" className="ui button" >
+                       <p className='logout-text'>Logout</p> 
+                    </button>
                 </div>
                 
             </div>
         )
     }
 }
+
+// https://i.stoneapi.org/f031e8dfe56dfc59ad76ad9877ff7ef7/silver_sparkle/silver_sparkle_color_1.jpg
 
 const MDTP = (dispatch) => ({
     logoutUser: () => {
@@ -47,10 +53,3 @@ const MDTP = (dispatch) => ({
 })
 
 export default withRouter(connect(null, MDTP)(NavBar));
-
-
-                {/* <Switch >
-                    <Route path="/cards" component={ CardList } />
-                    <Route path="/readings" component={ ReadingList } />
-                    <Route path="/profile" component={ Profile } />
-                </Switch>  */}

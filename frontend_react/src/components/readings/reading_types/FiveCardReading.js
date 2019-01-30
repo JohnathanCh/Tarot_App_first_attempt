@@ -57,11 +57,13 @@ class ThreeCardReading extends React.Component {
             <div>
                 <h1>Five Card Reading</h1>
                {this.state.clicked === true ? null : <div>
-                    <button onClick={this.handleCardPull} >Reading </button>
+                    <button onClick={this.handleCardPull} className='pull-card-button'> 
+                        <h2>Pull Cards</h2>
+                    </button>
                 </div>}
 
                 <div className="five-card-reading" >
-                    <div className="ui medium images" >
+                    <div className="inner-cards-five-card-reading" >
                     {this.state.clicked === true && this.state.readingCards.length !== 0 ? 
                         this.state.readingCards.map(card => 
                             <div onClick={this.show('blurring')} >

@@ -100,7 +100,9 @@
     height: 100%;
     padding-top: 80px;
     
-    background-image: url('http://aqreative.co/wp-content/uploads/2018/04/space-colorful-geometric-wallpaper-iphone.jpg');
+    /* background-image: url('https://s3-us-west-2.amazonaws.com/iamgod/wp-content/uploads/2016/03/25172737/tumblr_nl38pb9Dk71six59bo1_5001.gif'); */
+    background-image: url('http://i.imgur.com/L5MfO.gif');
+   
     /* background-size: cover; */
     overflow: hidden; 
     overflow-y: scroll;
@@ -117,12 +119,10 @@
 }
 
 .one-card-reading h1 {
-    background-color: aquamarine;
-    order: 0;
+    background-color: black;
 }
 
 .one-card-reading-button {
-    background-color: yellow;
     border-radius: 27px;
     /* order: 1; */
 }
@@ -164,19 +164,56 @@
 
 /* STYLING FOR THREE CARD READING */
 .three-card-reading {
-    overflow: hidden; 
-    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    
+    /* background-image: url('https://s3-us-west-2.amazonaws.com/iamgod/wp-content/uploads/2016/03/25172737/tumblr_nl38pb9Dk71six59bo1_5001.gif'); */
+    background-image: url('http://i.imgur.com/L5MfO.gif');
+   
+    /* background-size: cover; */
+    /* overflow: hidden; 
+    overflow-y: scroll; */
 
-    display: flex;
-    justify-content: center;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* display: flex; */
+    /* justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row; */
+}
+
+.three-card-reading-cards {
+
+}
+
+.inner-cards-three-card-reading {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin: auto;
+    width: 30%;
+}
+
+.image-card {
+
 }
 
 /* --------------------------------------- */
 
 
 /* STYLING FOR FIVE CARD READING */
+
+.inner-cards-five-card-reading {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin: auto;
+    width: 30%;
+}
 
 /* --------------------------------------- */
 

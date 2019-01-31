@@ -13,15 +13,17 @@ class Profile extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='past-readings-page'>
                 <h1>Your Past Readings</h1>
     
                 {Array.isArray(this.props.user.readings) && this.props.user.readings.length > 0 ?  
                     this.props.user.readings.reverse().map(reading => 
-                    <div className="horizontal-scroll">
-                        <h4>{reading.readingName}</h4>
+                    <div className="past-readings">
+                        <h3>{reading.readingName}</h3>
 
-                        {reading.readingCards.map(card => <CardImage card={card} /> )}
+                        <div className='past-readings-list'>
+                            {reading.readingCards.map(card => <CardImage card={card} /> )}
+                        </div>
                     </div>
                     )
                 : <h2>No readings to show yet. Pull some cards and come back!</h2> }

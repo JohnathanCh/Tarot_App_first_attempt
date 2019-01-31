@@ -90,7 +90,7 @@ class ThreeCardReading extends React.Component {
                             </div>
                             <div onClick={this.show('blurring')} className='five-card-reading-bottom' >
                                 <CardImage key={this.state.readingCards[4].id} card={this.state.readingCards[4]}/>
-                                <h2>Where this is heading</h2>
+                                <h2>The Direction/Outcome</h2>
                             </div>
 
                         </div>

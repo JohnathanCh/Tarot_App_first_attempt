@@ -64,6 +64,13 @@ class Signup extends Component {
 
         this.props.handleCreateUser({...this.state.user})
         // localStorage.setItem('token', user.jwt)
+        this.props.history.push('/cards')
+
+        this.setState({
+            user: {...this.state.user},
+            loggedIn: !this.state.loggedIn,
+            pageOpen: false
+        })
     };
 
 
@@ -88,7 +95,7 @@ class Signup extends Component {
 
                                 <div className="field">
                                     <div className="ui left icon input">
-                                        <i className="user icon"></i>
+                                        <i className="mail icon"></i>
                                         <input type="text" name="userEmail" placeholder="Email" value={this.props.userName} onChange={this.handleEmailInput}/> 
                                     </div>
                                 </div>
@@ -99,7 +106,7 @@ class Signup extends Component {
                                         <input type="password" name="password" placeholder="Password" value={this.props.password} onChange={this.handlePasswordInput} />
                                     </div>
                                 </div>
-                            <button className="ui fluid large primary submit button" type="submit">Login</button>
+                            <button className="ui fluid large primary submit button" type="submit">Signup</button>
                             </div>
                         </form>
 

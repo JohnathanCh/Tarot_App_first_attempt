@@ -172,6 +172,24 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+
+.three-card-reading h1 {
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    width: fit-content;
+    margin: auto;
+}
+
+.three-card-reading h4 {
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    width: fit-content;
+    margin: auto;
+    border-radius: 5px;
 }
 
 .three-card-reading-cards {
@@ -186,8 +204,12 @@
     width: 30%;
 }
 
-.image-card {
-
+.image-card h2 {
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    width: fit-content;
+    margin: auto;
+    border-radius: 5px;
 }
 
 /* --------------------------------------- */
@@ -213,7 +235,16 @@
 }
 
 .five-card-reading h2 {
-    color: darkcyan;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.five-card-reading h1 {
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    display: inline-block;
 }
 
 .inner-cards-five-card-reading {

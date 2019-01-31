@@ -60,8 +60,8 @@ class Login extends Component {
 
                                 <div className="field">
                                     <div className="ui left icon input">
-                                        <i className="user icon"></i>
-                                        <input type="text" name="user_email" placeholder="E-mail address" onChange={this.handleEmailInput}/>
+                                        <i className="mail icon"></i>
+                                        <input type="text" name="user_email" placeholder="E-mail" onChange={this.handleEmailInput}/>
                                     </div>
                                 </div>
 

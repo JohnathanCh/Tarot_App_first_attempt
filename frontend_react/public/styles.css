@@ -128,13 +128,13 @@ html, body, #app, #app>div {
 }
 
 .past-readings-page {
-  background: url(https://www.jpl.nasa.gov/images/universe/astronomy/20140108/machine20150108-16.jpg) ;
-  background-image: url(https://i2.wp.com/22teachings.com/wp-content/uploads/2018/05/tarot-world.jpg?w=900&ssl=1);
+  /* background: url(https://www.jpl.nasa.gov/images/universe/astronomy/20140108/machine20150108-16.jpg) ; */
+  background-image: url('https://www.thoughtco.com/thmb/eCknAMO0p_unSFlATeVOySaaXCY=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-165739809-570952fa3df78c7d9ed7cebb.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 170h;
+  height: 200vh;
   width: 200vh;
 }
 
@@ -143,6 +143,12 @@ html, body, #app, #app>div {
   color: white;
 
   display: inline-block;
+  border-radius: 5px;
+}
+
+.empty-reading-message {
+  background: rgba(255, 255, 255, 0.575);
+  color: black;
   border-radius: 5px;
 }
 

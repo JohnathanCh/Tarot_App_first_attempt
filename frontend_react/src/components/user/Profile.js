@@ -26,7 +26,7 @@ class Profile extends React.Component {
                         </div>
                     </div>
                     )
-                : <h2>No readings to show yet. Pull some cards and come back!</h2> }
+                : <h2 className='empty-reading-message'>No readings to show yet. Pull some cards and come back!</h2> }
                
             </div>
         )

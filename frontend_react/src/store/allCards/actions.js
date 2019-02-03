@@ -28,6 +28,8 @@ export const selectCardAction = (card) => {
 export const fetchCards = () => {
     //doesnt need to be called thunk, and will be called with dispatch
     return function thunk(dispatch) {
+
+        // https://three-seeds-tarot.herokuapp.com/
         fetch('http://localhost:3000/cards')
         .then(resp => resp.json())
         .then(cards => dispatch(cardListAction(cards))

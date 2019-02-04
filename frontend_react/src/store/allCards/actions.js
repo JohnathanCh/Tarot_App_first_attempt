@@ -24,13 +24,13 @@ export const selectCardAction = (card) => {
 //returns a thunk(the function you return that will be called with dispatch)
 
 // Fetches all cards
-// If making a post request or searching ro a specific card, I may need to input an arguement.
+// If making a post request or searching for a specific card, I may need to input an arguement.
 export const fetchCards = () => {
     //doesnt need to be called thunk, and will be called with dispatch
     return function thunk(dispatch) {
 
         // https://three-seeds-tarot.herokuapp.com/
-        fetch('http://localhost:3000/cards')
+        fetch('https://three-seeds-tarot.herokuapp.com/cards')
         .then(resp => resp.json())
         .then(cards => dispatch(cardListAction(cards))
         )}

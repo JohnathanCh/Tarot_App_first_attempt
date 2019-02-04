@@ -1,0 +1,7 @@
+
+// THE WEBSITE
+https://three-seeds-tarot.herokuapp.com/
+
+
+// THE GIT REPO
+https://git.heroku.com/three-seeds-tarot.git

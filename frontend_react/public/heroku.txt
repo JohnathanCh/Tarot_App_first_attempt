@@ -1,0 +1,7 @@
+// DEPLOYED ADDRESS
+https://three-seeds.herokuapp.com/
+
+
+// GIT REPO
+https://git.heroku.com/three-seeds.git
+

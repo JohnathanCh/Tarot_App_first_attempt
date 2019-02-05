@@ -56,8 +56,9 @@ export const createUser = (user) => {
             })
         }
 
-        // https://three-seeds-tarot.herokuapp.com/
-        fetch('https://three-seeds-tarot.herokuapp.com/users', options)
+        // https://three-seeds-tarot.herokuapp.com///
+        // http://localhost:3000/
+        fetch('http://localhost:3000/users', options)
         .then(resp => resp.json())
         .then(user => {dispatch(createUserAction(user)); localStorage.setItem('token', user.jwt)})
     }
@@ -81,8 +82,9 @@ export const getUser = (email, password) => {
             })
         }
 
-        // https://three-seeds-tarot.herokuapp.com/
-        fetch(`https://three-seeds-tarot.herokuapp.com/auth`, options)
+        // https://three-seeds-tarot.herokuapp.com///
+        // http://localhost:3000/
+        fetch(`http://localhost:3000/auth`, options)
         .then(resp => resp.json())
         .then(user => { dispatch(loginUserAction(user));
         ; localStorage.setItem('token', user.jwt) })
@@ -93,8 +95,9 @@ export const getUserReadings = (id) => {
     return function thunk(dispatch) {
 
 
-        // https://three-seeds-tarot.herokuapp.com/
-        fetch(`https://three-seeds-tarot.herokuapp.com/users/${id}`)
+        // https://three-seeds-tarot.herokuapp.com///
+        // http://localhost:3000/
+        fetch(`http://localhost:3000/users/${id}`)
         .then(resp => resp.json())
         .then(userReadings => dispatch(userReadingsAction(userReadings)))
     }

@@ -67,7 +67,7 @@ class CardImage extends React.Component {
                         </Modal.Description>
                     </Modal.Content>
                     <Modal.Actions>
-                        <Button primary onClick={this.modalClose}>Close</Button>
+                        {/* <Button primary onClick={this.modalClose}>Close</Button> */}
                     </Modal.Actions>
                 </Modal>
 

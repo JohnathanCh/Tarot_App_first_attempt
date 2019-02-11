@@ -3,7 +3,8 @@ import * as actions from './actions'
 const initialState = {
     cardList: [],
     user: {},
-    readingCards: []
+    readingCards: [],
+    readingChosen: false
 }
 
 
@@ -15,6 +16,11 @@ const initialState = {
         return {
             ...state,
             readingCards: [...action.payload]
+        }
+        case actions.READING_CHOSEN:
+        return {
+            ...state,
+            readingChosen: action.payload
         }
             
         default:

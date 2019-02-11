@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink, Route, Switch } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
+import { connect } from "react-redux";
 
 import OneCardReading from './reading_types/OneCardReading';
 import ThreeCardReading from './reading_types/ThreeCardReading';
 import FiveCardReading from './reading_types/FiveCardReading';
 import './readingStyles.css'
 
-export default class NewReading extends React.Component {
+class NewReading extends React.Component {
 
     state ={
         readingChose: false
@@ -21,6 +21,7 @@ export default class NewReading extends React.Component {
     }
 
     render() {
+        console.log("new reading props", this.props)
         
         return (
             <div className='new-reading-page'>
@@ -72,3 +73,9 @@ export default class NewReading extends React.Component {
         )
     }
 }
+
+const MSTP = (state) => ({
+    chosenReading: state.readingChosen
+})
+
+export default connect(MSTP)(NewReading)

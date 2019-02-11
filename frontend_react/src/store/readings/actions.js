@@ -1,6 +1,7 @@
 /*--------------- Action Types ---------------*/
 export const CREATE_READING = "CREATE_READING"
 export const READING_CARDS = "READING_CARDS"
+export const READING_CHOSEN = "READING_CHOSEN"
 
 
 /*--------------- Action Creators---------------*/
@@ -15,6 +16,13 @@ export const readingCardsAction = (cards) => {
     return({
         type: READING_CARDS,
         payload: cards
+    })
+}
+
+export const readingChosen = (bool) => {
+    return({
+        type: READING_CHOSEN,
+        payload: bool
     })
 }
 

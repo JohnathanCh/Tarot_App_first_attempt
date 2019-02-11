@@ -76,12 +76,11 @@ class Signup extends Component {
 
     render() {
         // MAKE SURE TO BE CONSISTENT WITH NAMING THE FIELDS THAT YOURE SENDING TO THE BACKEND: userName vs user_name
-        // ALSO MAKE SURE TO FIND DIFFERENT ICONS WHERE NEEDED
         return (
             <div className="signup-page" >
                 <Modal open={this.state.pageOpen === true} style={inlineStyle.modal}>
 
-                    <Modal.Header> Signup </Modal.Header>
+                    <Modal.Header style={{"font-family": "'Cinzel', serif", "font-weight": "900"}}> Signup </Modal.Header>
 
                     <Modal.Content>
                         <form className="ui large form" onSubmit={this.handleSignup}>
@@ -106,11 +105,11 @@ class Signup extends Component {
                                         <input type="password" name="password" placeholder="Password" value={this.props.password} onChange={this.handlePasswordInput} />
                                     </div>
                                 </div>
-                            <button className="ui fluid large primary submit button" type="submit">Signup</button>
+                            <button className="ui fluid large primary submit button" type="submit" style={{"font-family": "'Cinzel', serif"}}>Signup</button>
                             </div>
                         </form>
 
-                        <h3>Already have an account? <Link to='/'>here</Link></h3> 
+                        <h3 style={{"font-family": "'Cinzel', serif"}}>Already have an account? <Link to='/'>here</Link></h3> 
                     </Modal.Content>
                 </Modal>
             </div>

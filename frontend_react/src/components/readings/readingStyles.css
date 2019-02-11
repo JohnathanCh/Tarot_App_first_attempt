@@ -1,6 +1,6 @@
 /* FOR THE NEW READING CONTAINER */
-.new-reading-page {
-
+.new-reading-page > *{
+    font-family: 'Cinzel', serif !important;
 }
 
 .reading-elements {
@@ -20,6 +20,7 @@
     font-style: normal;
     padding: 0.1em 0.3em;
     border-radius: 0.2em;
+    font-family: 'Cinzel', serif !important;
 }
 
 .link-button {
@@ -48,6 +49,9 @@
 .button-text {
     background-color: black;
     color: white;
+    width: 75%;
+    margin: auto;
+    border-radius: 20px;
 }
 
   
@@ -175,6 +179,8 @@
     overflow: hidden;
     overflow-y: scroll;
 
+    font-family: 'Cinzel', serif !important;
+
 }
 
 .three-card-reading h1 {
@@ -182,6 +188,9 @@
     background: rgba(0, 0, 0, 0.8);
     width: fit-content;
     margin: auto;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 900;
+
 }
 
 .three-card-reading h4 {
@@ -190,6 +199,7 @@
     width: fit-content;
     margin: auto;
     border-radius: 5px;
+    font-family: 'Cinzel', serif !important;
 }
 
 .three-card-reading-cards {
@@ -210,6 +220,8 @@
     width: fit-content;
     margin: auto;
     border-radius: 5px;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 700;
 }
 
 /* --------------------------------------- */
@@ -239,12 +251,16 @@
     background: rgba(0, 0, 0, 0.8);
     display: inline-block;
     border-radius: 5px;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 700;
 }
 
 .five-card-reading h1 {
     color: white;
     background: rgba(0, 0, 0, 0.8);
     display: inline-block;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 900;
 }
 
 .inner-cards-five-card-reading {
@@ -269,6 +285,7 @@
 .five-card-reading-water {
     /* background: Blue; */
     border-radius: 100px;
+    font-family: 'Cinzel', serif !important;
 }
 
 .five-card-reading-fire {

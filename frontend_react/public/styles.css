@@ -10,7 +10,6 @@ body, html {
 
 html, body, #app, #app>div {
   height: 100%;
-  font-family: 'Cinzel', serif !important;
 }
 
 .page {
@@ -48,15 +47,16 @@ html, body, #app, #app>div {
 
 #welcome {
   display: flex;
-  background-image: url('http://media.beliefnet.com/~/media/photos-with-attribution/spiritual/tarotcardscreditShutterstockcom.jpg?as=1');
-  height: 600px;
+  /* background-image: url('http://media.beliefnet.com/~/media/photos-with-attribution/spiritual/tarotcardscreditShutterstockcom.jpg?as=1'); */
+  /* height: 600px; */
 }
 
 #logout {
   background-image: url('https://i.pinimg.com/736x/26/1d/52/261d527e8212c515743ffcacfc53033c--tattoo-designs-tattoo-ideas.jpg');
   background-position: center;
   background-size: cover;
-  width: 150px !important;
+  width: 175px !important;
+  height: 100%;
 }
 
 .logout-text {
@@ -64,20 +64,55 @@ html, body, #app, #app>div {
   color: white;
 }
 
-#nav-bar {
-  background: rgb(50, 167, 245);
-  margin: 0;
+#navBar {
+  background: black;
+  /* background-position: center; */
+  /* margin: 0; */
   border-radius: 0;
+  /* margin-right: 0; */
+  display: flex;
+  /* width: vh; */
+}
+
+#nav-bar {
+  background: black;
+  /* margin: 0; */
+  /* border-radius: 0; */
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 200vh;
+  height: 70px;
   margin-bottom: 10px;
+
+  color: white;
+
+  /* display: inline-block; */
+}
+
+.navTitle {
+  /* float: left; */
+  font-family: 'Cinzel', serif !important;
+  /* color: white !important; */
 }
 
 #navButton {
   color: white;
-  margin: auto;
+  /* margin: auto; */
   height: 100%;
+  font-family: 'Cinzel', serif !important;
+
+  background-image: url('https://i.pinimg.com/736x/26/1d/52/261d527e8212c515743ffcacfc53033c--tattoo-designs-tattoo-ideas.jpg');
+  background-position: center;
+  background-size: cover;
+
+  align-self: flex-end;
+}
+
+#navButtons {
+  background: orange;
+  /* align-content: flex-end; */
+  /* float: right; */
+  /* height: 100vh; */
 }
 
 .new-reading a {

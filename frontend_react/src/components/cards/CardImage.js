@@ -55,12 +55,12 @@ class CardImage extends React.Component {
                 style={inlineStyle.modal}
                 >
 
-                    <Modal.Header>{this.props.card.name}</Modal.Header>
+                    <Modal.Header style={{"font-family": "'Cinzel', serif"}}>{this.props.card.name}</Modal.Header>
 
                     <Modal.Content >
                         <Image wrapped size='medium' src={this.getImage(this.props.card.name)} floated='left' />
-                        <Modal.Description>
-                            <Header>{capitalize(this.props.card.card_type)} Arcana</Header>
+                        <Modal.Description >
+                            <h1 style={{"font-family": "'Cinzel', serif"}}>{capitalize(this.props.card.card_type)} Arcana</h1>
                             <p>Meaning Upright: {this.props.card.meaning_up} </p>
                             <p>Meaning Reversed: {this.props.card.meaning_rev} </p>
                             <p>Description: {this.props.card.desc} </p>

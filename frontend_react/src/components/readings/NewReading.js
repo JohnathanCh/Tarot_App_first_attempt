@@ -37,7 +37,7 @@ class NewReading extends React.Component {
                             <div className='link-to-one-card-reading'>
                                 <NavLink to='/readings/new/1-card' onClick={this.handleChoice} >
                                     <button className='link-button'>
-                                        <p className='button-text'>One Card reading</p> 
+                                        <p className='button-text' style={{"font-family": "'Cinzel', serif"}}>One Card reading</p> 
                                     </button>
                                 </NavLink>
                             </div>
@@ -45,7 +45,7 @@ class NewReading extends React.Component {
                             <div className='link-to-three-card-reading'>
                                 <NavLink to='/readings/new/3-card' onClick={this.handleChoice} > 
                                     <button className='link-button'>
-                                        <p className='button-text'>Three Card Reading</p> 
+                                        <p className='button-text' style={{"font-family": "'Cinzel', serif"}}>Three Card Reading</p> 
                                     </button>  
                                 </NavLink>
                             </div>
@@ -53,7 +53,7 @@ class NewReading extends React.Component {
                             <div className='link-to-five-card-reading'>
                                 <NavLink to='/readings/new/5-card' onClick={this.handleChoice} >
                                     <button className='link-button'> 
-                                        <p className='button-text'>Five Card Reading</p>
+                                        <p className='button-text' style={{"font-family": "'Cinzel', serif"}}>Five Card Reading</p>
                                     </button>
                                 </NavLink>
                             </div>

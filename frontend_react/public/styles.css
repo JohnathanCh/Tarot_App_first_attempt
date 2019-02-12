@@ -51,68 +51,69 @@ html, body, #app, #app>div {
   /* height: 600px; */
 }
 
+
+
+#nav-bar {
+  background: greenyellow;
+  /* margin: 0; */
+  /* border-radius: 0; */
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  /* height: 70px; */
+  margin-bottom: 20px;
+  
+  color: white;
+  
+  display: flex;
+}
+
+#navBar {
+  background: black;
+  /* border-radius: 0; */
+  
+  width: 100%;
+  
+}
+.navTitle {
+  float: left;
+  font-family: 'Cinzel', serif !important;
+  /* color: white !important; */
+}
+
+#navButtons {
+  /* background: orange; */
+  display: flex;
+  float: right;
+  /* align-items: flex-end; */
+  height: 100%;
+}
+#navButton {
+  color: white;
+  /* margin: auto; */
+  height: 100%;
+  min-width: 7em;
+  font-family: 'Cinzel', serif !important;
+  
+  background-image: url('https://i.pinimg.com/736x/26/1d/52/261d527e8212c515743ffcacfc53033c--tattoo-designs-tattoo-ideas.jpg');
+  background-position: center;
+  background-size: cover;
+  
+  /* align-self: flex-end; */
+}
+
 #logout {
   background-image: url('https://i.pinimg.com/736x/26/1d/52/261d527e8212c515743ffcacfc53033c--tattoo-designs-tattoo-ideas.jpg');
   background-position: center;
   background-size: cover;
-  width: 175px !important;
+  
+  width: 10em;
   height: 100%;
 }
 
 .logout-text {
   background: black;
   color: white;
-}
-
-#navBar {
-  background: black;
-  /* background-position: center; */
-  /* margin: 0; */
-  border-radius: 0;
-  /* margin-right: 0; */
-  display: flex;
-  /* width: vh; */
-}
-
-#nav-bar {
-  background: black;
-  /* margin: 0; */
-  /* border-radius: 0; */
-  position: fixed;
-  z-index: 1;
-  width: 200vh;
-  height: 70px;
-  margin-bottom: 10px;
-
-  color: white;
-
-  /* display: inline-block; */
-}
-
-.navTitle {
-  /* float: left; */
-  font-family: 'Cinzel', serif !important;
-  /* color: white !important; */
-}
-
-#navButton {
-  color: white;
-  /* margin: auto; */
-  height: 100%;
-  font-family: 'Cinzel', serif !important;
-
-  background-image: url('https://i.pinimg.com/736x/26/1d/52/261d527e8212c515743ffcacfc53033c--tattoo-designs-tattoo-ideas.jpg');
-  background-position: center;
-  background-size: cover;
-
-  align-self: flex-end;
-}
-
-#navButtons {
-  background: orange;
-  /* align-content: flex-end; */
-  /* float: right; */
-  /* height: 100vh; */
 }
 
 .new-reading a {
@@ -171,8 +172,10 @@ html, body, #app, #app>div {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200vh;
   width: 200vh;
+  min-height: 200vh;
+
+  font-family: 'Cinzel', serif !important;
 }
 
 .past-readings-page h1 {
@@ -181,12 +184,15 @@ html, body, #app, #app>div {
 
   display: inline-block;
   border-radius: 5px;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 900;
 }
 
 .empty-reading-message {
   background: rgba(255, 255, 255, 0.575);
   color: black;
   border-radius: 5px;
+  font-family: 'Cinzel', serif !important;
 }
 
 .past-readings h3 {
@@ -198,6 +204,7 @@ html, body, #app, #app>div {
 
   display: inline-block;
   border-radius: 5px;
+  font-family: 'Cinzel', serif !important;
 }
 
 .past-readings-list {

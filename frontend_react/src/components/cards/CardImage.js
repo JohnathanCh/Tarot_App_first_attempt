@@ -55,7 +55,7 @@ class CardImage extends React.Component {
                 style={inlineStyle.modal}
                 >
 
-                    <Modal.Header style={{"font-family": "'Cinzel', serif"}}>{this.props.card.name}</Modal.Header>
+                    <Modal.Header style={{"font-family": "'Cinzel', serif", "font-weight": "900"}}>{this.props.card.name}</Modal.Header>
 
                     <Modal.Content >
                         <Image wrapped size='medium' src={this.getImage(this.props.card.name)} floated='left' />

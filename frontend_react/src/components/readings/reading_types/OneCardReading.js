@@ -59,7 +59,7 @@ class OneCardReading extends React.Component {
                     {this.state.clicked === true ? null : 
                         <div>
                             <button onClick={this.handleCardPull} className='pull-card-button'>
-                                <h2>Pull A Card</h2>
+                                <h2 style={{"font-family": "'Cinzel', serif"}}>Pull A Card</h2>
                             </button>
                         </div>
                     }

@@ -19,7 +19,7 @@ class NavBar extends React.Component {
                 
                 <h1 className="navTitle" >Three Seeds Tarot</h1>
 
-                <div className="menu" id="navButtons">
+                <div id="navButtons">
                     <NavLink to="/cards">
                         <button id="navButton" ><p className="button-text"> Cards </p></button>
                     </NavLink>

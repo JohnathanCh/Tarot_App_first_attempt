@@ -11,7 +11,6 @@ import CardList from './components/cards/CardList'
 import Welcome from "./components/Welcome";
 import NavBar from './NavBar';
 import NewReading from './components/readings/NewReading';
-import ReadingSplash from "./components/readings/ReadingSplash";
 import Profile from './components/user/Profile';
 
 let image = require(`../src/Rider-Waite/The_Fool.png`) 
@@ -46,7 +45,6 @@ class App extends Component {
 
           <Switch>  
             <Route path='/readings/new' component={ NewReading } />
-            <Route path='/readings' component={ ReadingSplash } />
             <Route path='/cards' component={ CardList }/> 
             <Route exact path='/profile' component={ Profile } />
             <Route exact path='/' component={ Welcome } />

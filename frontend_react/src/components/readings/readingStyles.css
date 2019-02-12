@@ -140,6 +140,11 @@
     transition: all, 2s;
     color: white;
     border-radius: 27px;
+    font-family: 'Cinzel', serif;
+}
+
+.pull-card-button h2 {
+    font-family: 'Cinzel', serif !important;
 }
 
 /* Make this hover transi */
@@ -244,6 +249,8 @@
 
     overflow: hidden; 
     overflow-y: scroll;
+
+    font-family: 'Cinzel', serif !important;
 }
 
 .five-card-reading h2 {

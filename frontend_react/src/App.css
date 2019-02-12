@@ -1,8 +1,16 @@
 .App {
   text-align: center;
   background-image: url('http://2.bp.blogspot.com/-kX_5_Cqch4g/UmBAsMV4krI/AAAAAAAADjA/XEJnfAq1Dsg/s1600/ProtectionKamea300dpi(a3).jpg');
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', serif !important;
+}
 
+.App > * {
+  font-family: 'Cinzel', serif !important;
+}
+
+@font-face {
+  font-family: 'Cinzel', serif;
+  src: url(https://fonts.googleapis.com/css?family=Cinzel:700,900)
 }
 
 /* .App-logo {

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createReading } from '../../../store/readings/actions';
 import CardImage from '../../cards/CardImage'
-import { Modal, Image } from 'semantic-ui-react'
+import '../readingStyles.css';
 
 class ThreeCardReading extends React.Component {
     state = {
@@ -68,11 +68,11 @@ class ThreeCardReading extends React.Component {
                         <div className='five-card-reading-water-fire'>
                             <div onClick={this.show('blurring')} className='five-card-reading-water' >
                                 <CardImage key={this.state.readingCards[0].id} card={this.state.readingCards[0]}/>
-                                <h2>Water/Unconsious/Moon</h2>
+                                <h2>Water/Unconsious</h2>
                             </div>
                             <div onClick={this.show('blurring')} className='five-card-reading-fire' >
                                 <CardImage key={this.state.readingCards[1].id} card={this.state.readingCards[1]}/>
-                                <h2>Fire/Conscious/Sun/Drive</h2>
+                                <h2>Fire/Conscious</h2>
                             </div>
                         </div>
 

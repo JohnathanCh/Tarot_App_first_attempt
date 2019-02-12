@@ -51,7 +51,7 @@ class Login extends Component {
             <div className="login-page">
                 <Modal open={ this.state.pageOpen === true } style={inlineStyle.modal}>
 
-                    <Modal.Header> Login </Modal.Header>
+                    <Modal.Header style={{"font-family": "'Cinzel', serif", "font-weight": "900"}}> Login </Modal.Header>
 
                     <Modal.Content>
                         
@@ -72,11 +72,11 @@ class Login extends Component {
                                     </div>
                                 </div>
 
-                                <button className="ui fluid large primary submit button" type="submit">Login</button>
+                                <button className="ui fluid large primary submit button" type="submit" style={{"font-family": "'Cinzel', serif"}}>Login</button>
                             </div>
                         </form>
 
-                            <h3>If you don't have a profile you can create one <Link to='/signup'>here</Link></h3>
+                            <h3 style={{"font-family": "'Cinzel', serif"}}>If you don't have a profile you can create one <Link to='/signup'>here</Link></h3>
                     </Modal.Content>
                 </Modal>
             </div>

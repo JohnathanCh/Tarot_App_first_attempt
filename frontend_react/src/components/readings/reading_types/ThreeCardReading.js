@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import CardInfo from "../../cards/CardInfo";
 import { createReading } from '../../../store/readings/actions';
 import CardImage from '../../cards/CardImage'
 import '../readingStyles.css';
@@ -44,9 +43,6 @@ class ThreeCardReading extends React.Component {
     }
 
     render() {
-        // console.log("propssss", this.props);
-
-        // const { open, dimmer } = this.state
         
         return (
             <div className="three-card-reading">
@@ -54,7 +50,7 @@ class ThreeCardReading extends React.Component {
                 <h4>Click the cards to get a description of what they mean</h4>
                {this.state.clicked === true ? null : <div>
                     <button onClick={this.handleCardPull} className='pull-card-button'>
-                        <h2> Pull Cards </h2> 
+                        <h2 style={{"font-family": "'Cinzel', serif"}}> Pull Cards </h2> 
                     </button>
                 </div>}
                 

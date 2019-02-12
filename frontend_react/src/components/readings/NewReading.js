@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink, Route, Switch } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
+import { connect } from "react-redux";
 
 import OneCardReading from './reading_types/OneCardReading';
 import ThreeCardReading from './reading_types/ThreeCardReading';
 import FiveCardReading from './reading_types/FiveCardReading';
 import './readingStyles.css'
 
-export default class NewReading extends React.Component {
+class NewReading extends React.Component {
 
     state ={
         readingChose: false
@@ -21,6 +21,7 @@ export default class NewReading extends React.Component {
     }
 
     render() {
+        console.log("new reading props", this.props)
         
         return (
             <div className='new-reading-page'>
@@ -36,7 +37,7 @@ export default class NewReading extends React.Component {
                             <div className='link-to-one-card-reading'>
                                 <NavLink to='/readings/new/1-card' onClick={this.handleChoice} >
                                     <button className='link-button'>
-                                        <p className='button-text'>One Card reading</p> 
+                                        <p className='button-text' style={{"font-family": "'Cinzel', serif"}}>One Card reading</p> 
                                     </button>
                                 </NavLink>
                             </div>
@@ -44,7 +45,7 @@ export default class NewReading extends React.Component {
                             <div className='link-to-three-card-reading'>
                                 <NavLink to='/readings/new/3-card' onClick={this.handleChoice} > 
                                     <button className='link-button'>
-                                        <p className='button-text'>Three Card Reading</p> 
+                                        <p className='button-text' style={{"font-family": "'Cinzel', serif"}}>Three Card Reading</p> 
                                     </button>  
                                 </NavLink>
                             </div>
@@ -52,7 +53,7 @@ export default class NewReading extends React.Component {
                             <div className='link-to-five-card-reading'>
                                 <NavLink to='/readings/new/5-card' onClick={this.handleChoice} >
                                     <button className='link-button'> 
-                                        <p className='button-text'>Five Card Reading</p>
+                                        <p className='button-text' style={{"font-family": "'Cinzel', serif"}}>Five Card Reading</p>
                                     </button>
                                 </NavLink>
                             </div>
@@ -72,3 +73,9 @@ export default class NewReading extends React.Component {
         )
     }
 }
+
+const MSTP = (state) => ({
+    chosenReading: state.readingChosen
+})
+
+export default connect(MSTP)(NewReading)

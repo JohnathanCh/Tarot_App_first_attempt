@@ -30,12 +30,15 @@ class NewReading extends React.Component {
         if ((nextProps.location.pathname === "/readings/new/1-card") || (nextProps.location.pathname === "/readings/new/3-card") || (nextProps.location.pathname === "/readings/new/5-card")) {
             return true
         }
-        else if (nextProps.location.pathname === "/readings/new" && nextState.readingChose === true) {
+        else if (nextProps.location.pathname === "/readings/new" && this.state.readingChose === true) {
             this.setState({
                 readingChose: false
             })
-            console.log(this.state.readingChose)
+            console.log("reading chose", this.state.readingChose)
             return true
+        }
+        else {
+            return false
         }
     }
 

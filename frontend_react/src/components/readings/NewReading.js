@@ -20,6 +20,25 @@ class NewReading extends React.Component {
         })
     }
 
+    shouldComponentUpdate = (nextProps, nextState) => {
+        console.group()
+        console.log("shouldComponentUpdate", this.props.location.pathname)
+        console.log("nextProps", nextProps)
+        console.log("nextState", nextState.readingChose)
+        console.groupEnd()
+
+        if ((nextProps.location.pathname === "/readings/new/1-card") || (nextProps.location.pathname === "/readings/new/3-card") || (nextProps.location.pathname === "/readings/new/5-card")) {
+            return true
+        }
+        else if (nextProps.location.pathname === "/readings/new" && nextState.readingChose === true) {
+            this.setState({
+                readingChose: false
+            })
+            console.log(this.state.readingChose)
+            return true
+        }
+    }
+
     render() {
         console.log("new reading props", this.props)
         

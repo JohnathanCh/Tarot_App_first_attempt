@@ -39,7 +39,6 @@ const createUserReducer = (state = initialState, action) => {
                 }
 
         case actions.GET_READINGS:
-        console.log("USER REDUCER", state, action);
 
             return {
                 loggedIn: state.loggedIn,
@@ -60,11 +59,3 @@ const createUserReducer = (state = initialState, action) => {
 }
 
 export default createUserReducer;
-
-// user: {
-    // id: action.payload.user.id,
-    // name: action.payload.user.name,
-    // email: action.payload.user.email
-//     },
-// loggedIn: action.payload.loggedIn 
-// }

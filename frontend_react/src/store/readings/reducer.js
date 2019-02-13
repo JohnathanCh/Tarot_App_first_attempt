@@ -9,7 +9,6 @@ const initialState = {
 
 
  const readingReducer = (state = initialState, action) => {
-     console.log("In the Reading Reducer", state);
      
     switch (action.type) {
         case actions.CREATE_READING:

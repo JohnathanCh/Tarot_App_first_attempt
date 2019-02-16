@@ -30,7 +30,7 @@ export const fetchCards = () => {
     return function thunk(dispatch) {
 
         // https://three-seeds-tarot.herokuapp.com///
-        fetch('http://localhost:3000/cards')
+        fetch('https://three-seeds-tarot.herokuapp.com/cards')
         .then(resp => resp.json())
         .then(cards => dispatch(cardListAction(cards))
         )}

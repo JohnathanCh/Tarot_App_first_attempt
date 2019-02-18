@@ -51,7 +51,7 @@ export const createReading = (readingCards, user) => {
         }
 
         // https://three-seeds-tarot.herokuapp.com///
-        fetch('http://localhost:3000/readings', options)
+        fetch('https://three-seeds-tarot.herokuapp.com/readings', options)
         .then(resp => resp.json())
         .then(reading => {console.log("This is a popsicle stick I'm useing to keep the castle standing")})
     }

@@ -1,5 +1,7 @@
 # Three Seeds Tarot Application
 Welcome to Three Seeds Tarot! This application is a prototype of something I would like to grow over time. The purpose of the application is to gain an insight into the world of Tarot through readings. 
+
+You can play with the deployed version of this app [here.](https://three-seeds.herokuapp.com/)
 ## Using the App
 Users can create a profile or login if they are returning.
 
